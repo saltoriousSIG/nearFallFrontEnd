@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from '../header/header';
 import styled from 'styled-components';
-import bg from '../../assets/img/bg.jpg';
 import Footer from '../footer/footer';
 import { Outlet } from 'react-router';
 

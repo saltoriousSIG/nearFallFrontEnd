@@ -1,9 +1,7 @@
-import React, { useEffect, useRef, useMemo } from 'react';
-import FullCalendar from '@fullcalendar/react';
+import React, { useEffect } from 'react';
 import { Calendar } from '@fullcalendar/core';
 import googleCalendarPlugin from '@fullcalendar/google-calendar';
 import dayGridPlugin from '@fullcalendar/daygrid';
-import $ from 'jquery';
 import GlobalStyle from '../common/globalstyle/global.style';
 import styled from 'styled-components';
 
