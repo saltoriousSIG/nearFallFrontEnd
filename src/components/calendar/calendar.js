@@ -30,10 +30,7 @@ export const NFCalendar = () => {
         });
 
         const events = calendar.getEvents();
-
-        console.log(events);
         calendar.render()
-        
 
     }, []);
 
