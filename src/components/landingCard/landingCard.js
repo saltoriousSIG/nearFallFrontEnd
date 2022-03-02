@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardBody, Col, Row } from "reactstrap";
+import { CardBody, Col, Row } from "reactstrap";
 import boat from '../../assets/img/boat.png';
 import { IGFeed } from "../instagram-feed/instagram-feed";
 import GlobalStyle from '../common/globalstyle/global.style';
