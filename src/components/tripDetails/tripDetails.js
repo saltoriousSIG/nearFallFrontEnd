@@ -37,7 +37,7 @@ export const TripDetails = (props) => {
     const { tripName } = useParams();
     const currentTrip = useMemo(() => {
         return trips[tripName];
-    }, [tripName, trips]);
+    }, [tripName]);
 
 
     const { media, description, description2, price, tripTimes, tripDuration, details, targetCatch } = currentTrip || {};
