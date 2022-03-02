@@ -11,10 +11,16 @@ const CC = styled.div`
 `;
 
 const FooterContainer = styled.div`
+  margin-top: 20px;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+
+  
 `;
 
 const NavFooter = styled(Navbar)`
-background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+background: linear-gradient(to right, #f46b45, #eea849);
 `;
 
 

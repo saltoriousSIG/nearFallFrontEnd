@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { trips } from '../../utils/trips';
 
 const Container = styled.div`
   width: 100%;

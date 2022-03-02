@@ -1,7 +1,21 @@
-import React from 'react';
-import { Navbar, NavbarToggler, Nav, NavItem, NavLink, NavbarBrand } from 'reactstrap';
+import React, { useState } from 'react';
+import { 
+    Navbar, 
+    NavbarToggler, 
+    Nav, 
+    NavItem,
+    NavLink, 
+    NavbarBrand,
+    Dropdown,
+    DropdownToggle,
+    DropdownMenu,
+    DropdownItem 
+} from 'reactstrap';
 import logo from '../../assets/img/nf_logo.png';
 import styled from 'styled-components';
+import { trips } from '../../utils/trips';
+import { useNavigate } from 'react-router';
+
 
 const Logo = styled.img`
     height: 75px;
@@ -64,6 +78,16 @@ const NBar = styled(Navbar)`
 
 
 const Header = () => {
+
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggle = () => setIsOpen(!isOpen);
+
+    const navigate = useNavigate();
+
+    const goToPage = (tripName) => {
+        navigate(`/trip/${tripName}`);
+    }
     return (
         <div>
             <NBar
@@ -82,8 +106,8 @@ const Header = () => {
                             <HeaderButton>Belmar Fishing Charters</HeaderButton>
                             <HeaderButton>905 NJ-35, S Belmar NJ</HeaderButton>
                         </ButtonContainer>
-                        <i class="fa-brands fa-instagram fa-2x"></i>
-                        <i class="fa-brands fa-facebook fa-2x"></i>
+                        <i className="fa-brands fa-instagram fa-2x"></i>
+                        <i className="fa-brands fa-facebook fa-2x"></i>
                     </NavSocialItems>
                     <NavMenuItems>
                         <Nav >
@@ -93,17 +117,35 @@ const Header = () => {
                                 </Link>
                             </NavItem>
                             <NavItem>
-                                <Link href="thenearfall">
+                                <Link href="/thenearfall">
                                     The Nearfall
                                 </Link>
                             </NavItem>
+                            <Dropdown
+                                nav
+                                isOpen={isOpen}
+                                toggle={toggle}
+                            >
+                                <DropdownToggle
+                                    caret
+                                    nav
+                                >
+                                   Trips &#38; Rates
+                                </DropdownToggle>
+                                <DropdownMenu>
+                                    {
+                                        Object.keys(trips).map((x, i) => {
+                                            return ( 
+                                                <DropdownItem key={i} onClick={() => goToPage(x)}>
+                                                    {x}
+                                                </DropdownItem>
+                                            )
+                                        })
+                                    }
+                                </DropdownMenu>
+                            </Dropdown>
                             <NavItem>
-                                <Link href="rates">
-                                    Trips & Rates
-                                </Link>
-                            </NavItem>
-                            <NavItem>
-                                <Link href="calendar">
+                                <Link href="/calendar">
                                     Calendar
                                 </Link>
                             </NavItem>
