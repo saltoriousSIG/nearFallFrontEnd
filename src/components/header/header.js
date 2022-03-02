@@ -155,17 +155,17 @@ const Header = () => {
                                 </Link>
                             </NavItem>
                             <NavItem>
-                                <Link href="#">
+                                <Link href="/policies">
                                     Policies
                                 </Link>
                             </NavItem>
                             <NavItem>
-                                <Link href="#">
+                                <Link href="/gallery">
                                     Gallery
                                 </Link>
                             </NavItem>
                             <NavItem>
-                                <Link href="#">
+                                <Link href="/contact">
                                     Contact Us
                                 </Link>
                             </NavItem>

@@ -18,7 +18,6 @@ const Title = styled.h1`
 `;
 
 
-
 const Text = styled.p`
   color: white;
   text-align: center; 
@@ -41,6 +40,9 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  &.row {
+    flex-direction: row;
+  }
 `;
 
 
@@ -50,7 +52,7 @@ const Styled = {
     Text,
     Title,
     PageCol,
-    Container
+    Container,
 }
 
 export default Styled;

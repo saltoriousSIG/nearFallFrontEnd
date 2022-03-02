@@ -7,6 +7,9 @@ import { Rates } from './components/rates/rates';
 import { NFCalendar } from './components/calendar/calendar';
 import { TripDetails } from './components/tripDetails/tripDetails';
 import Crew from './components/crew/crew';
+import Policies from './components/policies/policies';
+import Gallery from './components/gallery/gallery';
+import Contact from './components/contact/contact';
 
 
 function App() {
@@ -20,14 +23,10 @@ function App() {
           <Route path='/calendar' exact element={<NFCalendar />} />
           <Route path='/trip/:tripName' element={<TripDetails />} />
           <Route path='/thecrew' exact element={<Crew />} />
-
-          
-          {/* <Route path='/policies' exact element={<Policies />} />
+          <Route path='/policies' exact element={<Policies />} />
           <Route path='/gallery' exact element={<Gallery />} />
-          <Route path='/contact' exact element={<Contact />} /> */}
-
+          <Route path='/contact' exact element={<Contact />} />
         </Route>
-
       </Routes>
     </Router>
   );
