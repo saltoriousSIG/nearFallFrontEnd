@@ -6,6 +6,7 @@ import { VesselInfo } from './components/Vessel/vessel';
 import { Rates } from './components/rates/rates';
 import { NFCalendar } from './components/calendar/calendar';
 import { TripDetails } from './components/tripDetails/tripDetails';
+import Crew from './components/crew/crew';
 
 
 function App() {
@@ -18,10 +19,10 @@ function App() {
           <Route path='/rates' exact element={<Rates />} />
           <Route path='/calendar' exact element={<NFCalendar />} />
           <Route path='/trip/:tripName' element={<TripDetails />} />
+          <Route path='/thecrew' exact element={<Crew />} />
 
-
-          {/* <Route path='/thecrew' exact element={<Crew />} />
-          <Route path='/policies' exact element={<Policies />} />
+          
+          {/* <Route path='/policies' exact element={<Policies />} />
           <Route path='/gallery' exact element={<Gallery />} />
           <Route path='/contact' exact element={<Contact />} /> */}
 

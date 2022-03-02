@@ -150,7 +150,7 @@ const Header = () => {
                                 </Link>
                             </NavItem>
                             <NavItem>
-                                <Link href="#">
+                                <Link href="/thecrew">
                                     The Crew
                                 </Link>
                             </NavItem>
