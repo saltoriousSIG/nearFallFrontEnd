@@ -13,6 +13,8 @@ const MainPage = styled.div`
 const MainContent = styled.div`
   height: 100%;
   width: 100%;
+  border:1px solid transparent;
+
 `;
 
 const Page = () => {
