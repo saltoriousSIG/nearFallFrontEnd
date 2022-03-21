@@ -12,7 +12,10 @@ import Gallery from './components/gallery/gallery';
 import Contact from './components/contact/contact';
 
 
+
 function App() {
+
+
   return (
     <Router>
       <Routes>

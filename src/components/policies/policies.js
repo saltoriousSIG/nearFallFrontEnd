@@ -5,7 +5,8 @@ import styled from 'styled-components';
 const UL = styled.ul`
     li {
         color: white;
-        font-family: 'Lato', sans-serif;
+        font-family: 'Poppins', sans-serif;
+        letter-spacing:0.7px;
     }
 `;
 
@@ -17,7 +18,7 @@ const Attention = styled.span`
 
 const Policies = () => {
     return (
-        <GlobalStyle.Container>
+        <GlobalStyle.Container className='mt-5'>
             <GlobalStyle.Title> Policies &#38; What to bring </GlobalStyle.Title>
             <GlobalStyle.Jumbotron>
                 <GlobalStyle.Container style={{ alignItems: 'flex-start' }}>

@@ -15,12 +15,13 @@ const FooterContainer = styled.div`
   bottom: 0;
   width: 100%;
   z-index: 1000;
-
+  
   
 `;
 
 const NavFooter = styled(Navbar)`
-background: linear-gradient(to right, #f46b45, #eea849);
+background-color:#E6E6E6;
+
 `;
 
 
