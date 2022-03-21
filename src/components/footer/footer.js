@@ -24,7 +24,6 @@ background-color:#E6E6E6;
 
 `;
 
-
 const Footer = () => {
     return (
         <FooterContainer>
