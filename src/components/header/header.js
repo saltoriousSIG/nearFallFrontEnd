@@ -102,7 +102,7 @@ const HeadlineText1 = styled.h1`
     }
 
     @media all and (max-width:1650px){
-        font-size:2rem;
+        font-size:1.5rem;
     }
 
     @media all and (max-width:1100px){
@@ -122,7 +122,7 @@ font-family: 'Ubuntu', sans-serif;
 }
 
 @media all and (max-width:1650px){
-    font-size:2rem;
+    font-size:1.5rem;
 }
 
 @media all and (max-width:1100px){
@@ -197,6 +197,8 @@ const SideBarItem = styled(NavItem)`
  font-weight:bold;
  letter-spacing:1.5px;
  margin-bottom:10px;
+ cursor:pointer;
+ z-index:1000;
 
  display:flex;
  justify-content:center;
@@ -344,28 +346,41 @@ const Header = () => {
                      
                     >
                         <SideBarItem>
-                            Home
+                            <Link href="/">
+                                Home
+                            </Link>
+                        </SideBarItem>
+
+                        <SideBarItem>
+                            <Link to='/thenearfall'>
+                            The NearFall
+                            </Link>
                         </SideBarItem>
                         <SideBarItem>
-                        The NearFall
+                            <Link to='/calendar'>
+                            Calendar
+                            </Link>
                         </SideBarItem>
                         <SideBarItem>
-                        Rates
+                            <Link to='/thecrew'>
+                            The Crew
+                            </Link>
                         </SideBarItem>
                         <SideBarItem>
-                        Calendar
+                            <Link to='/policies'>
+                            Policies
+                            </Link>
                         </SideBarItem>
                         <SideBarItem>
-                        The Crew
+                            <Link to='/gallery'>
+                            Gallery
+                            </Link>
                         </SideBarItem>
+                        
                         <SideBarItem>
-                        Policies
-                        </SideBarItem>
-                        <SideBarItem>
-                        Gallery
-                        </SideBarItem>
-                        <SideBarItem>
-                        Contact
+                            <Link to='/contact'>
+                                Contact
+                            </Link>
                         </SideBarItem>
                         <Dropdown
                                 nav
@@ -393,6 +408,7 @@ const Header = () => {
                     </SideBar>
                 }
                 </AnimatePresence>
+
             </NBar>
         </div>
     )

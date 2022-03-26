@@ -14,7 +14,7 @@ const Row = styled.div`
     @media all and (max-width:1300px){
         display:flex;
         justify-content: flex-start;
-        flex-direction: column;
+        flex-direction: column-reverse;
         margin-right:auto;
     }
 `
@@ -29,7 +29,17 @@ const HeroContainer = styled.div`
 
     @media all and (max-width:1300px){
         margin:auto;
-        width:90%
+        height:35vh;
+        width:80%;
+    }
+
+    @media all and (max-width:1024px){
+        margin-top:5%;
+        height:60vh;
+    }
+
+    @media all and (max-width:650px){
+        margin-top:10%;
     }
 `
 
@@ -39,22 +49,71 @@ const InstagramContainer=styled(motion.div)`
     width:40rem;
     justify-content: center;
     flex-direction: column;
-    margin-right:auto;
+    margin:auto;
     
     @media all and (max-width:1300px){
         margin:auto;
         height:50vh;
     }
+
+    @media all and (max-width:1024px){
+        margin-top:10%;
+    }
+
+    @media all and (max-width:650px){
+        height:20rem;
+        width:35rem;
+    }
+
+    @media all and (max-width:565px){
+        height:15rem;
+        width:20rem;
+    }
+
+    @media all and (max-width:375px){
+        height:10rem;
+        width:16rem;
+        
+    }
 `
 
 const HeroHeaderText = styled(motion.h1)`
     color:white;
+    letter-spacing:1px;
     
+
+    @media all and (max-width:930px){
+        font-size:3.5rem;
+    }
+    
+    @media all and (max-width:800px){
+        font-size:3rem;
+    }
+    
+    @media all and (max-width:690px){
+        font-size:2rem;
+    }
+
+    @media all and (max-width:490px){
+        font-size:2rem;
+    }
+
+    @media all and (max-width:398px){
+        font-size:1.5rem;
+    }
 `
 
 const HeroText = styled(motion.p)`
     color:white;
     font-size:20px;
+
+    @media all and (max-width:490px){
+        font-size:1rem;
+    }
+
+    @media all and (max-width:398px){
+        font-size: 0.8 rem;
+    }
 `
 
 const CallToActionButton = styled(motion.button)`
@@ -89,8 +148,9 @@ const ButtonRow = styled.div`
  display:flex;
  justify-content:center;
  align-items:flex-start;
-
 `
+
+
 
 const Gallery = () => {
 
@@ -106,7 +166,7 @@ const Gallery = () => {
     return <>
     <motion.div >
     <Row>
-    <HeroContainer className='d-flex justify-content-center align-items-start '>
+    <HeroContainer className='d-flex justify-content-center align-items-start'>
             <HeroHeaderText className='display-1'>
                 <strong>NearFall Fishing Charters</strong>
             </HeroHeaderText>

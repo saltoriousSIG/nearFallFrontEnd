@@ -4,7 +4,7 @@ import { Card, Col }  from 'reactstrap';
 const Jumbotron = styled(Card)`
   background-color: transparent;
   height: auto;
-  margin: 60px auto;
+  margin:auto;
   width: 75%;
   border:none;
   padding: 15px;
@@ -16,6 +16,7 @@ const Title = styled.h1`
   color: white;
   text-decoration: underline;
   font-family: 'Poppins', sans-serif;
+
 `;
 
 
@@ -37,6 +38,21 @@ const TextNormal = styled.p`
   font-family: 'Poppins', sans-serif;
   display: inline;
   letter-spacing:0.7px;
+  font-size:1rem;
+ 
+
+  @media all and (max-width:800px){
+    font-size:0.8rem;
+  }
+`;
+
+const TextNormalIndent = styled.p`
+  color: white;
+  text-align:; 
+  font-family: 'Poppins', sans-serif;
+  display: inline;
+  letter-spacing:0.7px;
+  text-indent: 50px;
 
   @media all and (max-width:800px){
     font-size:0.8rem;
@@ -74,6 +90,7 @@ const Styled = {
     Title,
     PageCol,
     Container,
+    TextNormalIndent
 }
 
 export default Styled;
