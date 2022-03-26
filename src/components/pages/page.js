@@ -5,7 +5,7 @@ import Footer from '../footer/footer';
 import { Outlet } from 'react-router';
 
 const MainPage = styled.div`
-  height: 100%;
+  height: 100vh;
   width: 100%;
   background: url(assets/img/background1.jpg) no-repeat center;
 `;
@@ -15,7 +15,7 @@ const MainContent = styled.div`
   width: 100%;
   border:1px solid transparent;
   position:relative;
-  top:100px;
+  top: 100px;
 `;
 
 const Page = () => {

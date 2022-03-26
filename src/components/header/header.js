@@ -23,7 +23,7 @@ const Logo = styled.img`
     height: 75px;
     width: 100px;
 
-    @media all and (max-width:800px){
+    @media all and (max-width:1024px){
         height: 50px;
         width: 60px;
     }
@@ -31,6 +31,8 @@ const Logo = styled.img`
 
 const NavMenuItems = styled.div`
   display: flex;
+  font-size: 22px !important;
+ 
 `;
 
 const NavMenuItemsContainer = styled.div`
@@ -47,7 +49,7 @@ const NavSocialItems = styled.div`
     padding-left: 12px;
   }
 
-  @media all and (max-width:800px){
+  @media all and (max-width:1024px){
       i {
           display:none;
       }
@@ -59,14 +61,14 @@ const NavSocialItems = styled.div`
 `;
 
 const Link = styled(NavLink)`
-  font-size: 18px !important;
+  font-size: 22px !important;
   color: black;
   &:hover {
       background-color: rgba(0, 0, 0, 0.25);
       color:black;
   }
 
-  @media all and (max-width:1650px){
+  @media all and (max-width:1024px){
       display:none;
   }
 `;
@@ -76,7 +78,7 @@ const HeaderButton = styled.button`
   background: transparent;
   font-weight: bold;
 
-  @media all and (max-width:800px){
+  @media all and (max-width:1024px){
       font-size:0.8rem;
   }
 `;
@@ -86,7 +88,7 @@ const ButtonContainer = styled.div`
   align-items: center;
   justify-content: center;
 
-  @media all and (max-width: 800px){
+  @media all and (max-width: 1024px){
       display:none;
   }
 `;
@@ -105,7 +107,7 @@ const HeadlineText1 = styled.h1`
         font-size:1.5rem;
     }
 
-    @media all and (max-width:1100px){
+    @media all and (max-width:1024px){
         display:none;
     }
 `;
@@ -125,7 +127,7 @@ font-family: 'Ubuntu', sans-serif;
     font-size:1.5rem;
 }
 
-@media all and (max-width:1100px){
+@media all and (max-width:1024px){
     display:none;
 }
 `
@@ -144,10 +146,11 @@ const NBar = styled(Navbar)`
   background-color:#E6E6E6;
   position:fixed;
   height: fit-content;
+  padding: 25px;
   width:100%;
   z-index:1;
 
-  @media all and (max-width: 800px){
+  @media all and (max-width: 1024px){
       display:flex;
       justify-content:center;
       align-items:center;
@@ -162,9 +165,9 @@ const NavDropDown = styled.button`
     color:black;
     font-size:2rem;
     display:none;
-    z-index:1000;
+    z-index: 1000;
 
-    @media all and (max-width: 1650px){
+    @media all and (max-width: 1024px){
         display:block;
     }
 `
@@ -182,7 +185,7 @@ const SideBar = styled(motion.Nav)`
   right:0;
   z-index:999;
 
-  @media all and (min-width: 1650px){
+  @media all and (min-width: 1024px){
     display:none;
  }
  
@@ -207,7 +210,7 @@ const SideBarItem = styled(NavItem)`
 
 const TripsAndRatesHide = styled.div`
 
-    @media all and (max-width: 1650px){
+    @media all and (max-width: 1024px){
     display:none;
  }
 `
