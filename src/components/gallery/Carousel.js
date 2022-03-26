@@ -11,6 +11,47 @@ const CarouselImg = styled.img`
   height:25rem;
   width:40rem;
   border-radius:15px;
+  z-index:1;
+
+
+  @media all and (max-width:650px){
+    height:20rem;
+    width:35rem;
+  }
+
+  @media all and (max-width:565px){
+    height:15rem;
+    width:20rem;
+ }
+
+  @media all and (max-width:375px){
+    height:10rem;
+    width:16rem;
+  }
+`
+
+const CustomCarousel = styled(Carousel)`
+ height:25rem;
+ width:40rem;
+ border-radius:15px;
+
+ margin:auto;
+
+ @media all and (max-width:650px){
+   height:20rem;
+   width:35rem;
+  }
+
+  @media all and (max-width:565px){
+    height:15rem;
+    width:20rem;
+ }
+
+ @media all and (max-width:375px){
+  height:10rem;
+  width:16rem;
+  
+ }
 `
 
 const CarouselTest = () =>{
@@ -23,7 +64,7 @@ const CarouselTest = () =>{
 
     return(
         <>
-         <Carousel activeIndex={index} onSelect={handleSelect}>
+         <CustomCarousel activeIndex={index} onSelect={handleSelect} className='bg-primary'>
         <Carousel.Item>
         <CarouselImg
          src={boat}
@@ -50,7 +91,7 @@ const CarouselTest = () =>{
           <h3>Gray Trigger</h3>
         </Carousel.Caption>
       </Carousel.Item>
-    </Carousel>
+    </CustomCarousel>
         </>
     );
 }

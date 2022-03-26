@@ -37,8 +37,8 @@ export const NFCalendar = () => {
     }, []);
 
     return (
-        <GlobalStyle.Container className='mt-4'>
-            <GlobalStyle.Title>
+        <GlobalStyle.Container className='mt-5'>
+            <GlobalStyle.Title className='mb-5'>
                 Calendar
             </GlobalStyle.Title>
             <Cal id='calendar' ></Cal>
