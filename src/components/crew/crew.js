@@ -43,9 +43,7 @@ const BackDrop = styled.div`
         width: 90%;
         margin: auto;
     } 
-
-
-`
+`;
 
 const BackDrop1 = styled.div`
     background-color:rgba(255, 255, 255, 0.1);
@@ -59,7 +57,6 @@ const BackDrop1 = styled.div`
     justify-content:center;
     align-items:center;
     margin: 20px auto;
-
     @media all and (max-width: 1024px){
         display:flex;
         flex-direction:column;
