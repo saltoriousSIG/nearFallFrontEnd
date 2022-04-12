@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import boat from '../../assets/img/boat.png';
 import styled from 'styled-components';
 import { Col, Row, } from 'reactstrap';
 import GlobalStyle from '../common/globalstyle/global.style';
+import CarouselComponent from '../common/carousel/Carousel';
+import { Carousel } from 'react-bootstrap';
 
 const Image = styled.img`
   border-radius: 10px;
@@ -14,8 +16,14 @@ const Image = styled.img`
     width: 90%;
     margin-bottom: 30px;
   } 
-  
 `;
+
+const CarouselTextItem = styled.span`
+  margin: auto;
+  color: white;
+  margin-top: 60px;
+`;
+
 
 const Text = styled(GlobalStyle.Text)`
   line-height: 30px;
@@ -72,11 +80,29 @@ const PageCol = styled(Col)`
 `
 
 export const VesselInfo = () => {
+
+  const items = useMemo(() => {
+    return [
+      <CarouselTextItem>
+        Our new boat is a 35' custom Donelle. She has a 350 HP Cummins diesel engine. Her design allows for more than enough fishing room for everyone on board as she has a 14 ft beam and a large deck space. The vessel has a spacious, fully enclosed cabin that can keep you warm and dry in between fishing spots.
+      </CarouselTextItem>,
+      <CarouselTextItem>
+        The Nearfall is equipped with the top-of-the-line electronics to make sailing safe, efficient and precise. She comes with dual fish finders, networked with GPS and Radar, 2 VHF radios, Sirius Weather and the latest USCG safety equipment. We have self-inflating life jackets, EPIRBs, and a liferaft. Your safety is our number one priority when sailing with the Nearfall team.
+      </CarouselTextItem>,
+      <CarouselTextItem>
+        The vessel’s cabin has a comfortable dinette area, refrigerator, microwave and coffee station as well as large forward bunks.
+      </CarouselTextItem>,
+      <CarouselTextItem>
+        The Nearfall team spares no expense with our fishing gear. All of our rods are custom-built and are brand new in 2022. We have both conventional and spinning rod setups available depending on your preference and the type of fish we are targeting.
+      </CarouselTextItem>
+
+    ]
+  }, []);
   return (
     <Container>
       <PageRow>
         <PageCol>
-          <GlobalStyle.Title style={{marginBottom: '30px'}}>
+          <GlobalStyle.Title style={{ marginBottom: '30px' }}>
             A Day With NearFall
           </GlobalStyle.Title>
           <Image src={boat} alt='The Nearfall' />
@@ -88,27 +114,7 @@ export const VesselInfo = () => {
           <GlobalStyle.Title>
             The NearFall Specs
           </GlobalStyle.Title>
-          <GlobalStyle.TextNormal className=''>
-            <ul>
-              <li>
-                Our new boat is a 35' custom Donelle. She has a 350 HP Cummins diesel engine. Her design allows for more than enough fishing room for everyone on board as she has a 14 ft beam and a large deck space. The vessel has a spacious, fully enclosed cabin that can keep you warm and dry in between fishing spots.
-              </li>
-              <br />
-              <li>
-                The Nearfall is equipped with the top-of-the-line electronics to make sailing safe, efficient and precise. She comes with dual fish finders, networked with GPS and Radar, 2 VHF radios, Sirius Weather and the latest USCG safety equipment. We have self-inflating life jackets, EPIRBs, and a liferaft. Your safety is our number one priority when sailing with the Nearfall team.
-              </li>
-              <br />
-              <li>
-                The vessel’s cabin has a comfortable dinette area, refrigerator, microwave and coffee station as well as large forward bunks.
-              </li>
-              <br />
-              <li>
-                The Nearfall team spares no expense with our fishing gear. All of our rods are custom-built and are brand new in 2022. We have both conventional and spinning rod setups available depending on your preference and the type of fish we are targeting.
-              </li>
-              <br />
-
-            </ul>
-          </GlobalStyle.TextNormal>
+          <CarouselComponent items={items} height={275} />
         </PageCol>
       </PageRow>
     </Container>

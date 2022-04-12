@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { Row, Col } from 'reactstrap';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
-import CarouselTest from './Carousel';
-
+import CarouselComponent from "../common/carousel/Carousel";
+import dzug from '../../assets/img/dzug.jpeg';
+import facas from '../../assets/img/facas.jpeg';
+import captain from '../../assets/img/elcaptain.jpeg';
+import fiore from '../../assets/img/petefiore.jpeg';
+import { useMatch, useNavigate } from "react-router";
 
 const PageRow = styled(Row)`
     display:flex;
@@ -17,6 +21,16 @@ const PageRow = styled(Row)`
         margin-top:0;
     }
 `;
+
+const CarouselImg = styled.img`
+  height: auto;
+  border-radius: 10px;
+  z-index: 1;
+  max-height: 500px;
+  width: 100%;
+  object-fit: cover;
+`;
+
 
 const PageCol = styled(Col)`
   width: 48%;
@@ -111,6 +125,17 @@ const HomePage = () => {
         }
     }
 
+    const navigate = useNavigate();
+
+    const items = useMemo(() => {
+        return [ 
+            <CarouselImg src={dzug} />,
+            <CarouselImg src={captain} />,
+            <CarouselImg src={fiore} />,
+            <CarouselImg src={facas} />
+        ]
+    }, []);
+    
     return (
         <motion.div style={{ height: '100%' }}>
             <PageRow>
@@ -126,18 +151,18 @@ const HomePage = () => {
                             Nearfall Fishing Charters is the place for you.
                         </HeroText>
                         <ButtonRow >
-                            <CallToActionButton>
+                            <CallToActionButton onClick={() => navigate('/calendar')}>
                                 View Calendar
                             </CallToActionButton>
-                            <CallToActionButton>
-                                View Trips
+                            <CallToActionButton onClick={() => navigate('/thenearfall')}>
+                               The Nearfall
                             </CallToActionButton>
                         </ButtonRow>
                     </HeroContainer>
                 </PageCol>
                 <PageCol>
                     <InstagramContainer>
-                        <CarouselTest className='shadow' />
+                        <CarouselComponent items={items} />
                     </InstagramContainer>
                 </PageCol>
             </PageRow>
