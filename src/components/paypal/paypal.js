@@ -12,8 +12,12 @@ const Paypal = (props) => {
 
     const handlePolicyAccept = (e) => {
         e.preventDefault();
-        swal('Attention', 'You dumb mfs need to accept this privacy polcy n shit', 'info', {
-            buttons: ['Cancel', 'Accept']
+        const link = document.createElement('a');
+        link.innerHTML = 'Privacy Policy';
+        link.setAttribute('href', 'https://www.nearfallfishingcharters.com/policies')
+        swal(`Please confirm that you have reviewed our`, 'info', {
+            buttons: ['Cancel', 'Confirm'],
+            content: link
         }).then((confirm) => {
             if (confirm) { 
                 setAcceptPolicy(true);
