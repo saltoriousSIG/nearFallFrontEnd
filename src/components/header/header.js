@@ -226,7 +226,6 @@ const Header = () => {
     const navigate = useNavigate();
 
     const goToPage = (tripName) => {
-        console.log(tripName)
         navigate(`/trip/${tripName}`);
     }
 
@@ -371,33 +370,16 @@ const Header = () => {
                             </a>
                         </SideBarItem>
                         <SideBarItem>
+                            <a href='/tripList'>
+                                Trips
+                            </a>
+                        </SideBarItem>
+                        <SideBarItem>
                             <a href='/contact'>
                                 Contact
                             </a>
                         </SideBarItem>
-                        <Dropdown
-                                nav
-                                isOpen={isOpen}
-                                toggle={toggle}
-                            >
-                                <DropdownToggle
-                                    caret
-                                    nav
-                                >
-                                   Trips &#38; Rates
-                                </DropdownToggle>
-                                <DropdownMenu>
-                                    {
-                                        Object.keys(trips).map((x, i) => {
-                                            return ( 
-                                                <button key={i} onClick={() => goToPage(x)}>
-                                                    {x}
-                                                </button>
-                                            )
-                                        })
-                                    }
-                                </DropdownMenu>
-                            </Dropdown>
+                       
                     </SideBar>
                 }
                 </AnimatePresence>

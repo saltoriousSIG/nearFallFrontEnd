@@ -18,6 +18,9 @@ const Container = styled(GlobalStyle.Container)`
   &.vertical {
       flex-direction: column;
   }
+  @media all and (max-width:1024px){
+    flex-direction: column;
+  }
 `
 
 const ImageContainer = styled.div`
