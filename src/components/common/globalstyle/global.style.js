@@ -80,7 +80,11 @@ const Container = styled.div`
   justify-content: center;
   &.row {
     flex-direction: row;
+    @media all and (max-width:1024px){
+      flex-direction: column;
+    }
   }
+  
 `;
 
 

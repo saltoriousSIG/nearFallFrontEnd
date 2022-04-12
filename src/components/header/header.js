@@ -226,6 +226,7 @@ const Header = () => {
     const navigate = useNavigate();
 
     const goToPage = (tripName) => {
+        console.log(tripName)
         navigate(`/trip/${tripName}`);
     }
 
@@ -344,35 +345,35 @@ const Header = () => {
                      
                     >
                         <SideBarItem>
-                            <Link href="/">
+                            <a href="/">
                                 Home
-                            </Link>
+                            </a>
                         </SideBarItem>
 
                         <SideBarItem>
-                            <Link to='/thenearfall'>
+                            <a href='/thenearfall'>
                             The NearFall
-                            </Link>
+                            </a>
                         </SideBarItem>
                         <SideBarItem>
-                            <Link to='/calendar'>
+                            <a href='/calendar'>
                             Calendar
-                            </Link>
+                            </a>
                         </SideBarItem>
                         <SideBarItem>
-                            <Link to='/thecrew'>
+                            <a href='/thecrew'>
                             The Crew
-                            </Link>
+                            </a>
                         </SideBarItem>
                         <SideBarItem>
-                            <Link to='/policies'>
+                            <a href='/policies'>
                             Policies
-                            </Link>
+                            </a>
                         </SideBarItem>
                         <SideBarItem>
-                            <Link to='/contact'>
+                            <a href='/contact'>
                                 Contact
-                            </Link>
+                            </a>
                         </SideBarItem>
                         <Dropdown
                                 nav
@@ -389,9 +390,9 @@ const Header = () => {
                                     {
                                         Object.keys(trips).map((x, i) => {
                                             return ( 
-                                                <DropdownItem key={i} onClick={() => goToPage(x)}>
+                                                <button key={i} onClick={() => goToPage(x)}>
                                                     {x}
-                                                </DropdownItem>
+                                                </button>
                                             )
                                         })
                                     }

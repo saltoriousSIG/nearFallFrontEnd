@@ -42,7 +42,7 @@ const Container = styled.div`
   padding: 20px;
   padding-top: 100px;
   @media all and (max-width: 1024px){
-    padding-top: 25px;
+    padding-top: 155px;
   } 
 `;
 
@@ -114,7 +114,7 @@ export const VesselInfo = () => {
           <GlobalStyle.Title>
             The NearFall Specs
           </GlobalStyle.Title>
-          <CarouselComponent items={items} height={275} />
+          <CarouselComponent items={items} height={200} />
         </PageCol>
       </PageRow>
     </Container>

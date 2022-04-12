@@ -9,21 +9,33 @@ const Container = styled.div`
   min-width: 599px;
   height: auto; 
   max-height: 400px;
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none;
+  }
   min-height: ${(props) => {
-    if (props.height) { 
+    if (props.height) {
       return props.height + 'px'
-    } 
+    }
     return '399px';
   }};
+  @media screen and (max-width: 1024px) { 
+    max-width: 100%;
+    min-width: 100%;
+  }
   .carousel-inner { 
     min-width: 599px;
     max-height: 400px;
     min-height: ${(props) => {
-      if (props.height) { 
-        return props.height + 'px'
-      } 
-      return '399px';
-    }};
+    if (props.height) {
+      return props.height + 'px'
+    }
+    return '399px';
+  }};
+    @media screen and (max-width: 1024px) { 
+      max-width: 100%;
+      min-width: 100%;
+    }
   }
 `;
 

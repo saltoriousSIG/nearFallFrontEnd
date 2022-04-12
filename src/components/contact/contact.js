@@ -1,6 +1,7 @@
 import React from "react";
 import GlobalStyle from '../common/globalstyle/global.style';
 
+
 const Contact = () => {
     return (
         <GlobalStyle.Container className="row">
