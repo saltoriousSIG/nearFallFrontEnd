@@ -33,6 +33,12 @@ const TargetFishImage = styled(Image)`
   height: 75px;
 `;
 
+const BookTripButton = styled(Button)`
+  padding: 25px 50px;
+  font-size: 30px;
+  background: orange;
+`;
+
 
 
 export const TripDetails = (props) => {
@@ -67,10 +73,21 @@ export const TripDetails = (props) => {
 
     const onClickBook = () => {
         console.log(bookDetails)
-        const pageDataString = JSON.stringify(bookDetails);
+        const sendDetails = {
+            price: bookDetails.price,
+            calendarTitle: bookDetails.calendarTitle,
+            description: bookDetails.description,
+            source: bookDetails.source,
+            title: bookDetails.title,
+            tripDuration: bookDetails.tripDuration
+        }
+        console.log(sendDetails)
+        const pageDataString = JSON.stringify(sendDetails)
+        console.log(pageDataString)
         const encoded = btoa(unescape(encodeURIComponent(pageDataString)))
-        
-        // window.location = `http://localhost:3000/book-trip/${encoded}`;
+        console.log(encoded)
+        window.scrollTo(0,0);
+        window.location = `http://localhost:3000/book-trip/${encoded}`;
     }
 
     return (
@@ -83,6 +100,11 @@ export const TripDetails = (props) => {
                     })
                 }
             </ImageContainer>
+            <Container>
+                <BookTripButton onClick={onClickBook}>
+                    Book Now
+                </BookTripButton>
+            </Container>
             <GlobalStyle.Jumbotron>
                 <Container className='vertical'>
                     <GlobalStyle.Text>
@@ -165,11 +187,7 @@ export const TripDetails = (props) => {
                         )
                     }
                 </Container>
-                <Container>
-                    <Button onClick={onClickBook}>
-                        Book Now
-                    </Button>
-                </Container>
+
 
             </GlobalStyle.Jumbotron>
         </GlobalStyle.Container>

@@ -9,6 +9,13 @@ import captain from '../../assets/img/elcaptain.jpeg';
 import fiore from '../../assets/img/petefiore.jpeg';
 import { useMatch, useNavigate } from "react-router";
 
+
+const Container = styled.div`
+  @media screen and (max-width: 1024px) { 
+      padding-top: 75px;
+  }
+`;
+
 const PageRow = styled(Row)`
     display:flex;
     flex-direction:row;
@@ -78,7 +85,8 @@ const HeroText = styled(motion.p)`
 
 const CallToActionButton = styled(motion.button)`
   height: 100px;
-  width: 200px;
+  min-width: 200px;
+  width: fit-content;
   border-radius:10px;
   background-color:transparent;
   color: white !important;
@@ -135,9 +143,9 @@ const HomePage = () => {
             <CarouselImg src={facas} />
         ]
     }, []);
-    
+
     return (
-        <motion.div style={{ height: '100%' }}>
+        <Container style={{ height: '100%' }}>
             <PageRow>
                 <PageCol>
                     <HeroContainer>
@@ -166,7 +174,7 @@ const HomePage = () => {
                     </InstagramContainer>
                 </PageCol>
             </PageRow>
-        </motion.div>
+        </Container>
     )
 
 
