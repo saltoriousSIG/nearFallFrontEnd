@@ -15,7 +15,7 @@ const MainContent = styled.div`
   width: 100%;
   border:1px solid transparent;
   position:relative;
-  top: 100px;
+  top: 50px;
 `;
 
 const Page = () => {

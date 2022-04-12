@@ -9,6 +9,7 @@ import Crew from './components/crew/crew';
 import Policies from './components/policies/policies';
 import Contact from './components/contact/contact';
 import HomePage from './components/home/home';
+import BookTrip from './components/book/book';
 
 
 
@@ -27,6 +28,7 @@ function App() {
           <Route path='/thecrew' exact element={<Crew />} />
           <Route path='/policies' exact element={<Policies />} />
           <Route path='/contact' exact element={<Contact />} />
+          <Route path='/book-trip/:trip' exact element={<BookTrip />} /> 
         </Route>
       </Routes>
     </Router>

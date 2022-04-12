@@ -3,6 +3,8 @@ import { useParams } from "react-router";
 import GlobalStyle from '../common/globalstyle/global.style';
 import { trips } from "../../utils/trips";
 import styled from 'styled-components';
+import { useNavigate } from 'react-router';
+import { Button } from "reactstrap";
 
 
 const Image = styled(GlobalStyle.Image)`
@@ -39,6 +41,7 @@ export const TripDetails = (props) => {
         return trips[tripName];
     }, [tripName]);
 
+    const navigate = useNavigate();
 
     const { media, description, description2, price, tripTimes, tripDuration, details, targetCatch } = currentTrip || {};
 
@@ -53,8 +56,25 @@ export const TripDetails = (props) => {
     }, [details]);
 
 
+    const bookDetails = useMemo(() => {
+        return {
+            ...currentTrip,
+            source: 'booking',
+            title: tripName
+        }
+    }, [currentTrip]);
+
+
+    const onClickBook = () => {
+        console.log(bookDetails)
+        const pageDataString = JSON.stringify(bookDetails);
+        const encoded = btoa(unescape(encodeURIComponent(pageDataString)))
+        
+        // window.location = `http://localhost:3000/book-trip/${encoded}`;
+    }
+
     return (
-        <GlobalStyle.Container>
+        <GlobalStyle.Container style={{ paddingTop: '150px' }}>
             <GlobalStyle.Title style={{ marginTop: '20px' }}>{tripName}</GlobalStyle.Title>
             <ImageContainer>
                 {
@@ -134,7 +154,7 @@ export const TripDetails = (props) => {
 
 
                 </Container>
-                <Container style={{margin: '15px'}}>
+                <Container style={{ margin: '15px' }}>
                     {
                         (targetCatch && targetCatch.length > 0) && (
                             <Container>
@@ -144,6 +164,11 @@ export const TripDetails = (props) => {
                             </Container>
                         )
                     }
+                </Container>
+                <Container>
+                    <Button onClick={onClickBook}>
+                        Book Now
+                    </Button>
                 </Container>
 
             </GlobalStyle.Jumbotron>

@@ -63,11 +63,12 @@ export const trips = {
             maxOccupants: 6
         },
         price: {
-            deposit: 200,
+            deposit: 5,
             balance: 800
         },
         details:'Bring your own Jigs; Clam and Green Crabs provided; White leggers provided when available;',
         targetCatch:[blackfishTC],
+        calendarTitle: ['Blackfish/Bottom Fishing','Blackfish']
     },
     'Wreck Fishing Charters': {
         media: [codfish, wreckFishing],
@@ -83,6 +84,7 @@ export const trips = {
         },
         details: 'Bring your own Jigs; Clam provided; Sinkers & hooks provided;',
         targetCatch:[wreckTC, wreckTC1, wreckTC2, wreckTC3],
+        calendarTitle: ['Blackfish/Bottom Fishing','Bottom Fishing', 'Seabass/Bottom Fishing']
     },
     'Seabass Charters': {
         media: [seabass1, seabass2, seabass3],
@@ -98,6 +100,7 @@ export const trips = {
         },
         details: 'Clam provided; Bring your own Ava Jigs;',
         targetCatch:[seabassTC],
+        calendarTitle: ['Seabass/Striped Bass','seabass/bottom fishing']
     },
     'Striped Bass Charters -Spring and Fall': {
         media: [stripedBass1, stripedBass2],
@@ -118,6 +121,7 @@ export const trips = {
         },
         details: 'Snag hooks and hooks provided;Things to bring:; 6-7` Conventional and/or spinning Rod/Reel with 30-40lb test line.;Large Casting Bunker Spoons.; Casting spoons, Jigs, swimming plugs',
         targetCatch:[stripedBassTC],
+        calendarTitle: ['Seabass/Striped Bass', 'seabass/bottom fishing']
     },
     'Fluke (summer flounder) charters': {
         media: [fluke1, fluke2],
@@ -137,6 +141,7 @@ export const trips = {
         “BYOB&G”- Bring your own bucktails and GULP
         `,
         targetCatch:[flukeTC],
+        calendarTitle:['Fluke']
     },
     'Magic Hour Summer Special Fishing - Fishing and Fireworks Special':{
         media: [magicHour, fireworks],
@@ -153,6 +158,7 @@ export const trips = {
         },
         details: `All Bait and Tackle provided; BYOB&G;` ,
         targetCatch:[seabassTC, flukeTC, bluefishTC],
+        calendarTitle:['fishing and fireworks']
     },
     'October-The Mixed Bag Month': {
         media: [mixedBag, mixedBag1],
@@ -168,6 +174,7 @@ export const trips = {
         },
         details: `Crabs and Clam provided; Bring your own Blackfish Jigs;` ,
         targetCatch: [blackfishTC, bluefishTC, grayTrigger, porgieTC, seabassTC],
+        calendarTitle: ['bottom fishing']
     },
     'Sharking Charter': {
         media: [shark],
@@ -183,6 +190,7 @@ export const trips = {
         },
         details: `If we land a fish that the crew wishes to keep, we will have to bring it home asap to have weighed in. This decision is completely up to the paying customers.; If trip is canceled, deposit may be allocated for 2 inshore trips or moved to another date for sharking; All gear and bait provided;`,
         targetCatch:[sharktc1, sharktc2],
+        calendarTitle: null
     },
     'Midshore Tuna Charters': {
         media: [midShore, midShore1, midShore2, midShore3],
@@ -198,6 +206,7 @@ export const trips = {
         },
         details: `If trip is canceled, deposit may be allocated for 2 inshore trips or moved to another date for Midshore Tuna, Mahi and Meat trip, or Shark charter;All necessary gear provided;Recommend bringing your own selection of tuna jigs/plugs.;` ,
         targetCatch:[tunatc1, tunatc2, tunatc3],
+        calendarTitle: null
     },
     'Mahi and Meat Charter': {
         media: [mahi, mahi1, mahi2],
@@ -213,6 +222,7 @@ export const trips = {
         },
         details: `If trip is canceled, deposit may be allocated for 2 inshore trips or moved to another date for Midshore Tuna, Mahi and Meat trip, or Shark charter; All tackle and bait provided;`,
         targetCatch:[tunatc3, codTC, pollockTC, lingTC, flounderTC],
+        calendarTitle: null
     },
     'Inshore Speedsters': {
         media: [inshore, inshore1, inshore2, inshore3],
@@ -228,6 +238,7 @@ export const trips = {
         },
         details: `All tackle and bait provided;`,
         targetCatch:[bluefishTC,  spanishmacktc, albacoretc, bonitotc],
+        calendarTitle: null
     },
     'Evening Headboat Charters': {
         media: [dauntless, dauntless1, dauntless2],
@@ -244,5 +255,6 @@ export const trips = {
         },
         details: `All tackle and bait provided;Call for available trips and rates;`,
         targetCatch:[],
+        calendarTitle: null 
     }
 }

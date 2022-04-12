@@ -4,10 +4,11 @@ import googleCalendarPlugin from '@fullcalendar/google-calendar';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import GlobalStyle from '../common/globalstyle/global.style';
 import styled from 'styled-components';
+import { useNavigate } from 'react-router';
 
 
 const Container = styled(GlobalStyle.Container)`
-  padding-top: 50px;
+  padding-top: 150px;
 `;
 const Cal = styled.div`
   height: 100%;
@@ -33,6 +34,7 @@ const Cal = styled.div`
 
 
 export const NFCalendar = () => {
+    const navigate = useNavigate();
 
     useEffect(() => {
         const element = document.getElementById('calendar');
@@ -45,9 +47,25 @@ export const NFCalendar = () => {
             eventClick: function (event) {
                 event.jsEvent.cancelBubble = true;
                 event.jsEvent.preventDefault();
-                console.log(event);
-                const title = event.event._def.title;
-                alert(title);
+                const startTime = new Date(event.event._instance.range.start);
+
+                const timeStamp = (startTime.getTime());
+
+                const title = event.event._def.title.trim();
+
+                console.log(event.event)
+
+                const pageData = { 
+                    title,
+                    timeStamp,
+                    source: 'calendar',
+                    id: event.event._def.publicId
+                }
+
+                const pageDataString = JSON.stringify(pageData);
+                const encoded = btoa(pageDataString);
+                window.scrollTo(0,0)
+                navigate(`/book-trip/${encoded}`)
 
             },
             eventClassNames: function (args)  { 

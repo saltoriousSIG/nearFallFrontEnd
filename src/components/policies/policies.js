@@ -13,12 +13,17 @@ const UL = styled.ul`
 const Attention = styled.span`
   font-weight: 700;
   text-decoration: underline;
-`
+`;
+
+
+const Container = styled(GlobalStyle.Container)`
+  margin-top: 100px !important;
+`;
 
 
 const Policies = () => {
     return (
-        <GlobalStyle.Container className='mt-5'>
+        <Container className='mt-5'>
             <GlobalStyle.Title> Policies &#38; What to bring </GlobalStyle.Title>
             <GlobalStyle.Jumbotron>
                 <GlobalStyle.Container style={{ alignItems: 'flex-start' }}>
@@ -94,6 +99,25 @@ const Policies = () => {
                 </GlobalStyle.Container>
                 <GlobalStyle.Container style={{ alignItems: 'flex-start' }}>
                     <GlobalStyle.Title style={{ color: 'white' }}>
+                        Gas Surcharge
+                    </GlobalStyle.Title>
+                    <UL>
+                        <li>
+                            Unfortunately, due to the considerable increase in gas prices, your charter may be subject to a gas surcharge
+                        </li>
+                        <li>
+                            We will keep the surcharge fair for you and your party and will only increase the price based on the prices of fuel that week; price of fuel can vary from week to week
+                        </li>
+                        <li>
+                            Please bare with us while we deal with these inflated expenses; we look forward to having you out with us
+                        </li>
+                        <li>
+                            If a gas surcharge needs to be applied, you will be made aware 24 hours before the day of the trip
+                        </li>
+                    </UL>
+                </GlobalStyle.Container>
+                <GlobalStyle.Container style={{ alignItems: 'flex-start' }}>
+                    <GlobalStyle.Title style={{ color: 'white' }}>
                         What to Bring
                     </GlobalStyle.Title>
                     <UL>
@@ -103,7 +127,7 @@ const Policies = () => {
                         <li>
                             We have spinning and conventional rod/reel set ups free to use on charters
                             You will be fully responsible for the rod and reel at the rail
-                            <GlobalStyle.Container style={{ alignItems: 'flex-start', marginLeft: '10px'}}>
+                            <GlobalStyle.Container style={{ alignItems: 'flex-start', marginLeft: '10px' }}>
                                 <Attention>$350 for spinning set up if lost</Attention>
                                 <Attention>$335 for conventional set up if lost </Attention>
                             </GlobalStyle.Container>
@@ -136,7 +160,7 @@ const Policies = () => {
                         </li>
                         <li>
                             If you are prone to motion sickness, please take medication before the trip if it's needed
-                            <GlobalStyle.Container style={{ alignItems: 'flex-start', marginLeft:'10px' }}>
+                            <GlobalStyle.Container style={{ alignItems: 'flex-start', marginLeft: '10px' }}>
                                 <Attention>Scapolamine</Attention>
                                 <Attention>Dramamine</Attention>
                             </GlobalStyle.Container>
@@ -167,7 +191,7 @@ const Policies = () => {
                     </UL>
                 </GlobalStyle.Container>
             </GlobalStyle.Jumbotron>
-        </GlobalStyle.Container>
+        </Container>
     )
 }
 

@@ -31,7 +31,7 @@ const Logo = styled.img`
 
 const NavMenuItems = styled.div`
   display: flex;
-  font-size: 22px !important;
+  font-size: 18px !important;
  
 `;
 
@@ -61,7 +61,7 @@ const NavSocialItems = styled.div`
 `;
 
 const Link = styled(NavLink)`
-  font-size: 22px !important;
+  font-size: 18px !important;
   color: black;
   &:hover {
       background-color: rgba(0, 0, 0, 0.25);
@@ -148,7 +148,7 @@ const NBar = styled(Navbar)`
   height: fit-content;
   padding: 25px;
   width:100%;
-  z-index:1;
+  z-index:10000;
 
   @media all and (max-width: 1024px){
       display:flex;
@@ -297,11 +297,6 @@ const Header = () => {
                                 </Link>
                             </NavItem>
                             <NavItem>
-                                <Link href="/gallery">
-                                    Gallery
-                                </Link>
-                            </NavItem>
-                            <NavItem>
                                 <Link href="/contact">
                                     Contact Us
                                 </Link>
@@ -374,12 +369,6 @@ const Header = () => {
                             Policies
                             </Link>
                         </SideBarItem>
-                        <SideBarItem>
-                            <Link to='/gallery'>
-                            Gallery
-                            </Link>
-                        </SideBarItem>
-                        
                         <SideBarItem>
                             <Link to='/contact'>
                                 Contact
