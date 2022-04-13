@@ -103,7 +103,7 @@ export const VesselInfo = () => {
       <PageRow>
         <PageCol>
           <GlobalStyle.Title style={{ marginBottom: '30px' }}>
-            A Day With NearFall
+            A Day on the Nearfall
           </GlobalStyle.Title>
           <Image src={boat} alt='The Nearfall' />
           <Text>
