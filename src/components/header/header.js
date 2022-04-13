@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-import { 
-    Navbar, 
-    NavbarToggler, 
-    Nav, 
+import {
+    Navbar,
+    NavbarToggler,
+    Nav,
     NavItem,
-    NavLink, 
+    NavLink,
     NavbarBrand,
     Dropdown,
     DropdownToggle,
     DropdownMenu,
-    DropdownItem 
+    DropdownItem
 } from 'reactstrap';
 import logo from '../../assets/img/nf_logo.png';
 import styled from 'styled-components';
@@ -31,7 +31,7 @@ const Logo = styled.img`
 
 const NavMenuItems = styled.div`
   display: flex;
-  font-size: 18px !important;
+  font-size: 13px !important;
  
 `;
 
@@ -61,7 +61,7 @@ const NavSocialItems = styled.div`
 `;
 
 const Link = styled(NavLink)`
-  font-size: 18px !important;
+  font-size: 13px !important;
   color: black;
   &:hover {
       background-color: rgba(0, 0, 0, 0.25);
@@ -104,7 +104,7 @@ const HeadlineText1 = styled.h1`
     }
 
     @media all and (max-width:1650px){
-        font-size:1.5rem;
+        font-size:1.2rem;
     }
 
     @media all and (max-width:1024px){
@@ -112,7 +112,7 @@ const HeadlineText1 = styled.h1`
     }
 `;
 
-const HeadLineText2 =styled.h1`
+const HeadLineText2 = styled.h1`
 color: black;
 letter-spacing:1px;
 border-top:2px solid black;
@@ -124,7 +124,7 @@ font-family: 'Ubuntu', sans-serif;
 }
 
 @media all and (max-width:1650px){
-    font-size:1.5rem;
+    font-size:1.2rem;
 }
 
 @media all and (max-width:1024px){
@@ -146,7 +146,7 @@ const NBar = styled(Navbar)`
   background-color:#E6E6E6;
   position:fixed;
   height: fit-content;
-  padding: 25px;
+  padding: 10px;
   width:100%;
   z-index:10000;
 
@@ -230,18 +230,18 @@ const Header = () => {
     }
 
     const sideBarVariant = {
-        hidden:{
-            opacity:0,
-            x:1200
+        hidden: {
+            opacity: 0,
+            x: 1200
         },
-        visible:{
-            opacity:1,
-            x:0
+        visible: {
+            opacity: 1,
+            x: 0
         },
-        exit:{transition:{ duration: 1}, x:1200 }
+        exit: { transition: { duration: 1 }, x: 1200 }
     }
 
-   
+
 
 
     return (
@@ -252,8 +252,8 @@ const Header = () => {
                 <Brand href="/">
                     <Logo src={logo} />
                     <BrandName className='d-flex flex-row'>
-                    <HeadlineText1 className='ms-2 pe-3'><strong>NEARFALL</strong></HeadlineText1>
-                    <HeadLineText2 className='ps-3'>Fishing Charter</HeadLineText2>
+                        <HeadlineText1 className='ms-2 pe-3'><strong>NEARFALL</strong></HeadlineText1>
+                        <HeadLineText2 className='ps-3'>Fishing Charters</HeadLineText2>
                     </BrandName>
                 </Brand>
                 <NavbarToggler onClick={function noRefCheck() { }} />
@@ -265,8 +265,12 @@ const Header = () => {
                             {/* <HeaderButton>Belmar Fishing Charters</HeaderButton> */}
                             <HeaderButton><u>905 NJ-35, S Belmar NJ</u></HeaderButton>
                         </ButtonContainer>
-                        <i className="fa-brands fa-instagram fa-2x"></i>
-                        <i className="fa-brands fa-facebook fa-2x"></i>
+                        <a href='https://www.facebook.com/NearfallFishing'>
+                            <i className="fa-brands fa-facebook fa-2x"></i>
+                        </a>
+                        <a href='https://instagram.com/nearfall_fishing_charters?igshid=YmMyMTA2M2Y='>
+                            <i className="fa-brands fa-instagram fa-2x"></i>
+                        </a>
                     </NavSocialItems>
                     <NavMenuItems className='pt-1'>
                         <Nav >
@@ -280,7 +284,7 @@ const Header = () => {
                                     The Nearfall
                                 </Link>
                             </NavItem>
-                            
+
                             <NavItem>
                                 <Link href="/calendar">
                                     Calendar
@@ -302,86 +306,86 @@ const Header = () => {
                                 </Link>
                             </NavItem>
                             <TripsAndRatesHide>
-                            <Dropdown
-                                nav
-                                isOpen={isOpen}
-                                toggle={toggle}
-                            >
-                                <DropdownToggle
-                                    caret
+                                <Dropdown
                                     nav
+                                    isOpen={isOpen}
+                                    toggle={toggle}
                                 >
-                                   Trips &#38; Rates
-                                </DropdownToggle>
-                                <DropdownMenu>
-                                    {
-                                        Object.keys(trips).map((x, i) => {
-                                            return ( 
-                                                <DropdownItem key={i} onClick={() => goToPage(x)}>
-                                                    {x}
-                                                </DropdownItem>
-                                            )
-                                        })
-                                    }
-                                </DropdownMenu>
-                            </Dropdown>
+                                    <DropdownToggle
+                                        caret
+                                        nav
+                                    >
+                                        Trips &#38; Rates
+                                    </DropdownToggle>
+                                    <DropdownMenu>
+                                        {
+                                            Object.keys(trips).map((x, i) => {
+                                                return (
+                                                    <DropdownItem key={i} onClick={() => goToPage(x)}>
+                                                        {x}
+                                                    </DropdownItem>
+                                                )
+                                            })
+                                        }
+                                    </DropdownMenu>
+                                </Dropdown>
                             </TripsAndRatesHide>
                         </Nav>
                     </NavMenuItems>
                 </NavMenuItemsContainer>
-                <NavDropDown onClick={()=>{setSideBar(!sideBar)}}>
-                        <IoMenu className='mb-2'/>
+                <NavDropDown onClick={() => { setSideBar(!sideBar) }}>
+                    <IoMenu className='mb-2' />
                 </NavDropDown>
-                
-                <AnimatePresence exitBeforeEnter>
-                {sideBar && 
-                    <SideBar
-                     initial='hidden'
-                     animate='visible'
-                     exit='exit'
-                     variants={sideBarVariant}
-                     transition={{ duration:1 }}
-                     
-                    >
-                        <SideBarItem>
-                            <a href="/">
-                                Home
-                            </a>
-                        </SideBarItem>
 
-                        <SideBarItem>
-                            <a href='/thenearfall'>
-                            The NearFall
-                            </a>
-                        </SideBarItem>
-                        <SideBarItem>
-                            <a href='/calendar'>
-                            Calendar
-                            </a>
-                        </SideBarItem>
-                        <SideBarItem>
-                            <a href='/thecrew'>
-                            The Crew
-                            </a>
-                        </SideBarItem>
-                        <SideBarItem>
-                            <a href='/policies'>
-                            Policies
-                            </a>
-                        </SideBarItem>
-                        <SideBarItem>
-                            <a href='/tripList'>
-                                Trips
-                            </a>
-                        </SideBarItem>
-                        <SideBarItem>
-                            <a href='/contact'>
-                                Contact
-                            </a>
-                        </SideBarItem>
-                       
-                    </SideBar>
-                }
+                <AnimatePresence exitBeforeEnter>
+                    {sideBar &&
+                        <SideBar
+                            initial='hidden'
+                            animate='visible'
+                            exit='exit'
+                            variants={sideBarVariant}
+                            transition={{ duration: 1 }}
+
+                        >
+                            <SideBarItem>
+                                <a href="/">
+                                    Home
+                                </a>
+                            </SideBarItem>
+
+                            <SideBarItem>
+                                <a href='/thenearfall'>
+                                    The NearFall
+                                </a>
+                            </SideBarItem>
+                            <SideBarItem>
+                                <a href='/calendar'>
+                                    Calendar
+                                </a>
+                            </SideBarItem>
+                            <SideBarItem>
+                                <a href='/thecrew'>
+                                    The Crew
+                                </a>
+                            </SideBarItem>
+                            <SideBarItem>
+                                <a href='/policies'>
+                                    Policies
+                                </a>
+                            </SideBarItem>
+                            <SideBarItem>
+                                <a href='/tripList'>
+                                    Trips
+                                </a>
+                            </SideBarItem>
+                            <SideBarItem>
+                                <a href='/contact'>
+                                    Contact
+                                </a>
+                            </SideBarItem>
+
+                        </SideBar>
+                    }
                 </AnimatePresence>
 
             </NBar>

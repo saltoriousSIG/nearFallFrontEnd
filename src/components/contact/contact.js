@@ -4,11 +4,11 @@ import GlobalStyle from '../common/globalstyle/global.style';
 
 const Contact = () => {
     return (
-        <GlobalStyle.Container className="row">
-            <GlobalStyle.Container style={{maxWidth: '45%', padding: '75px'}}>
+        <GlobalStyle.Container>
+            <GlobalStyle.Container style={{maxWidth: '40%', padding: '75px'}}>
                 <iframe title='contact-form' src="https://docs.google.com/forms/d/e/1FAIpQLSefmLN78MVcFook-Eyi5ur2-R6HIaZZZcfVFrHPVKPP1yzZFg/viewform?embedded=true" width="640" height="947" frameborder="0">Loading…</iframe>
             </GlobalStyle.Container>
-            <GlobalStyle.Container style={{maxWidth: '45%'}}>
+            <GlobalStyle.Container style={{maxWidth: '40%'}}>
                 <GlobalStyle.Title>Nearfall Fishing Charters</GlobalStyle.Title>
                 <GlobalStyle.Text>Boat Address: 905 NJ-35, Belmar, NJ 07719.</GlobalStyle.Text>
                 <GlobalStyle.Text>Slip J 2</GlobalStyle.Text>
