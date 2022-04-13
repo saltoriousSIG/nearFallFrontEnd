@@ -2,6 +2,12 @@ import React, { useState } from 'react';
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import swal from 'sweetalert';
 import { Button } from 'reactstrap';
+import styled from 'styled-components';
+
+const ActionButton = styled(Button)`
+  background-color: #017BFE;
+`;
+
 
 const Paypal = (props) => {
     const {
@@ -25,7 +31,6 @@ const Paypal = (props) => {
         })
     }
 
-    console.log(acceptPolicy)
 
     if (acceptPolicy) { 
         return (
@@ -61,7 +66,7 @@ const Paypal = (props) => {
             </PayPalScriptProvider>
         )
     }
-    return <Button className='btn btn-primary' onClick={handlePolicyAccept}>view/accept polcy</Button>
+    return <ActionButton className='btn btn-primary' onClick={handlePolicyAccept}>View/Accept policy</ActionButton>
     
 }
 

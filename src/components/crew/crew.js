@@ -101,20 +101,26 @@ const Crew = () => {
             </BackDrop1>
 
             <BackDrop1>
-                <Image src={deckhand1} />
-                <Image src={deckhand2} />
                 <GlobalStyle.Container>
-                    <GlobalStyle.Title style={{ color: 'lightgray', textDecoration: 'none', fontSize: '22px' }}>
-                        Captain/Deckhand Mike Gudewitz,
-                    </GlobalStyle.Title>
-                    <GlobalStyle.Title className='pb-5' style={{ color: 'lightgray', textDecoration: 'none', fontSize: '22px' }}>
-                        Deckhand Justin Gudewitz
-                    </GlobalStyle.Title>
+                    <GlobalStyle.Container className='row'>
+                        <Image src={deckhand1} />
+                        <Image src={deckhand2} />
+                    </GlobalStyle.Container>
+                    <GlobalStyle.Container>
+                        <GlobalStyle.Title style={{ color: 'lightgray', textDecoration: 'none', fontSize: '22px' }}>
+                            Captain/Deckhand Mike Gudewitz,
+                        </GlobalStyle.Title>
+                        <GlobalStyle.Title className='pb-5' style={{ color: 'lightgray', textDecoration: 'none', fontSize: '22px' }}>
+                            Deckhand Justin Gudewitz
+                        </GlobalStyle.Title>
 
-                    <GlobalStyle.TextNormalIndent className='ps-3 pe-3'>
-                        Mike is no stranger to the Atlantic Ocean and local bottom fishing grounds. With over 25 years of experience on well respected head boats and charter boats, Capt Mike has the ability to get you on the meat. Over the years, Mike has become well versed in inshore and offshore bottom fishing, as well as targeting Striped Bass and Bluefish. Mike prides himself on being a people person and looks forward to meeting you. Next to Mike, youll notice our deckhand in training, Justin. Justin is Mike’s son and has been joining Mike on trips anytime he can . At just 8 years old, you will be impressed by what this young boy can do. If your charter has the space and Mike is on board, you might get the opportunity to meet our up and coming fishing expert.
-                    </GlobalStyle.TextNormalIndent>
+                        <GlobalStyle.TextNormalIndent className='ps-3 pe-3'>
+                            Mike is no stranger to the Atlantic Ocean and local bottom fishing grounds. With over 25 years of experience on well respected head boats and charter boats, Capt Mike has the ability to get you on the meat. Over the years, Mike has become well versed in inshore and offshore bottom fishing, as well as targeting Striped Bass and Bluefish. Mike prides himself on being a people person and looks forward to meeting you. Next to Mike, youll notice our deckhand in training, Justin. Justin is Mike’s son and has been joining Mike on trips anytime he can . At just 8 years old, you will be impressed by what this young boy can do. If your charter has the space and Mike is on board, you might get the opportunity to meet our up and coming fishing expert.
+                        </GlobalStyle.TextNormalIndent>
+                    </GlobalStyle.Container>
                 </GlobalStyle.Container>
+
+
             </BackDrop1>
 
             <Wrapper>
