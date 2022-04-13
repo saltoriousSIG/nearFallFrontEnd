@@ -4,7 +4,7 @@ import GlobalStyle from '../common/globalstyle/global.style';
 
 const Contact = () => {
     return (
-        <GlobalStyle.Container>
+        <GlobalStyle.Container style={{paddingTop: '75px'}}>
             <GlobalStyle.Container style={{ maxWidth: '40%' }}>
                 <GlobalStyle.Title>Nearfall Fishing Charters</GlobalStyle.Title>
                 <GlobalStyle.Text>Boat Address: 905 NJ-35, Belmar, NJ 07719.</GlobalStyle.Text>
