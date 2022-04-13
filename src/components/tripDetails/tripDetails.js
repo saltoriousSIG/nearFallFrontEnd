@@ -90,7 +90,16 @@ export const TripDetails = (props) => {
         const encoded = btoa(unescape(encodeURIComponent(pageDataString)))
         console.log(encoded)
         window.scrollTo(0,0);
-        window.location = `http://localhost:3000/book-trip/${encoded}`;
+
+        switch (process.env.REACT_APP_ENVIRONMENT) { 
+            case 'development':
+                window.location = `http://localhost:3000/book-trip/${encoded}`;
+                break
+            case 'production':
+
+                window.location = `https://www.nearfallfishingcharters.com/book-trip/${encoded}`;
+
+        }
     }
 
     return (
