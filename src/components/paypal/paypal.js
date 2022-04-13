@@ -15,7 +15,7 @@ const Paypal = (props) => {
         const link = document.createElement('a');
         link.innerHTML = 'Privacy Policy';
         link.setAttribute('href', 'https://www.nearfallfishingcharters.com/policies')
-        swal(`Please confirm that you have reviewed our`, 'info', {
+        swal('',`Please confirm that you have reviewed our`, 'info', {
             buttons: ['Cancel', 'Confirm'],
             content: link
         }).then((confirm) => {
