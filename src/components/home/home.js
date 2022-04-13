@@ -21,7 +21,7 @@ const PageRow = styled(Row)`
     flex-direction:row;
     justify-content:center;
     align-items:center;
-    margin: 0 15px;
+    margin: 0 25px;
     margin-top: 175px;
     @media all and (max-width:1024px){
         flex-direction: column-reverse;
@@ -151,7 +151,7 @@ const HomePage = () => {
                 <PageCol>
                     <HeroContainer>
                         <HeroHeaderText>
-                            <strong>NearFall Fishing Charters</strong>
+                            <strong>Nearfall Fishing Charters</strong>
                         </HeroHeaderText>
                         <BorderBottom />
                         <HeroText>
