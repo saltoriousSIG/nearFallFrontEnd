@@ -141,8 +141,7 @@ const HomePage = () => {
             <CarouselImg src={boat} />,
             <CarouselImg src={dzug} />,
             <CarouselImg src={captain} />,
-            <CarouselImg src={fiore} />,
-            <CarouselImg src={facas} />
+            <CarouselImg src={fiore} />
         ]
     }, []);
 
