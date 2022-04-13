@@ -158,7 +158,7 @@ export const trips = {
         },
         details: `All Bait and Tackle provided; BYOB&G;` ,
         targetCatch:[seabassTC, flukeTC, bluefishTC],
-        calendarTitle:['fishing and fireworks']
+        calendarTitle:['Fishing and Fireworks']
     },
     'October-The Mixed Bag Month': {
         media: [mixedBag, mixedBag1],
