@@ -16,6 +16,7 @@ import { Row } from 'reactstrap';
 const Image = styled(GlobalStyle.Image)`
   height: 450px;
   width: 400px;
+  border-radius: 10px;
 `;
 
 const Container = styled(GlobalStyle.Container)`
@@ -80,7 +81,7 @@ const Wrapper = styled.div`
 const Crew = () => {
     return (
         <Container>
-            <GlobalStyle.Title >The NearFall Crew</GlobalStyle.Title>
+            <GlobalStyle.Title >The Nearfall Crew</GlobalStyle.Title>
             <TextNormalIndent>
                 You can’t have a successful fishing boat without a dedicated and friendly crew. We pride ourselves on making your experience enjoyable and sending you home feeling like you are a part of the Nearfall family. The Nearfall Team is loaded with experience and ready to bring you the best fishing experience on every trip. Each Captain and Deckhand’s knowledge of fishing and the local fishing will not only make your day easier and maximize your time at the rail, but you will also leave your charter as a better fisherman. We all look forward to having you aboard!
             </TextNormalIndent>
