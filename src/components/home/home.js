@@ -7,7 +7,8 @@ import dzug from '../../assets/img/dzug.jpeg';
 import facas from '../../assets/img/facas.jpeg';
 import captain from '../../assets/img/elcaptain.jpeg';
 import fiore from '../../assets/img/petefiore.jpeg';
-import { useMatch, useNavigate } from "react-router";
+import boat from '../../assets/img/boat.png';
+import { useNavigate } from "react-router";
 
 
 const Container = styled.div`
@@ -137,6 +138,7 @@ const HomePage = () => {
 
     const items = useMemo(() => {
         return [ 
+            <CarouselImg src={boat} />,
             <CarouselImg src={dzug} />,
             <CarouselImg src={captain} />,
             <CarouselImg src={fiore} />,
