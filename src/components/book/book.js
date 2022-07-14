@@ -153,7 +153,10 @@ const BookTrip = (props) => {
                           
                         </FormGroup>
     
-                        <Paypal amount={tripDetails?.price.deposit} />
+                        {/* <Paypal amount={tripDetails?.price.deposit} /> */}
+                        <Styled.Container>
+                            Please call (732) - 344 - 8833 to book a charter
+                        </Styled.Container>
                     </Form>
                 </Styled.FormContainer>
             </Styled.Container>

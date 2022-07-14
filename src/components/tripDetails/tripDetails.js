@@ -84,11 +84,9 @@ export const TripDetails = (props) => {
             title: bookDetails.title,
             tripDuration: bookDetails.tripDuration
         }
-        console.log(sendDetails)
+       
         const pageDataString = JSON.stringify(sendDetails)
-        console.log(pageDataString)
         const encoded = btoa(unescape(encodeURIComponent(pageDataString)))
-        console.log(encoded)
         window.scrollTo(0,0);
 
         switch (process.env.REACT_APP_ENVIRONMENT) { 
