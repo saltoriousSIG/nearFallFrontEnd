@@ -218,7 +218,7 @@ export const trips = {
         },
         price: {
             deposit: 400,
-            balance: 800
+            balance: 1100
         },
         details: `If trip is canceled, deposit may be allocated for 2 inshore trips or moved to another date for Midshore Tuna, Mahi and Meat trip, or Shark charter; All tackle and bait provided;`,
         targetCatch:[tunatc3, codTC, pollockTC, lingTC, flounderTC],
