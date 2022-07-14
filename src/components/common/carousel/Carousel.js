@@ -50,7 +50,7 @@ const CarouselComponent = (props) => {
   const [index, setIndex] = useState(0);
 
   const carouselItems = useMemo(() => {
-    return items.map((x) => {
+    return items && items.map((x) => {
       return (
         <Carousel.Item>
           {x}
@@ -67,7 +67,7 @@ const CarouselComponent = (props) => {
     <Container height={height}>
       <Carousel activeIndex={index} onSelect={handleSelect}>
         {
-          carouselItems.map((x, i) => {
+          carouselItems && carouselItems.map((x, i) => {
             return x;
           })
         }
