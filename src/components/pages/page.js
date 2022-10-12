@@ -1,11 +1,11 @@
-import React from 'react';
-import Header from '../header/header';
-import styled from 'styled-components';
-import Footer from '../footer/footer';
-import { Outlet } from 'react-router';
+import React from "react";
+import Header from "../header/header";
+import styled from "styled-components";
+import Footer from "../footer/footer";
+import { Outlet } from "react-router";
 
 const MainPage = styled.div`
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background: url(assets/img/background1.jpg) no-repeat center;
 `;
@@ -13,21 +13,22 @@ const MainPage = styled.div`
 const MainContent = styled.div`
   height: 100%;
   width: 100%;
-  border:1px solid transparent;
-  position:relative;
-  top: 50px;
+  border: 1px solid transparent;
+  position: relative;
+
+  top: 100px;
 `;
 
 const Page = () => {
   return (
-    <MainPage>
+    <MainPage id="mainPage">
       <Header />
-      <MainContent>
+      <MainContent id="maincontent">
         <Outlet />
       </MainContent>
       {/* <Footer /> */}
     </MainPage>
-  )
-}
+  );
+};
 
 export default Page;

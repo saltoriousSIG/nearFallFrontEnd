@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const Container = styled.div`
   width: 100%;
@@ -16,12 +16,9 @@ const Title = styled.h1`
 `;
 
 export const Rates = (props) => {
-    return (
-        <Container>
-            <Title>Trips &#38; Rates</Title>
-
-
-        </Container>
-    )
-}
-
+  return (
+    <Container>
+      <Title>Trips &#38; Rates</Title>
+    </Container>
+  );
+};
