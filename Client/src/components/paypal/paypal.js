@@ -24,11 +24,7 @@ const Paypal = (props) => {
               id: props.id,
             })
             .then((res) => {
-              if (res.ok) return res.json();
-              return res.json().then((json) => Promise.reject(json));
-            })
-            .then(({ id }) => {
-              return id;
+              return res.data.payload;
             })
             .catch((e) => {
               console.error(e.error);

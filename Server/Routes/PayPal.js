@@ -16,18 +16,8 @@ const paypalClient = new paypal.core.PayPalHttpClient(
 router.post("/paypal", async (req, res) => {
   const request = new paypal.orders.OrdersCreateRequest();
 
-  let selectedTrip = {};
-
-  trips.forEach((element) => {
-    if (element.id === req.body.id) {
-      selectedTrip = {
-        deposit: element.price.deposit,
-        balance: element.price.balance,
-        total: element.price.balance + element.price.deposit,
-        id: element.id,
-        name: element.name,
-      };
-    }
+  let selectedTrip = trips.find((element) => {
+    return element.id === req.body.id;
   });
 
   request.prefer("return=representation");
@@ -37,21 +27,24 @@ router.post("/paypal", async (req, res) => {
       {
         amount: {
           currency_code: "USD",
-          value: selectedTrip?.deposit,
+          value: selectedTrip?.price.deposit,
           breakdown: {
             item_total: {
               currency_code: "USD",
-              value: selectedTrip?.total,
+              value: selectedTrip?.price.deposit,
             },
           },
         },
-        items: {
-          name: selectedTrip?.name,
-          unit_amount: {
-            currency_code: "USD",
-            value: selectedTrip?.total,
+        items: [
+          {
+            name: selectedTrip?.name,
+            unit_amount: {
+              currency_code: "USD",
+              value: selectedTrip?.price.deposit,
+            },
+            quantity: 1,
           },
-        },
+        ],
       },
     ],
   });
@@ -59,9 +52,9 @@ router.post("/paypal", async (req, res) => {
   try {
     const order = await paypalClient.execute(request);
     console.log(order, "our order");
-    res.json({ id: order.result.id });
+    res.status(200).json({ payload: order.result.id });
   } catch (err) {
-    // console.log(err);
+    console.log(err);
     res.status(500).json({ success: false, data: err });
   }
 });
