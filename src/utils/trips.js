@@ -154,7 +154,7 @@ export const trips = {
         },
         price: {
             deposit: 200,
-            balance: 475
+            balance: 600
         },
         details: `All Bait and Tackle provided; BYOB&G;` ,
         targetCatch:[seabassTC, flukeTC, bluefishTC],
