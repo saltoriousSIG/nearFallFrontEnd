@@ -12,7 +12,13 @@ const UL = styled.ul`
 
 const Attention = styled.span`
   font-weight: 700;
-  text-decoration: underline;
+  text-decoration: ${(props) => {
+    if (props.nounderline) {
+      return "none";
+    }
+    return "underline";
+  }};
+  color: white;
 `;
 
 const Container = styled(GlobalStyle.Container)`
@@ -115,8 +121,15 @@ const Policies = () => {
                 charter master ONLY
               </li>
             </li>
+          </UL>
+        </GlobalStyle.Container>
+        <GlobalStyle.Container style={{ alignItems: "flex-start" }}>
+          <GlobalStyle.Title style={{ color: "white" }}>
+            Tipping
+          </GlobalStyle.Title>
+          <UL>
             <li>
-              All charter rates do not include a customary 20% tip for the
+              All charter rates do not include a customary 20-25% tip for the
               deckhand. Our mates work extremely hard to make your trip a
               success. Similar to a waiter when going out to eat at a
               restaurant, your deckhand provides you a service to make your day
@@ -126,6 +139,135 @@ const Policies = () => {
               the boat and ending with the cleaning and packaging of your catch,
               the deckhand’s role is essential to a successful trip
             </li>
+            <li>
+              The Captain of the charter has permission to ask the charter
+              master why a tip below 20% has occurred. If it is because of poor
+              service, we can then improve on providing you and other patrons a
+              better day in the future. More often than not, tips below 20%
+              occur simply because people are not aware of what a customary tip
+              amount is and our crew will kindly educate you because this is how
+              the deckhand earns his living!
+            </li>
+            <li>
+              **Please DO NOT blame the deckhand for slow fishing and tip less
+              because of an empty cooler. There are a lot of variables that
+              affect fishing and the blame should not be on the deckhand. He
+              will always work hard for you.
+              <GlobalStyle.Container
+                style={{ alignItems: "flex-start", marginLeft: "10px" }}
+              >
+                <Attention>$900 fare-180-225 tip</Attention>
+                <Attention>$1000 fare-200-250 tip</Attention>
+                <Attention>$1200 fare-240-300 tip</Attention>
+                <Attention>$1500 fare- 300-375 tip</Attention>
+                <Attention>$2400 fare- 480-600 tip</Attention>
+              </GlobalStyle.Container>
+            </li>
+          </UL>
+        </GlobalStyle.Container>
+        <GlobalStyle.Container style={{ alignItems: "flex-start" }}>
+          <GlobalStyle.Title style={{ color: "white" }}>
+            OPEN BOAT/SHARE CHARTER
+          </GlobalStyle.Title>
+          <UL>
+            <li>
+              If you want to join our open boat text and email list, please text
+              <a href="tel:732-344-8833"> 732-344-8833</a> with your FULL NAME,
+              preferred PHONE NUMBER and EMAIL address, along with the days you
+              are normally available and the species you prefer to catch
+            </li>
+            <li>
+              Every time we will put an open boat trip together, you will
+              receive a text stating our availability as well as price per
+              person; Reservations will be taken on a first come, first serve
+              basis
+            </li>
+            <li>
+              Open boat trips will typically range from 160-170$ per person and
+              tip is NOT included.
+            </li>
+            <li>
+              Once you commit to a spot on the open boat, FULL fare will need to
+              be sent via Venmo or Paypal{" "}
+            </li>
+            <li>
+              Please bring extra cash for tip for the deckhand as it was not
+              included in your fare (20-25% is customary)
+            </li>
+            <li>
+              If we must cancel the open boat trip due to poor weather
+              conditions or lack of participation, you will be REFUNDED the FULL
+              amount
+            </li>
+            <li>
+              If you must forfeit your spot after committing to an open boat,{" "}
+              <strong>you are still responsible for the fare</strong> until a
+              replacement can be found! The moment someone fills the spot you
+              are forfeiting you will then be fully reimbursed.{" "}
+            </li>
+            <li>
+              On rare occasions a charter may have a couple people back out and
+              they request our help to fill the rest of the charter. In the
+              event this happens, the remaining spots will be treated as open
+              boat{" "}
+            </li>
+
+            <GlobalStyle.Container
+              style={{ alignItems: "flex-start", marginLeft: "10px" }}
+            >
+              <Attention>
+                How is the Catch Divided? (on OPEN BOAT trips)
+              </Attention>
+              <Attention nounderline={true}>
+                <li>This is done on a day by day basis with majority rule</li>
+              </Attention>
+              <Attention nounderline={true}>
+                <li>
+                  If the majority of the crew would like to share the catch we
+                  will divide the catch evenly amongst the paying crew
+                </li>
+              </Attention>
+              <Attention nounderline={true}>
+                <li>
+                  If the majority of people want to “keep what they catch”, then
+                  that is what we will do
+                </li>
+                <GlobalStyle.Container
+                  style={{ alignItems: "flex-start", marginLeft: "10px" }}
+                >
+                  <Attention nounderline={true}>
+                    <li>
+                      If you catch more than your limit, the extras go towards
+                      the pool of fish to be evenly divided{" "}
+                    </li>
+                  </Attention>
+                  <Attention nounderline={true}>
+                    <li>
+                      If you catch below your limit and a boat limit was not
+                      caught that day, you must be prepared to bring home less
+                      than your limit
+                    </li>
+                  </Attention>
+                </GlobalStyle.Container>
+              </Attention>
+              <Attention nounderline={true}>
+                <li>
+                  Keepers caught by the captain and deckhand will be split
+                  evenly amongst the people who have not caught their limit
+                </li>
+                <GlobalStyle.Container
+                  style={{ alignItems: "flex-start", marginLeft: "10px" }}
+                >
+                  <Attention nounderline={true}>
+                    <li>
+                      If everyone has caught their limit or has even amount of
+                      keepers, then the captain/deckhands catch will be evenly
+                      divided amongst everyone{" "}
+                    </li>
+                  </Attention>
+                </GlobalStyle.Container>
+              </Attention>
+            </GlobalStyle.Container>
           </UL>
         </GlobalStyle.Container>
         <GlobalStyle.Container style={{ alignItems: "flex-start" }}>
@@ -176,6 +318,35 @@ const Policies = () => {
             <li>
               If a gas surcharge needs to be applied, you will be made aware 24
               hours before the day of the trip
+            </li>
+            <li>
+              Open boat trips will typically range from 160-170$ per person and
+              tip is NOT included.
+            </li>
+            <li>
+              Once you commit to a spot on the open boat, FULL fare will need to
+              be sent via Venmo or Paypal
+            </li>
+            <li>
+              Please bring extra cash for tip for the deckhand as it was not
+              included in your fare (20-25% is customary)
+            </li>
+            <li>
+              If we must cancel the open boat trip due to poor weather
+              conditions or lack of participation, you will be REFUNDED the FULL
+              amount
+            </li>
+            <li>
+              If you must forfeit your spot after committing to an open boat,
+              you are still responsible for the fare until a replacement can be
+              found! The moment someone fills the spot you are forfeiting you
+              will then be fully reimbursed.
+            </li>
+            <li>
+              On rare occasions a charter may have a couple people back out and
+              they request our help to fill the rest of the charter. In the
+              event this happens, the remaining spots will be treated as open
+              boat
             </li>
           </UL>
         </GlobalStyle.Container>

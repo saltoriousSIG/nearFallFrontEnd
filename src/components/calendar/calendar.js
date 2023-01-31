@@ -52,9 +52,6 @@ export const NFCalendar = () => {
                 const timeStamp = (startTime.getTime());
 
                 const title = event.event._def.title.trim();
-
-                console.log(event.event)
-
                 const pageData = { 
                     title,
                     timeStamp,
@@ -86,7 +83,6 @@ export const NFCalendar = () => {
         
         calendar.render()
         const events = calendar.getEventSources();
-        console.log(events);
     }, []);
 
     return (

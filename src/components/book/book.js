@@ -16,7 +16,6 @@ const BookTrip = (props) => {
         const tripDataString = decodeURIComponent(escape(window.atob(trip)));
         const td = JSON.parse(tripDataString);
         const tripDate = new Date(parseInt(td.timeStamp));
-        console.log(td);
         return {
             ...td,
             dateTime: tripDate.toUTCString()
@@ -37,8 +36,7 @@ const BookTrip = (props) => {
             ...pageData,
             [e.target.name]: e.target.value
         })
-    }
-
+    } 
     const tripDate = useMemo(() => {
         if (selectedTrip) {
             const date = new Date(selectedTrip.start.dateTime);
@@ -153,7 +151,7 @@ const BookTrip = (props) => {
                           
                         </FormGroup>
     
-                        {/* <Paypal amount={tripDetails?.price.deposit} /> */}
+                        <Paypal id={tripDetails.id} />
                         <Styled.Container>
                             Please call (732) - 344 - 8833 to book a charter
                         </Styled.Container>

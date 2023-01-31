@@ -4,11 +4,9 @@ import styled from 'styled-components';
 
 
 const Container = styled.div`
-  width: 100%;
+  width: auto;
   max-width: 600px;
-  min-width: 599px;
   height: auto; 
-  max-height: 400px;
   .carousel-control-prev,
   .carousel-control-next {
     display: none;
@@ -25,7 +23,6 @@ const Container = styled.div`
   }
   .carousel-inner { 
     min-width: 599px;
-    max-height: 400px;
     min-height: ${(props) => {
     if (props.height) {
       return props.height + 'px'
@@ -65,7 +62,7 @@ const CarouselComponent = (props) => {
 
   return (
     <Container height={height}>
-      <Carousel activeIndex={index} onSelect={handleSelect}>
+      <Carousel activeIndex={index} onSelect={handleSelect} controls={true} interval={2000}>
         {
           carouselItems && carouselItems.map((x, i) => {
             return x;

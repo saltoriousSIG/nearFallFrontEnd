@@ -9,6 +9,7 @@ import captain from '../../assets/img/elcaptain.jpeg';
 import fiore from '../../assets/img/petefiore.jpeg';
 import boat from '../../assets/img/boat.png';
 import { useNavigate } from "react-router";
+import CarouselImages from "../carousel-images/CarouselImages";
 
 
 const Container = styled.div`
@@ -34,9 +35,9 @@ const CarouselImg = styled.img`
   height: auto;
   border-radius: 10px;
   z-index: 1;
-  max-height: 500px;
-  width: 100%;
-  object-fit: cover;
+  height: 700px;
+  width: auto;
+  object-fit: contain;
 `;
 
 
@@ -172,7 +173,7 @@ const HomePage = () => {
                 </PageCol>
                 <PageCol>
                     <InstagramContainer>
-                        <CarouselComponent items={items} />
+                        <CarouselImages />
                     </InstagramContainer>
                 </PageCol>
             </PageRow>

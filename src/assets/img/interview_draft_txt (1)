@@ -1,0 +1,30 @@
+import requests
+
+SPEC_URL = "http://worldtimeapi.org/api"
+URL_BASE = "http://worldtimeapi.org/api/"
+DATETIME_FORMAT = "%Y-%m-%dT%H:%M:%S.%f%z"
+
+'''
+Write and API client that queries the worldtimeapi.org datetime api
+
+This program must implement a function that accepts a valid timezone string
+as an argument and return an object encoding the equivalent of datetime.datetime.now() in timezone
+as member "time" (self.time) in string format DATETIME_FORMAT
+
+The object must implement a change_timezone method that accepts a timezone string as an argument
+and return the same self.time in DATETIME_FORMAT at new timezone "timezone"
+'''
+
+class DateTime:
+    def __init__(self, timezone):
+        self.timezone = timezone
+        #...
+
+    def change_timezone(self, timezone):
+        pass
+
+
+def get_time(timezone):
+    return DateTime(timezone)
+
+
