@@ -80,7 +80,7 @@ export const TripDetails = (props) => {
   }, [currentTrip]);
 
   const onClickBook = () => {
-    const sendDetails = {
+     const sendDetails = {
       id: bookDetails.id,
       price: bookDetails.price,
       calendarTitle: bookDetails.calendarTitle,

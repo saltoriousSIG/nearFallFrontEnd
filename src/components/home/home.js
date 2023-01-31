@@ -146,7 +146,6 @@ const HomePage = () => {
         ]
     }, []);
 
-    console.log(process.env.REACT_APP_ENVIRONMENT);
     return (
         <Container style={{ height: '100%' }}>
             <PageRow>

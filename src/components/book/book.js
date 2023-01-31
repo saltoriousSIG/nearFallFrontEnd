@@ -83,6 +83,8 @@ const BookTrip = (props) => {
 
           const calendarTitles = tripData.calendarTitle;
 
+        
+
           const getResults = () => {
             const dat = [];
             calendarTitles.map((x) => {
@@ -101,7 +103,6 @@ const BookTrip = (props) => {
 
           setAllTrips(res);
 
-          console.log(res);
         } catch (e) {
           console.log(e);
         }
@@ -110,7 +111,6 @@ const BookTrip = (props) => {
 
     load();
   }, [trips, tripData]);
-  console.log(allTrips);
 
   const availTrips = useMemo(() => {
     if (!allTrips) return;
@@ -119,13 +119,11 @@ const BookTrip = (props) => {
       return Math.floor(new Date(start.dateTime).getTime()) > Date.now();
     });
     const sorted = filtered.sort((a, b) => {
-      console.log(new Date(a.start.dateTime))
       return (new Date(a.start.dateTime) - new Date(b.start.dateTime));
     });
     return sorted;
   }, [allTrips]);
 
-  console.log(availTrips);
 
   if (tripDetails) {
     return (
@@ -140,7 +138,7 @@ const BookTrip = (props) => {
                 {availTrips &&
                   availTrips.map((x) => {
                     const date = new Date(x.start.dateTime);
-                    const formattedDate = date.toUTCString();
+                    const formattedDate = date.toLocaleString()
                     return (
                       <option value={Date.parse(date)}>{formattedDate}</option>
                     );
@@ -191,7 +189,7 @@ const BookTrip = (props) => {
 
             <Paypal id={tripDetails.id} />
             <Styled.Container>
-              Please call (732) - 344 - 8833 to book a charter
+              Please call/text (732) - 344 - 8833 with any additional questions
             </Styled.Container>
           </Form>
         </Styled.FormContainer>

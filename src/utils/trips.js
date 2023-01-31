@@ -301,10 +301,10 @@ export const trips = {
         targetCatch:[bluefishTC,  spanishmacktc, albacoretc, bonitotc],
         calendarTitle: ['AM Inshore Speedsters', 'PM Inshore Speedsters']
     },
-    'Marathon-Jumbo Blackfish Special': {
+    'Marathon Jumbo Blackfish Special': {
         id: 13,
         media: [marathonTaug1, marathonTaug2, marathonTaug3],
-        description: `If you're a hardcore ‘Tog’ fisherman and you are on the hunt to beat your personal best, this is the trip for you! From sunup to sun down we will have you anchored over wrecks and set up for success on the blackfish grounds.  With the extended hours for this trip we are able to fish areas out of our reach during our typical blackfish charter. Most of the bottom we will put you on is home to some truly massive blackfish that no picture can adequately show. It is not uncommon to see multiple fish between 10 and 20 pounds on a trip (many people go their whole lives without seeing a single ‘Jumbo’ in person)! From December through January you are welcome to join us on this Jumbo Tog marathon.`,
+        description: `If you're a hardcore Tog fisherman and you are on the hunt to beat your personal best, this is the trip for you! From sunup to sun down we will have you anchored over wrecks and set up for success on the blackfish grounds.  With the extended hours for this trip we are able to fish areas out of our reach during our typical blackfish charter. Most of the bottom we will put you on is home to some truly massive blackfish that no picture can adequately show. It is not uncommon to see multiple fish between 10 and 20 pounds on a trip (many people go their whole lives without seeing a single Jumbo in person)! From December through January you are welcome to join us on this Jumbo Tog marathon.`,
         address:'dauntless address',
         tripTimes:["430am-630pm"],
         tripDuration: {
@@ -315,7 +315,7 @@ export const trips = {
             deposit: 400,
             balance: 1100
         },
-        details: `Bring Your Own Jigs \n Green Crab and White Crabs Provided (when available)`,
+        details: `Bring Your Own Jigs Green Crab and White Crabs Provided (when available)`,
         targetCatch:[blackfishTC],
         calendarTitle: ['Marathon Blackfish'] 
     },

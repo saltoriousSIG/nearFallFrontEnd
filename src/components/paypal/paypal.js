@@ -12,7 +12,7 @@ const ActionButton = styled(Button)`
 const Paypal = (props) => {
   const url = "http://localhost:5000/api/posts/paypal";
 
-  console.log(props.id, "id we will send.");
+
 
   useEffect(() => {
     window.paypal
