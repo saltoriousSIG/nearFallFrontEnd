@@ -8,6 +8,7 @@ const CarouselImg = styled.img`
   height: 700px;
   width: auto;
   object-fit: contain;
+  object-position: left;
   @media screen and (max-width: 1024px) {
     height: 500px;
     margin-bottom: 40px;
@@ -30,7 +31,7 @@ const CarouselImages = () => {
   const renderedImages = useMemo(() => {
     return Object.keys(images).map((key) => {
       return <CarouselImg src={images[key]} />;
-    });
+    }).reverse();
   }, [images]);
 
   return <CarouselComponent items={renderedImages} />;
