@@ -173,7 +173,7 @@ export const trips = {
             fall: 'Things to bring: 6-7` Conventional and/or spinning Rod/Reel with 30-40lb test line, Large Casting spoons, Jigs, swimming plugs'
         },
         details: '',
-        notes: 'Sailing out of Browns Point Marina, Keyport NJ from 4/1/23 - 5/9/23',
+        notes: 'Sailing Lockwood Boatworks, 1825 Rt 35 S Amboy, NJ from 4/1/23 - 5/9/23',
         targetCatch:[stripedBassTC],
         calendarTitle: ['AM Raritan Stripers', 'PM Raritan Stripers']
     },
