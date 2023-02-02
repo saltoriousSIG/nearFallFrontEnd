@@ -27,6 +27,7 @@ const BookTrip = (props) => {
     name: "",
     email: "",
     phone: "",
+    scheduledDate: ""
   });
 
   const onInputUpdate = (e) => {
@@ -124,6 +125,7 @@ const BookTrip = (props) => {
     return sorted;
   }, [allTrips]);
 
+  console.log(pageData)
 
   if (tripDetails) {
     return (
@@ -133,14 +135,19 @@ const BookTrip = (props) => {
           <Form>
             <FormGroup>
               <Label for="exampleSelect">Select a date</Label>
-              <Input type="select" name="select" id="exampleSelect">
+              <Input type="select" name="select" id="exampleSelect" onChange={e =>  {
+                setPageData({
+                  ...pageData,
+                  scheduledDate: e.target.value
+                })
+              }}>
                 {tripDate && <option>{tripDate}</option>}
                 {availTrips &&
                   availTrips.map((x) => {
                     const date = new Date(x.start.dateTime);
                     const formattedDate = date.toLocaleString()
                     return (
-                      <option value={Date.parse(date)}>{formattedDate}</option>
+                      <option value={formattedDate}>{formattedDate}</option>
                     );
                   })}
               </Input>
