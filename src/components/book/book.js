@@ -187,7 +187,7 @@ const BookTrip = (props) => {
               </Styled.ContainerVert>
             </FormGroup>
 
-            <Paypal id={tripDetails.id} />
+            <Paypal id={tripDetails.id} pageData={pageData} />
             <Styled.Container>
               Please call/text (732) - 344 - 8833 with any additional questions
             </Styled.Container>

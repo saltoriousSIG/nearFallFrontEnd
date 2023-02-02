@@ -91,7 +91,7 @@ export const trips = {
             maxOccupants: 6
         },
         price: {
-            deposit: 200,
+            deposit: 1,
             balance: 800
         },
         details:'Bring your own Jigs; Clam and Green Crabs provided; White leggers provided when available;',

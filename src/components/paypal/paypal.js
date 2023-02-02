@@ -10,10 +10,18 @@ const ActionButton = styled(Button)`
 `;
 
 const Paypal = (props) => {
+  const { pageData } = props;
 
-  const url = useMemo(() => { 
-    if (process.env.REACT_APP_ENVIRONMENT === 'development') return "http://localhost:5000/api/posts/paypal"
-    return "https://nearfall-paypal.herokuapp.com/api/posts/paypal" 
+  const url = useMemo(() => {
+    if (process.env.REACT_APP_ENVIRONMENT === "development")
+      return "http://localhost:5000/api/paypal";
+    return "https://nearfall-paypal.herokuapp.com/api/paypal";
+  }, [process.env.REACT_APP_ENVIRONMENT]);
+
+  const baseUrl = useMemo(() => {
+    if (process.env.REACT_APP_ENVIRONMENT === "development")
+      return "http://localhost:5000";
+    return "https://nearfall-paypal.herokuapp.com";
   }, [process.env.REACT_APP_ENVIRONMENT]);
 
   useEffect(() => {
@@ -33,7 +41,7 @@ const Paypal = (props) => {
             });
         },
         // Finalize the transaction after payer approval
-        onApprove: (data, actions) => {
+        onApprove:  (data, actions) => {
           return actions.order.capture().then(function (orderData) {
             // Successful capture! For dev/demo purposes:
             console.log(
@@ -46,6 +54,13 @@ const Paypal = (props) => {
             alert(
               `Transaction ${transaction.status}: ${transaction.id}\n\nSee console for all available details`
             );
+            axios.post(
+              `${baseUrl}/api/formData`,
+              {
+                ...pageData,
+              }
+            );
+
             // When ready to go live, remove the alert and show a success message within this page. For example:
             // const element = document.getElementById('paypal-button-container');
             // element.innerHTML = '<h3>Thank you for your payment!</h3>';
@@ -69,9 +84,10 @@ const Paypal = (props) => {
     swal("", `Please confirm that you have reviewed our`, "info", {
       buttons: ["Cancel", "Confirm"],
       content: link,
-    }).then((confirm) => {
+    }).then(async (confirm) => {
       if (confirm) {
         setAcceptPolicy(true);
+        console.log(res);
       }
     });
   };
