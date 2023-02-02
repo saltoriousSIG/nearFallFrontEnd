@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect, useMemo, useCallback } from "react";
 // import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import swal from "sweetalert";
 import { Button } from "reactstrap";
@@ -73,7 +73,7 @@ const Paypal = (props) => {
 
   const [acceptPolicy, setAcceptPolicy] = useState(false);
 
-  const handlePolicyAccept = (e) => {
+  const handlePolicyAccept = useCallback((e) => {
     e.preventDefault();
     if (!pageData.name || !pageData.email || !pageData.phone) return swal('Error', 'You forgot to enter something!', 'error');
     if (!pageData.scheduledData) return swal ('Error', 'You forgot to select a date!', 'error');
@@ -91,7 +91,7 @@ const Paypal = (props) => {
         setAcceptPolicy(true);
       }
     });
-  };
+  }, [pageData]);
 
   if (acceptPolicy) {
     return (
