@@ -74,7 +74,6 @@ const Paypal = (props) => {
   const [acceptPolicy, setAcceptPolicy] = useState(false);
 
   const handlePolicyAccept = useCallback((e) => {
-    console.log(pageData)
     e.preventDefault();
     if (!pageData.name || !pageData.email || !pageData.phone) return swal('Error', 'You forgot to enter something!', 'error');
     if (!pageData.scheduledDate) return swal ('Error', 'You forgot to select a date!', 'error');
