@@ -87,7 +87,6 @@ const Paypal = (props) => {
     }).then(async (confirm) => {
       if (confirm) {
         setAcceptPolicy(true);
-        console.log(res);
       }
     });
   };
