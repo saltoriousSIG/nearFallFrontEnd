@@ -11,7 +11,7 @@ import {
     DropdownMenu,
     DropdownItem
 } from 'reactstrap';
-import logo from '../../assets/img/nf_logo.png';
+import logo from '../../assets/img/nearfall_logo.png';
 import styled from 'styled-components';
 import { trips } from '../../utils/trips';
 import { useNavigate } from 'react-router';
@@ -21,11 +21,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const Logo = styled.img`
     height: 75px;
-    width: 100px;
+    width: auto;
 
     @media all and (max-width:1024px){
         height: 50px;
-        width: 60px;
     }
 `;
 
@@ -251,10 +250,6 @@ const Header = () => {
             >
                 <Brand href="/">
                     <Logo src={logo} />
-                    <BrandName className='d-flex flex-row'>
-                        <HeadlineText1 className='ms-2 pe-3'><strong>NEARFALL</strong></HeadlineText1>
-                        <HeadLineText2 className='ps-3'>Fishing Charters</HeadLineText2>
-                    </BrandName>
                 </Brand>
                 <NavbarToggler onClick={function noRefCheck() { }} />
 

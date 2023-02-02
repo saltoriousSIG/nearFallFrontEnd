@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 // import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import swal from "sweetalert";
 import { Button } from "reactstrap";
@@ -10,9 +10,11 @@ const ActionButton = styled(Button)`
 `;
 
 const Paypal = (props) => {
-  const url = "http://localhost:5000/api/posts/paypal";
 
-
+  const url = useMemo(() => { 
+    if (process.env.REACT_APP_ENVIRONMENT === 'development') return "http://localhost:5000/api/posts/paypal"
+    return "https://nearfall-paypal.herokuapp.com/api/posts/paypal" 
+  }, [process.env.REACT_APP_ENVIRONMENT]);
 
   useEffect(() => {
     window.paypal
