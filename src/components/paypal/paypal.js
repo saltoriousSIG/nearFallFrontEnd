@@ -75,7 +75,8 @@ const Paypal = (props) => {
 
   const handlePolicyAccept = (e) => {
     e.preventDefault();
-    if (!pageData.name || !pageData.email || !pageData.phone || !pageData.scheduledDate) return swal('Error', 'You forgot to enter something!', 'error');
+    if (!pageData.name || !pageData.email || !pageData.phone) return swal('Error', 'You forgot to enter something!', 'error');
+    if (!pageData.scheduledData) return swal ('Error', 'You forgot to select a date!', 'error');
     const link = document.createElement("a");
     link.innerHTML = "Boat Policy";
     link.setAttribute(

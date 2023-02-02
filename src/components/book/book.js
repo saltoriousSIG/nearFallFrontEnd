@@ -141,7 +141,6 @@ const BookTrip = (props) => {
                   scheduledDate: e.target.value
                 })
               }}>
-                {tripDate && <option>{tripDate}</option>}
                 {availTrips &&
                   availTrips.map((x) => {
                     const date = new Date(x.start.dateTime);
