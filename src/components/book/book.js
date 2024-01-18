@@ -54,9 +54,13 @@ const BookTrip = (props) => {
         const filtered = calendarData.data.items.filter((x) => {
           return x.id === tripData.id;
         });
+        console.log(calendarData.data.items)
+        console.log(tripData.title)
+
 
         const filterByName = calendarData.data.items
           .filter((x) => {
+          console.log(x.summary)
             return x.summary === tripData.title;
           })
           .filter((x) => {
@@ -74,6 +78,8 @@ const BookTrip = (props) => {
             return false;
           })
           .map((x) => trips[x])[0];
+        console.log(filterByName)
+        console.log(filterTripData)
 
         setTripDetails(filterTripData);
         setAllTrips(filterByName);
@@ -81,11 +87,7 @@ const BookTrip = (props) => {
       } else if (source === "booking") {
         try {
           const events = calendarData.data.items;
-
           const calendarTitles = tripData.calendarTitle;
-
-        
-
           const getResults = () => {
             const dat = [];
             calendarTitles.map((x) => {
@@ -124,8 +126,6 @@ const BookTrip = (props) => {
     });
     return sorted;
   }, [allTrips]);
-
-  console.log(pageData)
 
   if (tripDetails) {
     return (
@@ -184,7 +184,7 @@ const BookTrip = (props) => {
             <FormGroup>
               <Styled.ContainerVert>
                 <Styled.Text>
-                  Deposit Price: ${tripDetails?.price.deposit}
+                  Deposit Price: ${(tripDetails?.price.deposit * 0.025) + tripDetails?.price.deposit}
                 </Styled.Text>
                 <Styled.Text>
                   Total Price: $
@@ -195,7 +195,7 @@ const BookTrip = (props) => {
 
             <Paypal id={tripDetails.id} pageData={pageData} />
             <Styled.Container>
-              Please call/text (732) - 344 - 8833 with any additional questions
+              Please call/text (732) - 232 -5620 with any additional questions
             </Styled.Container>
           </Form>
         </Styled.FormContainer>

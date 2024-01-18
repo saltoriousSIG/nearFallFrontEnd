@@ -58,7 +58,8 @@ export const TripDetails = (props) => {
     tripDuration,
     details,
     targetCatch,
-    notes
+    notes,
+    additionalDetails,
   } = currentTrip || {};
 
   const { deposit, balance } = price || {};
@@ -80,7 +81,7 @@ export const TripDetails = (props) => {
   }, [currentTrip]);
 
   const onClickBook = () => {
-     const sendDetails = {
+    const sendDetails = {
       id: bookDetails.id,
       price: bookDetails.price,
       calendarTitle: bookDetails.calendarTitle,
@@ -117,9 +118,13 @@ export const TripDetails = (props) => {
       <Container>
         <BookTripButton onClick={onClickBook}>Book Now</BookTripButton>
       </Container>
-      {notes && <Container>
-        <p style={{color: 'white', textDecoration: 'underline'}}><strong>{notes}</strong></p>
-      </Container>}
+      {notes && (
+        <Container>
+          <p style={{ color: "white", textDecoration: "underline" }}>
+            <strong>{notes}</strong>
+          </p>
+        </Container>
+      )}
       <GlobalStyle.Jumbotron>
         <Container className="vertical">
           <GlobalStyle.Text>{description}</GlobalStyle.Text>
@@ -172,7 +177,10 @@ export const TripDetails = (props) => {
             >
               {detailsArray.map((x, i) => {
                 return (
-                  <GlobalStyle.Text style={{ textAlign: "left", whiteSpace:'pre-line' }} key={i}>
+                  <GlobalStyle.Text
+                    style={{ textAlign: "left", whiteSpace: "pre-line" }}
+                    key={i}
+                  >
                     {x}
                   </GlobalStyle.Text>
                 );
@@ -180,6 +188,11 @@ export const TripDetails = (props) => {
             </Container>
           )}
         </Container>
+        {additionalDetails && <Container>
+          <GlobalStyle.Text style={{maxWidth:'500px'}}>
+          {additionalDetails}
+          </GlobalStyle.Text>
+        </Container>}
         <Container style={{ margin: "15px" }}>
           {targetCatch && targetCatch.length > 0 && (
             <Container>

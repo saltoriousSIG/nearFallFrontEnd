@@ -77,21 +77,31 @@ const Policies = () => {
               if a double booking happens to occur to reschedule.
             </li>
             <li>
-              A $200 deposit is required for all inshore trips. For all shark,
-              tuna, and mahi and meat charters, a deposit of $400 is required.
-              In the event of cancellation of the trip, the deposit may be used
-              for another specialty trip or split for 2 inshore trips.
+              There will be a 2.5% service fee for paypal upon deposit. A $200
+              deposit is required for all inshore trips. For all shark, tuna,
+              and mahi and meat charters, a deposit of $400 is required. In the
+              event of cancellation of the trip, the deposit may be used for
+              another specialty trip or split for 2 inshore trips.
             </li>
             <li>
               Deposits Are NON-Refundable. If the trip is canceled, the deposit
-              will be applied to your next trip or for a rescheduled date. If
-              the deposit is not used in that calendar year, it will be carried
-              over to the next year.
+              will be applied to your next trip or for a rescheduled date.
+              Deposits not used in the year of booking are good for one calendar
+              year following the original booking.
             </li>
             <li>
               Deposits are to be paid on the day of booking via
               Nearfallfishingcharters.com
             </li>
+
+            <GlobalStyle.Container
+              style={{ alignItems: "flex-start", marginLeft: "10px" }}
+            >
+              <Attention>
+                In the rare occasion a check must be given as deposit, it will be accepted as long as it is not within 30 days of your trip.
+              </Attention>
+            </GlobalStyle.Container>
+
             <li>
               Balances are to be paid in CASH on the day of the trip by the
               charter master
@@ -172,7 +182,7 @@ const Policies = () => {
           <UL>
             <li>
               If you want to join our open boat text and email list, please text
-              <a href="tel:732-344-8833"> 732-344-8833</a> with your FULL NAME,
+              <a href="tel:732-232-5620"> 732-232-5620</a> with your FULL NAME,
               preferred PHONE NUMBER and EMAIL address, along with the days you
               are normally available and the species you prefer to catch
             </li>
@@ -183,13 +193,21 @@ const Policies = () => {
               basis
             </li>
             <li>
-              Open boat trips will typically range from 160-170$ per person and
+              Open boat trips will typically range from $160-175 per person and
               tip is NOT included.
             </li>
             <li>
               Once you commit to a spot on the open boat, FULL fare will need to
-              be sent via Venmo or Paypal{" "}
+              be sent via Zelle, Venmo or Paypal{" "}
             </li>
+            <GlobalStyle.Container
+              style={{ alignItems: "flex-start", marginLeft: "10px" }}
+            >
+              <Attention>
+                There will be no service fee for Zelle. A 2.5% service fee will
+                be applied for Venmo and Paypal
+              </Attention>
+            </GlobalStyle.Container>
             <li>
               Please bring extra cash for tip for the deckhand as it was not
               included in your fare (20-25% is customary)
@@ -318,35 +336,6 @@ const Policies = () => {
             <li>
               If a gas surcharge needs to be applied, you will be made aware 24
               hours before the day of the trip
-            </li>
-            <li>
-              Open boat trips will typically range from 160-170$ per person and
-              tip is NOT included.
-            </li>
-            <li>
-              Once you commit to a spot on the open boat, FULL fare will need to
-              be sent via Venmo or Paypal
-            </li>
-            <li>
-              Please bring extra cash for tip for the deckhand as it was not
-              included in your fare (20-25% is customary)
-            </li>
-            <li>
-              If we must cancel the open boat trip due to poor weather
-              conditions or lack of participation, you will be REFUNDED the FULL
-              amount
-            </li>
-            <li>
-              If you must forfeit your spot after committing to an open boat,
-              you are still responsible for the fare until a replacement can be
-              found! The moment someone fills the spot you are forfeiting you
-              will then be fully reimbursed.
-            </li>
-            <li>
-              On rare occasions a charter may have a couple people back out and
-              they request our help to fill the rest of the charter. In the
-              event this happens, the remaining spots will be treated as open
-              boat
             </li>
           </UL>
         </GlobalStyle.Container>

@@ -10,7 +10,7 @@ import pete from "../../assets/img/petefiore.jpeg";
 import facas from "../../assets/img/facas.jpeg";
 import dzug from "../../assets/img/dzug.jpeg";
 import woj from "../../assets/img/woj.jpeg";
-import kizman from "../../assets/img/kizman.jpeg";
+import kizman from "../../assets/img/captainjohnnew.jpeg";
 import kluzner from "../../assets/img/kluz.jpeg";
 import { Row } from "reactstrap";
 

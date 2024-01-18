@@ -26,7 +26,8 @@ const Text = styled.p`
   font-family: 'Poppins', sans-serif;
   display: inline;
   letter-spacing:0.7px;
-
+  white-space: break-spaces;
+  
   @media all and (max-width:800px){
     font-size:0.8rem;
   }

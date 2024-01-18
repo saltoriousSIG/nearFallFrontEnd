@@ -93,7 +93,7 @@ export const VesselInfo = () => {
         The vessel’s cabin has a comfortable dinette area, refrigerator, microwave and coffee station as well as large forward bunks.
       </CarouselTextItem>,
       <CarouselTextItem>
-        The Nearfall team spares no expense with our fishing gear. All of our rods are custom-built and are brand new in 2022. We have both conventional and spinning rod setups available depending on your preference and the type of fish we are targeting.
+        The Nearfall team spares no expense with our fishing gear. All of our rods and reels are new in 2024! We have both conventional and spinning rod setups available depending on your preference and the type of fish we are targeting.
       </CarouselTextItem>
 
     ]
