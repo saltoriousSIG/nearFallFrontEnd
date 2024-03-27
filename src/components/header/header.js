@@ -244,6 +244,9 @@ const Header = () => {
         <NavMenuItemsContainer>
           <NavSocialItems>
             <HeaderButton>
+              <a href="https://www.njseamemorials.com/" target="_blank">NJ Sea Memorials</a>
+            </HeaderButton>
+            <HeaderButton>
               <u>Call 732-232-5620</u>
             </HeaderButton>
             <ButtonContainer>
