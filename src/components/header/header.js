@@ -286,13 +286,9 @@ const Header = () => {
                 <Link href="/contact">Contact Us</Link>
               </NavItem>
               <NavItem>
-                <a
-                  rel="noreferrer"
-                  href="https://www.njseamemorials.com/"
-                  target="_blank"
-                >
+                <Link href="https://www.njseamemorials.com/">
                   Burials-at-Sea
-                </a>
+                </Link>
               </NavItem>
               <TripsAndRatesHide>
                 <Dropdown nav isOpen={isOpen} toggle={toggle}>
@@ -308,6 +304,7 @@ const Header = () => {
                       );
                     })}
                   </DropdownMenu>
+                  `
                 </Dropdown>
               </TripsAndRatesHide>
             </Nav>
