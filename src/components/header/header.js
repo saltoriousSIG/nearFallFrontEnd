@@ -286,9 +286,13 @@ const Header = () => {
                 <Link href="/contact">Contact Us</Link>
               </NavItem>
               <NavItem>
-                <DropdownToggle nav href="">
+                <a
+                  rel="noreferrer"
+                  href="https://www.njseamemorials.com/"
+                  target="_blank"
+                >
                   Burials-at-Sea
-                </DropdownToggle>
+                </a>
               </NavItem>
               <TripsAndRatesHide>
                 <Dropdown nav isOpen={isOpen} toggle={toggle}>
