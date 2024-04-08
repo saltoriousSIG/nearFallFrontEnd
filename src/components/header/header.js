@@ -244,7 +244,9 @@ const Header = () => {
         <NavMenuItemsContainer>
           <NavSocialItems>
             <HeaderButton>
-              <a href="https://www.njseamemorials.com/" target="_blank">NJ Sea Memorials</a>
+              <a href="https://www.njseamemorials.com/" target="_blank">
+                NJ Sea Memorials
+              </a>
             </HeaderButton>
             <HeaderButton>
               <u>Call 732-232-5620</u>
@@ -284,7 +286,9 @@ const Header = () => {
                 <Link href="/contact">Contact Us</Link>
               </NavItem>
               <NavItem>
-                <DropdownToggle nav href="">Burials-at-Sea</DropdownToggle>
+                <DropdownToggle nav href="">
+                  Burials-at-Sea
+                </DropdownToggle>
               </NavItem>
               <TripsAndRatesHide>
                 <Dropdown nav isOpen={isOpen} toggle={toggle}>
@@ -345,7 +349,13 @@ const Header = () => {
                 <a href="/contact">Contact</a>
               </SideBarItem>
               <SideBarItem>
-                <a href="">Burials-at-Sea</a>
+                <a
+                  rel="noreferrer"
+                  href="https://www.njseamemorials.com/"
+                  target="_blank"
+                >
+                  Burials-at-Sea
+                </a>
               </SideBarItem>
             </SideBar>
           )}
