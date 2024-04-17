@@ -177,65 +177,12 @@ const Policies = () => {
         </GlobalStyle.Container>
         <GlobalStyle.Container style={{ alignItems: "flex-start" }}>
           <GlobalStyle.Title style={{ color: "white" }}>
-            OPEN BOAT/SHARE CHARTER
+            How is the Catch Divided? 
           </GlobalStyle.Title>
           <UL>
-            <li>
-              If you want to join our open boat text and email list, please text
-              <a href="tel:732-232-5620"> 732-232-5620</a> with your FULL NAME,
-              preferred PHONE NUMBER and EMAIL address, along with the days you
-              are normally available and the species you prefer to catch
-            </li>
-            <li>
-              Every time we will put an open boat trip together, you will
-              receive a text stating our availability as well as price per
-              person; Reservations will be taken on a first come, first serve
-              basis
-            </li>
-            <li>
-              Open boat trips will typically range from $160-175 per person and
-              tip is NOT included.
-            </li>
-            <li>
-              Once you commit to a spot on the open boat, FULL fare will need to
-              be sent via Zelle, Venmo or Paypal{" "}
-            </li>
             <GlobalStyle.Container
               style={{ alignItems: "flex-start", marginLeft: "10px" }}
             >
-              <Attention>
-                There will be no service fee for Zelle. A 2.5% service fee will
-                be applied for Venmo and Paypal
-              </Attention>
-            </GlobalStyle.Container>
-            <li>
-              Please bring extra cash for tip for the deckhand as it was not
-              included in your fare (20-25% is customary)
-            </li>
-            <li>
-              If we must cancel the open boat trip due to poor weather
-              conditions or lack of participation, you will be REFUNDED the FULL
-              amount
-            </li>
-            <li>
-              If you must forfeit your spot after committing to an open boat,{" "}
-              <strong>you are still responsible for the fare</strong> until a
-              replacement can be found! The moment someone fills the spot you
-              are forfeiting you will then be fully reimbursed.{" "}
-            </li>
-            <li>
-              On rare occasions a charter may have a couple people back out and
-              they request our help to fill the rest of the charter. In the
-              event this happens, the remaining spots will be treated as open
-              boat{" "}
-            </li>
-
-            <GlobalStyle.Container
-              style={{ alignItems: "flex-start", marginLeft: "10px" }}
-            >
-              <Attention>
-                How is the Catch Divided? (on OPEN BOAT trips)
-              </Attention>
               <Attention nounderline={true}>
                 <li>This is done on a day by day basis with majority rule</li>
               </Attention>
