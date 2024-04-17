@@ -41,7 +41,7 @@ const Paypal = (props) => {
             });
         },
         // Finalize the transaction after payer approval
-        onApprove:  (data, actions) => {
+        onApprove: (data, actions) => {
           return actions.order.capture().then(function (orderData) {
             // Successful capture! For dev/demo purposes:
             console.log(
@@ -54,12 +54,9 @@ const Paypal = (props) => {
             alert(
               `Transaction ${transaction.status}: ${transaction.id}\n\nSee console for all available details`
             );
-            axios.post(
-              `${baseUrl}/api/formData`,
-              {
-                ...pageData,
-              }
-            );
+            axios.post(`${baseUrl}/api/formData`, {
+              ...pageData,
+            });
 
             // When ready to go live, remove the alert and show a success message within this page. For example:
             // const element = document.getElementById('paypal-button-container');
@@ -73,25 +70,30 @@ const Paypal = (props) => {
 
   const [acceptPolicy, setAcceptPolicy] = useState(false);
 
-  const handlePolicyAccept = useCallback((e) => {
-    e.preventDefault();
-    if (!pageData.name || !pageData.email || !pageData.phone) return swal('Error', 'You forgot to enter something!', 'error');
-    if (!pageData.scheduledDate) return swal ('Error', 'You forgot to select a date!', 'error');
-    const link = document.createElement("a");
-    link.innerHTML = "Boat Policy";
-    link.setAttribute(
-      "href",
-      "https://www.nearfallfishingcharters.com/policies"
-    );
-    swal("", `Please confirm that you have reviewed our`, "info", {
-      buttons: ["Cancel", "Confirm"],
-      content: link,
-    }).then(async (confirm) => {
-      if (confirm) {
-        setAcceptPolicy(true);
-      }
-    });
-  }, [pageData]);
+  const handlePolicyAccept = useCallback(
+    (e) => {
+      e.preventDefault();
+      if (!pageData.name || !pageData.email || !pageData.phone)
+        return swal("Error", "You forgot to enter something!", "error");
+      if (!pageData.scheduledDate)
+        return swal("Error", "You forgot to select a date!", "error");
+      const link = document.createElement("a");
+      link.innerHTML = "Boat Policy";
+      link.setAttribute(
+        "href",
+        "https://www.nearfallfishingcharters.com/policies"
+      );
+      swal("", `Please confirm that you have reviewed our`, "info", {
+        buttons: ["Cancel", "Confirm"],
+        content: link,
+      }).then(async (confirm) => {
+        if (confirm) {
+          setAcceptPolicy(true);
+        }
+      });
+    },
+    [pageData]
+  );
 
   if (acceptPolicy) {
     return (

@@ -27,7 +27,7 @@ const BookTrip = (props) => {
     name: "",
     email: "",
     phone: "",
-    scheduledDate: ""
+    scheduledDate: "",
   });
 
   const onInputUpdate = (e) => {
@@ -54,13 +54,12 @@ const BookTrip = (props) => {
         const filtered = calendarData.data.items.filter((x) => {
           return x.id === tripData.id;
         });
-        console.log(calendarData.data.items)
-        console.log(tripData.title)
-
+        console.log(calendarData.data.items);
+        console.log(tripData.title);
 
         const filterByName = calendarData.data.items
           .filter((x) => {
-          console.log(x.summary)
+            console.log(x.summary);
             return x.summary === tripData.title;
           })
           .filter((x) => {
@@ -78,8 +77,8 @@ const BookTrip = (props) => {
             return false;
           })
           .map((x) => trips[x])[0];
-        console.log(filterByName)
-        console.log(filterTripData)
+        console.log(filterByName);
+        console.log(filterTripData);
 
         setTripDetails(filterTripData);
         setAllTrips(filterByName);
@@ -105,7 +104,6 @@ const BookTrip = (props) => {
           setTripDetails(tripData);
 
           setAllTrips(res);
-
         } catch (e) {
           console.log(e);
         }
@@ -122,7 +120,7 @@ const BookTrip = (props) => {
       return Math.floor(new Date(start.dateTime).getTime()) > Date.now();
     });
     const sorted = filtered.sort((a, b) => {
-      return (new Date(a.start.dateTime) - new Date(b.start.dateTime));
+      return new Date(a.start.dateTime) - new Date(b.start.dateTime);
     });
     return sorted;
   }, [allTrips]);
@@ -135,16 +133,21 @@ const BookTrip = (props) => {
           <Form>
             <FormGroup>
               <Label for="exampleSelect">Select a date</Label>
-              <Input type="select" name="select" id="exampleSelect" onChange={e =>  {
-                setPageData({
-                  ...pageData,
-                  scheduledDate: e.target.value
-                })
-              }}>
+              <Input
+                type="select"
+                name="select"
+                id="exampleSelect"
+                onChange={(e) => {
+                  setPageData({
+                    ...pageData,
+                    scheduledDate: e.target.value,
+                  });
+                }}
+              >
                 {availTrips &&
                   availTrips.map((x) => {
                     const date = new Date(x.start.dateTime);
-                    const formattedDate = date.toLocaleString()
+                    const formattedDate = date.toLocaleString();
                     return (
                       <option value={formattedDate}>{formattedDate}</option>
                     );
@@ -184,7 +187,9 @@ const BookTrip = (props) => {
             <FormGroup>
               <Styled.ContainerVert>
                 <Styled.Text>
-                  Deposit Price: ${(tripDetails?.price.deposit * 0.025) + tripDetails?.price.deposit}
+                  Deposit Price: $
+                  {tripDetails?.price.deposit * 0.035 +
+                    tripDetails?.price.deposit}
                 </Styled.Text>
                 <Styled.Text>
                   Total Price: $
