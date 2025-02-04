@@ -286,7 +286,7 @@ const Header = () => {
                 <Link href="/contact">Contact Us</Link>
               </NavItem>
               <NavItem>
-                <Link href="https://www.njseamemorials.com/">
+                <Link href="https://www.njseamemorials.com/" target="_blank">
                   Burials-at-Sea
                 </Link>
               </NavItem>

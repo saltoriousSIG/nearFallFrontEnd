@@ -3,7 +3,6 @@ import Styled from "./book.style";
 import { useParams } from "react-router";
 import { trips } from "../../utils/trips";
 import axios from "axios";
-import Fuse from "fuse.js";
 import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
 import Paypal from "../paypal/paypal";
 
@@ -13,21 +12,24 @@ const BookTrip = (props) => {
   const tripData = useMemo(() => {
     const tripDataString = decodeURIComponent(escape(window.atob(trip)));
     const td = JSON.parse(tripDataString);
-    const tripDate = new Date(parseInt(td.timeStamp));
     return {
       ...td,
-      dateTime: tripDate.toUTCString(),
     };
   }, [trip]);
 
   const [tripDetails, setTripDetails] = useState();
   const [selectedTrip, setSelectedTrip] = useState();
+  const [selectedTripName, setSelectedTripName] = useState();
+  const [selectedTripType, setSelectedTripType] = useState();
+  const [tripOptions, setTripOptions] = useState();
   const [allTrips, setAllTrips] = useState();
   const [pageData, setPageData] = useState({
     name: "",
     email: "",
     phone: "",
     scheduledDate: "",
+    tripType: "",
+    referralSource: "",
   });
 
   const onInputUpdate = (e) => {
@@ -36,12 +38,6 @@ const BookTrip = (props) => {
       [e.target.name]: e.target.value,
     });
   };
-  const tripDate = useMemo(() => {
-    if (selectedTrip) {
-      const date = new Date(selectedTrip.start.dateTime);
-      return date.toUTCString();
-    }
-  }, [selectedTrip]);
 
   useEffect(() => {
     const load = async () => {
@@ -49,61 +45,23 @@ const BookTrip = (props) => {
       const calendarData = await axios.get(
         `https://www.googleapis.com/calendar/v3/calendars/nearfallfishingcharters@gmail.com/events?maxResults=2500&key=${process.env.REACT_APP_GOOGLE_API_KEY}`
       );
-
       if (source === "calendar") {
-        const filtered = calendarData.data.items.filter((x) => {
+        const selectedTrip = calendarData.data.items.find((x) => {
           return x.id === tripData.id;
         });
-        console.log(calendarData.data.items);
-        console.log(tripData.title);
-
-        const filterByName = calendarData.data.items
-          .filter((x) => {
-            console.log(x.summary);
-            return x.summary === tripData.title;
-          })
-          .filter((x) => {
-            return x.id !== tripData.id;
-          })
-          .sort((a, b) => {
-            return new Date(a.start.dateTime) - new Date(b.start.dateTime);
-          });
-
-        const filterTripData = Object.keys(trips)
-          .filter((x) => {
-            if (trips[x].calendarTitle) {
-              return trips[x].calendarTitle.includes(tripData.title);
-            }
-            return false;
-          })
-          .map((x) => trips[x])[0];
-        console.log(filterByName);
-        console.log(filterTripData);
-
-        setTripDetails(filterTripData);
-        setAllTrips(filterByName);
-        setSelectedTrip(filtered[0]);
+        setAllTrips(calendarData.data.items);
+        setPageData({
+          ...pageData,
+          scheduledDate: new Date(selectedTrip.start.dateTime).toLocaleString(),
+        });
+        setSelectedTrip(selectedTrip);
       } else if (source === "booking") {
         try {
-          const events = calendarData.data.items;
-          const calendarTitles = tripData.calendarTitle;
-          const getResults = () => {
-            const dat = [];
-            calendarTitles.map((x) => {
-              const filtered = events.filter((y) => {
-                return y.summary.trim() === x.trim();
-              });
-
-              dat.push(filtered);
-            });
-            return dat.flat();
-          };
-
-          const res = getResults();
-
+          setSelectedTripName(tripData.title);
+          setSelectedTripType(trips[tripData.title]);
+          setTripOptions(Object.keys(trips));
           setTripDetails(tripData);
-
-          setAllTrips(res);
+          setAllTrips(calendarData.data.items);
         } catch (e) {
           console.log(e);
         }
@@ -111,7 +69,33 @@ const BookTrip = (props) => {
     };
 
     load();
-  }, [trips, tripData]);
+  }, [tripData]);
+
+  useEffect(() => {
+    const title = tripData.title;
+    switch (title) {
+      case "PM PRIVATE CHARTER": {
+        const allowedTrips = Object.keys(trips).filter((key) => {
+          return !trips[key].extendedOnly;
+        });
+        setTripOptions(allowedTrips);
+        break;
+      }
+      case "AM PRIVATE CHARTER": {
+        const allowedTrips = Object.keys(trips).filter((key) => {
+          return !trips[key].extendedOnly && !trips[key].pmOnly;
+        });
+        setTripOptions(allowedTrips);
+        break;
+      }
+      case 'EXTENDED HOUR "MARATHON" CHARTER': {
+        setTripOptions(Object.keys(trips));
+        break;
+      }
+      default:
+        break;
+    }
+  }, [tripData]);
 
   const availTrips = useMemo(() => {
     if (!allTrips) return;
@@ -125,90 +109,144 @@ const BookTrip = (props) => {
     return sorted;
   }, [allTrips]);
 
-  if (tripDetails) {
-    return (
-      <Styled.Container>
-        <Styled.Title>Book now!</Styled.Title>
-        <Styled.FormContainer>
-          <Form>
-            <FormGroup>
-              <Label for="exampleSelect">Select a date</Label>
-              <Input
-                type="select"
-                name="select"
-                id="exampleSelect"
-                onChange={(e) => {
-                  setPageData({
-                    ...pageData,
-                    scheduledDate: e.target.value,
-                  });
-                }}
-              >
-                {availTrips &&
-                  availTrips.map((x) => {
-                    const date = new Date(x.start.dateTime);
-                    const formattedDate = date.toLocaleString();
-                    return (
-                      <option value={formattedDate}>{formattedDate}</option>
-                    );
-                  })}
-              </Input>
-            </FormGroup>
-            <FormGroup>
-              <Label for="name">Name</Label>
-              <Input
-                type="text"
-                name="name"
-                id="name"
-                placeholder="Enter your name"
-                onChange={onInputUpdate}
-              />
-            </FormGroup>
-            <FormGroup>
-              <Label for="email">Email</Label>
-              <Input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Enter your email"
-                onChange={onInputUpdate}
-              />
-            </FormGroup>
-            <FormGroup>
-              <Label for="phone">Phone Number</Label>
-              <Input
-                type="number"
-                name="phone"
-                id="phone"
-                placeholder="Enter your phone number"
-                onChange={onInputUpdate}
-              />
-            </FormGroup>
-            <FormGroup>
+  const handleSelectTrip = (trip) => {
+    setSelectedTripType(trips[trip]);
+    setSelectedTripName(trip);
+  };
+
+  return (
+    <Styled.Container>
+      <Styled.Title>Book now!</Styled.Title>
+      <Styled.FormContainer>
+        <Form>
+          <FormGroup>
+            <Label for="exampleSelect">Select a date</Label>
+            <Input
+              type="select"
+              name="select"
+              id="exampleSelect"
+              value={
+                selectedTrip
+                  ? new Date(selectedTrip.start.dateTime).toLocaleString()
+                  : ""
+              }
+              onChange={(e) => {
+                setPageData({
+                  ...pageData,
+                  scheduledDate: e.target.value,
+                });
+              }}
+            >
+              {availTrips &&
+                availTrips.map((x, i) => {
+                  const date = new Date(x.start.dateTime);
+                  const formattedDate = date.toLocaleString();
+                  return (
+                    <option key={i} value={formattedDate}>
+                      {formattedDate}
+                    </option>
+                  );
+                })}
+            </Input>
+          </FormGroup>
+          <FormGroup>
+            <Label for="tripTypeSelect">Select Trip Type</Label>
+            <Input
+              type="select"
+              name="select"
+              id="tripTypeSelect"
+              value={selectedTripName}
+              onChange={(e) => handleSelectTrip(e.target.value)}
+            >
+              <option value=""></option>
+              {tripOptions &&
+                tripOptions.map((option, i) => {
+                  return (
+                    <option key={i} value={option}>
+                      {option}
+                    </option>
+                  );
+                })}
+            </Input>
+          </FormGroup>
+          <FormGroup>
+            <Label for="name">Name</Label>
+            <Input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Enter your name"
+              onChange={onInputUpdate}
+            />
+          </FormGroup>
+          <FormGroup>
+            <Label for="email">Email</Label>
+            <Input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email"
+              onChange={onInputUpdate}
+            />
+          </FormGroup>
+          <FormGroup>
+            <Label for="phone">Phone Number</Label>
+            <Input
+              type="number"
+              name="phone"
+              id="phone"
+              placeholder="Enter your phone number"
+              onChange={onInputUpdate}
+            />
+          </FormGroup>
+          <FormGroup>
+            <Label for="howDidYouHearSelect">How did you hear about us?</Label>
+            <Input
+              type="select"
+              name="referralSource"
+              id="howDidYouHearSelect"
+              onChange={(e) => onInputUpdate(e)}
+            >
+              <option value=""></option>
+              {[
+                "Friend/Referral",
+                "Instagram",
+                "Facebook",
+                "Google",
+                "Philadelphia Expo",
+                "Edision Fishing Expo",
+                "Fish Booker",
+                "Fisherman Magazine",
+              ].map((option, i) => {
+                return (
+                  <option key={i} value={option}>
+                    {option}
+                  </option>
+                );
+              })}
+            </Input>
+          </FormGroup>
+          <FormGroup>
+            {selectedTripType && (
               <Styled.ContainerVert>
                 <Styled.Text>
                   Deposit Price: $
-                  {tripDetails?.price.deposit * 0.035 +
-                    tripDetails?.price.deposit}
-                </Styled.Text>
-                <Styled.Text>
-                  Total Price: $
-                  {tripDetails?.price.deposit + tripDetails?.price.balance}
+                  {selectedTripType?.price.deposit * 0.035 +
+                    selectedTripType?.price.deposit}
                 </Styled.Text>
               </Styled.ContainerVert>
-            </FormGroup>
-
-            <Paypal id={tripDetails.id} pageData={pageData} />
-            <Styled.Container>
-              Please call/text (732) - 232 -5620 with any additional questions
-            </Styled.Container>
-          </Form>
-        </Styled.FormContainer>
-      </Styled.Container>
-    );
-  }
-
-  return <></>;
+            )}
+          </FormGroup>
+          {selectedTripType && (
+            <Paypal id={selectedTripType.id} pageData={pageData} />
+          )}
+          <Styled.Container>
+            Please call/text (732) - 232 -5620 with any additional questions
+          </Styled.Container>
+        </Form>
+      </Styled.FormContainer>
+    </Styled.Container>
+  );
 };
 
 export default BookTrip;

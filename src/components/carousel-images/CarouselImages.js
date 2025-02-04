@@ -8,6 +8,9 @@ const CarouselImg = styled.img`
   height: 700px;
   width: auto;
   object-fit: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   object-position: left;
   @media screen and (max-width: 1024px) {
     height: 500px;
@@ -15,23 +18,13 @@ const CarouselImg = styled.img`
   }
 `;
 
-function importAll(r) {
-  let images = {};
-  r.keys().forEach((item, index) => {
-    images[item.replace("./", "")] = r(item);
-  });
-  return images;
-}
-
-const CarouselImages = () => {
-  const images = importAll(
-    require.context("../../assets/carousel-img", false, /\.(png|jpe?g|svg)$/)
-  );
-
+const CarouselImages = ({ images }) => {
   const renderedImages = useMemo(() => {
-    return Object.keys(images).map((key) => {
-      return <CarouselImg src={images[key]} />;
-    }).reverse();
+    return images
+      .map((img) => {
+        return <CarouselImg src={img} />;
+      })
+      .reverse();
   }, [images]);
 
   return <CarouselComponent items={renderedImages} />;

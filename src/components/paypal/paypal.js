@@ -24,6 +24,8 @@ const Paypal = (props) => {
     return "https://nearfall-paypal.herokuapp.com";
   }, [process.env.REACT_APP_ENVIRONMENT]);
 
+  console.log(props.id);
+
   useEffect(() => {
     window.paypal
       .Buttons({
@@ -57,11 +59,6 @@ const Paypal = (props) => {
             axios.post(`${baseUrl}/api/formData`, {
               ...pageData,
             });
-
-            // When ready to go live, remove the alert and show a success message within this page. For example:
-            // const element = document.getElementById('paypal-button-container');
-            // element.innerHTML = '<h3>Thank you for your payment!</h3>';
-            // Or go to another URL:  actions.redirect('thank_you.html');
           });
         },
       })
@@ -97,43 +94,6 @@ const Paypal = (props) => {
 
   if (acceptPolicy) {
     return (
-      //   <PayPalScriptProvider
-      //     options={{
-      //       "client-id":
-      //         "AUgmJJNkO3cRmnWl2gHs-Fho4sAOEPgIH2PXW2HQKaVDRpEZUZdciclNiAq-ip9MGmAQM2RCnbFPkiwI",
-      //       components: "buttons",
-      //       currency: "USD",
-      //     }}
-      //   >
-
-      //     <PayPalButtons
-      //       createOrder={(data, actions) => {
-      //         axios
-      //           .post(url, {
-      //             items: [{ id: props.id }],
-      //           })
-      //           .then((response) => console.log(response))
-      //           .catch((err) => console.log(err));
-
-      //         return actions.order.create({
-      //           purchase_units: [
-      //             {
-      //               amount: {
-      //                 value: 1,
-      //               },
-      //             },
-      //           ],
-      //         });
-      //       }}
-      //       onApprove={(data, actions) => {
-      //         return actions.order.capture().then((details) => {
-      //           const name = details.payer.name.given_name;
-      //           alert(`Transaction completed by ${name}`);
-      //         });
-      //       }}
-      //     />
-      //   </PayPalScriptProvider>
-
       <div>
         <div id="paypal-button-container"></div>
       </div>

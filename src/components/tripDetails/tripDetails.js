@@ -3,8 +3,9 @@ import { useParams } from "react-router";
 import GlobalStyle from "../common/globalstyle/global.style";
 import { trips } from "../../utils/trips";
 import styled from "styled-components";
-import { useNavigate } from "react-router";
 import { Button } from "reactstrap";
+import { useContentful } from "../../hooks/useContentful";
+import CarouselImages from "../carousel-images/CarouselImages";
 
 const Image = styled(GlobalStyle.Image)`
   height: 350px;
@@ -23,9 +24,9 @@ const Container = styled(GlobalStyle.Container)`
 `;
 
 const ImageContainer = styled.div`
+  transform: translateX(35px);
   display: flex;
   width: 100%;
-  margin: auto 25%;
   justify-content: center;
   align-items: center;
 `;
@@ -47,8 +48,6 @@ export const TripDetails = (props) => {
     return trips[tripName];
   }, [tripName]);
 
-  const navigate = useNavigate();
-
   const {
     media,
     description,
@@ -60,7 +59,10 @@ export const TripDetails = (props) => {
     targetCatch,
     notes,
     additionalDetails,
+    contentfulIdentifier,
   } = currentTrip || {};
+
+  const images = useContentful("trip", contentfulIdentifier);
 
   const { deposit, balance } = price || {};
   const { time, minOccupants, maxOccupants } = tripDuration || {};
@@ -78,7 +80,7 @@ export const TripDetails = (props) => {
       source: "booking",
       title: tripName,
     };
-  }, [currentTrip]);
+  }, [currentTrip, tripName]);
 
   const onClickBook = () => {
     const sendDetails = {
@@ -101,6 +103,9 @@ export const TripDetails = (props) => {
         break;
       case "production":
         window.location = `https://www.nearfallfishingcharters.com/book-trip/${encoded}`;
+        break;
+      default:
+        break;
     }
   };
 
@@ -110,11 +115,9 @@ export const TripDetails = (props) => {
         {tripName}
       </GlobalStyle.Title>
       <ImageContainer>
-        {media &&
-          media.map((x, i) => {
-            return x && <Image key={i} src={x} />;
-          })}
+        <CarouselImages images={images} />
       </ImageContainer>
+
       <Container>
         <BookTripButton onClick={onClickBook}>Book Now</BookTripButton>
       </Container>
@@ -188,11 +191,13 @@ export const TripDetails = (props) => {
             </Container>
           )}
         </Container>
-        {additionalDetails && <Container>
-          <GlobalStyle.Text style={{maxWidth:'500px'}}>
-          {additionalDetails}
-          </GlobalStyle.Text>
-        </Container>}
+        {additionalDetails && (
+          <Container>
+            <GlobalStyle.Text style={{ maxWidth: "500px" }}>
+              {additionalDetails}
+            </GlobalStyle.Text>
+          </Container>
+        )}
         <Container style={{ margin: "15px" }}>
           {targetCatch && targetCatch.length > 0 && (
             <Container>

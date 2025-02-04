@@ -11,6 +11,7 @@ import facas from "../../assets/img/facas.jpeg";
 import dzug from "../../assets/img/dzug.jpeg";
 import woj from "../../assets/img/woj.jpeg";
 import kizman from "../../assets/img/captainjohnnew.jpeg";
+import felder from "../../assets/img/felder.jpeg";
 import kluzner from "../../assets/img/kluz.jpeg";
 import { Row } from "reactstrap";
 
@@ -30,8 +31,7 @@ const TextNormalIndent = styled(GlobalStyle.TextNormalIndent)`
 
 const BackDrop = styled.div`
   background-color: rgba(255, 255, 255, 0.1);
-  min-height: 820px;
-  height: fit-content;
+  height: 1050px;
   box-shadow: 1px 5px 5px black;
   padding: 15px;
   border-radius: 8px;
@@ -150,8 +150,37 @@ const Crew = () => {
         </GlobalStyle.Container>
       </BackDrop1>
 
+      <BackDrop1>
+        <Image src={felder} />
+        <GlobalStyle.Container>
+          <GlobalStyle.Title style={{ color: "white" }}>
+            Captain Zach Felder
+          </GlobalStyle.Title>
+          <GlobalStyle.TextNormal>
+            US Coast Guard Licensed 100 Ton Master Captain
+          </GlobalStyle.TextNormal>
+          <GlobalStyle.TextNormalIndent>
+            Captain Zach is the definition of an outdoorsman. If he isn’t
+            fishing, he's posted in the woods somewhere on the hunt for some
+            terrestrial game. He is someone who is truly passionate for the
+            sport of fishing and eager to teach you some of his tricks of the
+            trade that he's developed through years of experience and learning
+            from some of the Jersey Shore’s best. Primarily centered out of
+            Belmar, NJ, Captain Zack has been working boats since 2008 aboard
+            all of the big name headboats. He also spent two years working on
+            deck aboard the Voyager where he was able to gather incredible
+            experience offshore; targeting tuna and deep dropping for tilefish.
+            Since 2012, Captain Zack has been a 100 Ton Master Captain as well.
+            With over 17 years of professional experience, with many days spent
+            on the offshore and inshore grounds, Captain Zack is an asset to the
+            Nearfall team and you will enjoy a great day of fishing with him at
+            the helm.
+          </GlobalStyle.TextNormalIndent>
+        </GlobalStyle.Container>
+      </BackDrop1>
+
       <Wrapper>
-        <GlobalStyle.Title style={{ color: "white", marginLeft:'10%' }}>
+        <GlobalStyle.Title style={{ color: "white", marginLeft: "10%" }}>
           Team Members/Deckhands
         </GlobalStyle.Title>
         <GlobalStyle.TextNormalIndent className="ps-5 pe-5 ms-5 me-5 pb-5 pt-3">
@@ -169,7 +198,7 @@ const Crew = () => {
           professionals.
         </GlobalStyle.TextNormalIndent>
 
-        <BackDrop className="mb-5">
+        <BackDrop className="mb-5 max-h-[600px]">
           <Image src={mitch} />
           <GlobalStyle.Container>
             <GlobalStyle.Title
@@ -180,7 +209,7 @@ const Crew = () => {
                 fontSize: "22px",
               }}
             >
-              Deckhand/Team Member Mitchell Paton
+              Team Member Mitchell Paton
             </GlobalStyle.Title>
             <GlobalStyle.TextNormalIndent className="ps-3 pe-3">
               Mitchell is a Brick Town native and grew up working on the local
@@ -196,7 +225,7 @@ const Crew = () => {
           </GlobalStyle.Container>
         </BackDrop>
 
-        <BackDrop className="mb-5">
+        <BackDrop className="mb-5 max-h-[600px]">
           <Image src={kluzner} />
           <GlobalStyle.Container>
             <GlobalStyle.Title
@@ -225,189 +254,6 @@ const Crew = () => {
             </GlobalStyle.TextNormalIndent>
           </GlobalStyle.Container>
         </BackDrop>
-
-        <BackDrop className="mb-5">
-          <Image src={ant} />
-          <GlobalStyle.Container>
-            <GlobalStyle.Title
-              className="pb-5"
-              style={{
-                color: "lightgray",
-                textDecoration: "none",
-                fontSize: "22px",
-              }}
-            >
-              Deckhand/Team Anthony Fiore
-            </GlobalStyle.Title>
-            <GlobalStyle.TextNormalIndent className="ps-3 pe-3">
-              Although the second and younger of the two brothers, Anthony is no
-              stranger to the ocean and his knowledge for fishing is
-              substantial. As a Toms River native, Anthony, much like his
-              brother Pete, has been fishing since the young age of four years
-              old, perfecting his skills in the Barnegat bay and local ocean
-              bottom. Anthony spent 6 years specializing in bottom fishing,
-              fluke, and blackfish aboard head boats departing from Pt Pleasant
-              Beach. Anthony is also a union Laborer and looks forward to
-              joining us on the weekends.
-            </GlobalStyle.TextNormalIndent>
-          </GlobalStyle.Container>
-        </BackDrop>
-
-        <BackDrop className="mb-5">
-          <Image src={pete} />
-          <GlobalStyle.Container>
-            <GlobalStyle.Title
-              className="pb-5"
-              style={{
-                color: "lightgray",
-                textDecoration: "none",
-                fontSize: "22px",
-              }}
-            >
-              Deckhand/Team Peter Fiore
-            </GlobalStyle.Title>
-            <GlobalStyle.TextNormalIndent className="ps-3 pe-3">
-              Pete is one of the Fiore brothers who is well known to the area.
-              Pete spent several years on head boats and charter boats out of
-              the Point Pleasant area. Over the years, Pete was able to gain
-              well-rounded experience learning from some of the best. Pete can
-              reliably target anything from striped bass and bottom fishing to
-              deep water pelagics in the offshore canyons. With all of his
-              experience, he will soon be studying for his USCG captains
-              license. Pete is now a Union laborer and will be seen on the
-              weekends, especially when targeting tuna, shark and blackfish.
-            </GlobalStyle.TextNormalIndent>
-          </GlobalStyle.Container>
-        </BackDrop>
-
-        <BackDrop className="mb-5">
-          <Image src={facas} />
-          <GlobalStyle.Container>
-            <GlobalStyle.Title
-              className="pb-5"
-              style={{
-                color: "lightgray",
-                textDecoration: "none",
-                fontSize: "22px",
-              }}
-            >
-              Deckhand/Team Matthew Facas
-            </GlobalStyle.Title>
-            <GlobalStyle.TextNormalIndent className="ps-3 pe-3">
-              You will not meet a person more passionate about the sport of
-              fishing than Nearfall team member, Matt Facas, especially when it
-              comes to striped bass fishing. Matt is a Manasquan native and has
-              been fishing the local surf and rivers since he was 4 years old.
-              Matt’s knowledge of Striped Bass and other pelagic species makes
-              him an asset to the team. Over the last several years, he has had
-              the opportunity to work deck on a couple head boats targeting
-              bottom fish and fluke. Matt is a Medical Doctor and works in the
-              hospital. When he gets a day off, you may have the opportunity to
-              learn from him on your next trip.
-            </GlobalStyle.TextNormalIndent>
-          </GlobalStyle.Container>
-        </BackDrop>
-
-        <BackDrop className="mb-5">
-          <Image src={dzug} />
-          <GlobalStyle.Container>
-            <GlobalStyle.Title
-              className="pb-5"
-              style={{
-                color: "lightgray",
-                textDecoration: "none",
-                fontSize: "22px",
-              }}
-            >
-              Deckhand/Team Anthony Dzugan
-            </GlobalStyle.Title>
-            <GlobalStyle.TextNormalIndent className="ps-3 pe-3">
-              As another Brick Township native, Anthony has had easy access to
-              the ocean and rivers. Introduced to the sport in grade school,
-              Anthony developed his skills and is a quality fisherman. He has
-              spent time working deck for head boats out of Belmar NJ where he
-              specialized in Bluefish and Striped Bass. Anthony is one of those
-              guys that finds true joy in just getting out on the ocean, taking
-              in the salty air and fishing for anything that will bend the rod.
-              You will be able to meet Anthony on a trip periodically when he is
-              off from his day job as a State Officer.
-            </GlobalStyle.TextNormalIndent>
-          </GlobalStyle.Container>
-        </BackDrop>
-
-        <BackDrop className="mb-5">
-          <Image src={woj} />
-          <GlobalStyle.Container>
-            <GlobalStyle.Title
-              className="pb-5"
-              style={{
-                color: "lightgray",
-                textDecoration: "none",
-                fontSize: "22px",
-              }}
-            >
-              Deckhand/Team Daniel Wojtaszek
-            </GlobalStyle.Title>
-            <GlobalStyle.TextNormalIndent className="ps-3 pe-3">
-              Dan is yet another Brick Township native who has spent many years
-              on the ocean honing his skills as a fisherman. In high school and
-              college, Dan spent a number of years working on head boats out of
-              Belmar, specializing in Fluke, Striped Bass and Bluefish. Dan is
-              someone who emphasizes the importance of trying new things and
-              experiences and lives by that principal. ‘Wojo’ as his friends
-              commonly refer to him as, is now a well rounded fisherman because
-              of all of the unique fishing trips that he takes regularly up and
-              down the coast.
-            </GlobalStyle.TextNormalIndent>
-          </GlobalStyle.Container>
-        </BackDrop>
-
-        <BackDrop1>
-          <GlobalStyle.Container>
-            <GlobalStyle.Container className="row">
-              <Image src={deckhand1} />
-              <Image src={deckhand2} />
-            </GlobalStyle.Container>
-            <GlobalStyle.Container>
-              <GlobalStyle.Title
-                style={{
-                  color: "lightgray",
-                  textDecoration: "none",
-                  fontSize: "22px",
-                }}
-              >
-                Captain/Deckhand Mike Gudewitz,
-              </GlobalStyle.Title>
-
-              <GlobalStyle.Title
-                className="pb-5"
-                style={{
-                  color: "lightgray",
-                  textDecoration: "none",
-                  fontSize: "22px",
-                }}
-              >
-                Deckhand Justin Gudewitz
-              </GlobalStyle.Title>
-
-              <GlobalStyle.TextNormalIndent className="ps-3 pe-3">
-                Mike is no stranger to the Atlantic Ocean and local bottom
-                fishing grounds. With over 25 years of experience on well
-                respected head boats and charter boats, Capt Mike has the
-                ability to get you on the meat. Over the years, Mike has become
-                well versed in inshore and offshore bottom fishing, as well as
-                targeting Striped Bass and Bluefish. Mike prides himself on
-                being a people person and looks forward to meeting you. Next to
-                Mike, youll notice our deckhand in training, Justin. Justin is
-                Mike’s son and has been joining Mike on trips anytime he can .
-                At just 8 years old, you will be impressed by what this young
-                boy can do. If your charter has the space and Mike is on board,
-                you might get the opportunity to meet our up and coming fishing
-                expert.
-              </GlobalStyle.TextNormalIndent>
-            </GlobalStyle.Container>
-          </GlobalStyle.Container>
-        </BackDrop1>
       </Wrapper>
     </Container>
   );

@@ -92,14 +92,25 @@ export const trips = {
       time: "9h",
       maxOccupants: 6,
     },
+    dateRanges: [
+      {
+        start: "10:16",
+        end: "11:31",
+      },
+      {
+        start: "0:1",
+        end: "1:8",
+      },
+    ],
     price: {
       deposit: 200,
-      balance: 850,
+      balance: 880,
     },
+    contentfulIdentifier: "blackfish",
     details:
       "Bring your own Jigs; Clam and Green Crabs provided; White leggers provided when available;",
     targetCatch: [blackfishTC],
-    calendarTitle: ["Blackfish/Bottom Fishing", "Blackfish"],
+    calendarTitle: ["PM PRIVATE CHARTER", ""],
   },
   "Wreck Fishing Charters": {
     id: 2,
@@ -115,6 +126,13 @@ export const trips = {
       deposit: 200,
       balance: 800,
     },
+    dateRanges: [
+      {
+        start: "5:20",
+        end: "8:30",
+      },
+    ],
+    contentfulIdentifier: "wreckFishing",
     details: "Bring your own Jigs; Clam provided; Sinkers & hooks provided;",
     targetCatch: [wreckTC, wreckTC1, wreckTC2, wreckTC3],
     calendarTitle: [
@@ -137,7 +155,18 @@ export const trips = {
       deposit: 200,
       balance: 760,
     },
+    dateRanges: [
+      {
+        start: "4:17",
+        end: "5:19",
+      },
+      {
+        start: "9:1",
+        end: "10:15",
+      },
+    ],
     details: "Clam provided; Bring your own Ava Jigs;",
+    contentfulIdentifier: "seabass",
     targetCatch: [seabassTC],
     calendarTitle: [
       "Seabass/Striped Bass",
@@ -151,20 +180,31 @@ export const trips = {
     media: [stripedBass1, stripedBass2, stripedBass_3],
     description: `In the springtime, as ocean water temps rise along the shore, bait moves in numbers so great, at times, it seems you could walk on them. Bunker pods sometimes hundreds of yards long can be seen up the coast for miles. Following closely behind are trophy-sized Striped Bass. Fishing out of Belmar puts you right in the middle of some of the best Striped Bass fishing the spring run has to offer. It is common to see bass 30-45lb with fish pushing 50lb or more busting through anxious pods of bunker. We are able to target these trophy class Striped Bass by live-lining bunker, spooning and trolling. There’s nothing quite like anxiously waiting for a large fish to come up on your bait or lure. Make sure you hold on tight, because when they hit, they pick the bait up and run hard, often peeling 50 yards of line from your reel with ease! We are able to catch these fish from May through June during the spring run. During this time of year, we have plenty of daylight to work with and have the ability to customize your Striped Bass Charter to give you the best opportunity to catch your next trophy bass. Depending on your schedule and the feeding habits of the mass of fish swimming through, we have 2 available options for Striper Charters: Morning, Afternoon/Evening ‘Magic Hour’ Striped Bass trips. `,
     description2: ` As the summer months finally start to cool off and you begin thinking about your next Halloween Outfit, the ocean temps cool down and the Striped Bass make their way South again for the winter. During this time of year, you will never witness an ocean more alive. Sand eels, peanut bunker, and mullet flood the local waters. Striped Bass can be seen boiling up underneath the bait for much of the fall chasing this smaller class of bait. During this time of year, we can break out the lighter tackle, such as Ava Jigs, Swim shads, and topwater plugs. In addition to striped bass, you may have a good chance at catching gator blues, albacore, bonito and maybe even a Bluefin Tuna! We will be targeting Striped bass from the 2nd half of October through the month of December.`,
-    tripTimes: ["5:30am-12:30 pm", "2:00pm-8:30pm"],
+    tripTimes: ["5:30am-12:30 pm", "1:30pm-8:00pm"],
     tripDuration: {
-      time: "7h",
+      time: "6-7h",
       maxOccupants: 6,
     },
     price: {
       deposit: 200,
       balance: 760,
     },
+    dateRanges: [
+      {
+        start: "4:17",
+        end: "5:19",
+      },
+      {
+        start: "9:1",
+        end: "11:7",
+      },
+    ],
     equipment: {
       spring:
         "6-7’ Conventional Rod/Reel with 30-40lb test line; Large Casting Bunker Spoons; Snag Hooks and Hooks provided",
       fall: "6-7’ Conventional and/or Spinning rod with 30-40lb test line; Casting spoons, Ava Jigs, Swimming Plugs;",
     },
+    contentfulIdentifier: "stripedBass",
     details:
       "Snag hooks and hooks provided;Things to bring:; 6-7` Conventional and/or spinning Rod/Reel with 30-40lb test line.;Large Casting Bunker Spoons.; Casting spoons, Jigs, swimming plugs",
     targetCatch: [stripedBassTC],
@@ -194,6 +234,13 @@ export const trips = {
         "Things to bring: 6-7` Conventional and/or spinning Rod/Reel with 30-40lb test line, Large Casting spoons, Jigs, swimming plugs",
       fall: "Things to bring: 6-7` Conventional and/or spinning Rod/Reel with 30-40lb test line, Large Casting spoons, Jigs, swimming plugs",
     },
+    dateRanges: [
+      {
+        start: "2:24",
+        end: "4:16",
+      },
+    ],
+    contentfulIdentifier: "raritanBayStripedBass",
     details: "",
     notes:
       "Sailing Lockwood Boatworks, 1825 Rt 35 S Amboy, NJ from 4/1/23 - 5/9/23",
@@ -214,6 +261,13 @@ export const trips = {
       deposit: 200,
       balance: 800,
     },
+    dateRanges: [
+      {
+        start: "5:20",
+        end: "8:30",
+      },
+    ],
+    contentfulIdentifier: "fluke",
     details: `Sinkers, hooks provided; 
         Squid provided; Fluke Ribbons and Bluefish/Albacore Strips when available; 
         “BYOB&G”- Bring your own bucktails and GULP
@@ -236,15 +290,23 @@ We aren't the only ones that enjoy calamari! In the summer months, the bluefin t
       time: "6.5h",
       maxOccupants: 6,
     },
+    dateRanges: [
+      {
+        start: "5:20",
+        end: "8:30",
+      },
+    ],
+    pmOnly: true,
     price: {
       deposit: 200,
       balance: 800,
     },
+    contentfulIdentifier: "squid",
     details: `
      Bring Your Own Squid Jigs 
      Rods and Reels provided if Needed
         `,
-    additionalDetails:`
+    additionalDetails: `
 Squid Cleaning Policy: \r
 Squid is very tedious to clean. We will gladly clean as many squid as possible on the way home. Once we hit dock, we will no longer clean squid and you must take the rest of your catch whole \r\n
 Additional Fishing Time: \r
@@ -268,10 +330,18 @@ Additional fishing time is at the discretion of the captain. If the captain is w
       time: "5h",
       maxOccupants: 6,
     },
+    dateRanges: [
+      {
+        start: "5:20",
+        end: "8:30",
+      },
+    ],
     price: {
       deposit: 200,
       balance: 700,
     },
+    pmOnly: true,
+    contentfulIdentifier: "summerSpecial",
     details: `All Bait and Tackle provided; BYOB&G;`,
     targetCatch: [seabassTC, flukeTC, bluefishTC],
     calendarTitle: ["Fishing and Fireworks"],
@@ -289,6 +359,13 @@ Additional fishing time is at the discretion of the captain. If the captain is w
       deposit: 200,
       balance: 800,
     },
+    dateRanges: [
+      {
+        start: "9:1",
+        end: "9:31",
+      },
+    ],
+    contentfulIdentifier: "mixedBag",
     details: `Crabs and Clam provided; Bring your own Blackfish Jigs;`,
     targetCatch: [blackfishTC, bluefishTC, grayTrigger, porgieTC, seabassTC],
     calendarTitle: ["bottom fishing"],
@@ -304,8 +381,16 @@ Additional fishing time is at the discretion of the captain. If the captain is w
     },
     price: {
       deposit: 400,
-      balance: 1100,
+      balance: 1400,
     },
+    dateRanges: [
+      {
+        start: "5:20",
+        end: "8:30",
+      },
+    ],
+    extendedOnly: true,
+    contentfulIdentifier: "sharking",
     details: `If we land a fish that the crew wishes to keep, we will have to bring it home asap to have weighed in. This decision is completely up to the paying customers.; If trip is canceled, deposit may be allocated for 2 inshore trips or moved to another date for sharking; All gear and bait provided;`,
     targetCatch: [sharktc1, sharktc2],
     calendarTitle: ["Shark Fishing Special"],
@@ -323,6 +408,14 @@ Additional fishing time is at the discretion of the captain. If the captain is w
       deposit: 400,
       balance: 2000,
     },
+    dateRanges: [
+      {
+        start: "5:20",
+        end: "10:15",
+      },
+    ],
+    extendedOnly: true,
+    contentfulIdentifier: "midshoreTuna",
     details: `If trip is canceled, deposit may be allocated for 2 inshore trips or moved to another date for Midshore Tuna, Mahi and Meat trip, or Shark charter;All necessary gear provided;Recommend bringing your own selection of tuna jigs/plugs.;`,
     targetCatch: [tunatc1, tunatc2, tunatc3],
     calendarTitle: ["Tuna Fishing"],
@@ -338,12 +431,20 @@ Additional fishing time is at the discretion of the captain. If the captain is w
     },
     price: {
       deposit: 400,
-      balance: 1100,
+      balance: 1400,
     },
+    dateRanges: [
+      {
+        start: "5:20",
+        end: "8:30",
+      },
+    ],
+    contentfulIdentifier: "mahiNMeat",
     details: `If trip is canceled, deposit may be allocated for 2 inshore trips or moved to another date for Midshore Tuna, Mahi and Meat trip, or Shark charter; All tackle and bait provided;`,
     additionalDetails:
       "Depending on ocean conditions, and the way the Mahi move inshore, we may need to travel further than anicipated. In the event this extra mileage is required to put together an adequate catch, a $300 additional surcharge may be applied for fuel, and time. The Captain and the Charter Master will discuss if this is necessary prior to the trip",
     targetCatch: [tunatc3, codTC, pollockTC, lingTC, flounderTC],
+    extendedOnly: true,
     calendarTitle: ["Mahi and Meat"],
   },
   "Inshore Speedsters": {
@@ -359,6 +460,13 @@ Additional fishing time is at the discretion of the captain. If the captain is w
       deposit: 200,
       balance: 800,
     },
+    dateRanges: [
+      {
+        start: "5:20",
+        end: "8:30",
+      },
+    ],
+    contentfulIdentifier: "inShoreSpeedsters",
     details: `All tackle and bait provided;`,
     targetCatch: [bluefishTC, spanishmacktc, albacoretc, bonitotc],
     calendarTitle: ["AM Inshore Speedsters", "PM Inshore Speedsters"],
@@ -375,10 +483,22 @@ Additional fishing time is at the discretion of the captain. If the captain is w
     },
     price: {
       deposit: 400,
-      balance: 1100,
+      balance: 1250,
     },
+    dateRanges: [
+      {
+        start: "10:16",
+        end: "11:31",
+      },
+      {
+        start: "0:1",
+        end: "1:8",
+      },
+    ],
+    contentfulIdentifier: "marathonJumboBlackfish",
     details: `Bring Your Own Jigs Green Crab and White Crabs Provided (when available)`,
     targetCatch: [blackfishTC],
+    extendedOnly: true,
     calendarTitle: ["Marathon Blackfish"],
   },
   "Evening Headboat Charters": {
@@ -395,6 +515,14 @@ Additional fishing time is at the discretion of the captain. If the captain is w
     price: {
       details: "add details",
     },
+    dateRanges: [
+      {
+        start: "5:20",
+        end: "8:30",
+      },
+    ],
+    pmOnly: true,
+    contentfulIdentifier: "eveningHeadboat",
     details: `All tackle and bait provided;Call for available trips and rates;`,
     targetCatch: [],
     calendarTitle: null,
