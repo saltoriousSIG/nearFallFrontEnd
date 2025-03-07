@@ -11,7 +11,7 @@ import facas from "../../assets/img/facas.jpeg";
 import dzug from "../../assets/img/dzug.jpeg";
 import woj from "../../assets/img/woj.jpeg";
 import kizman from "../../assets/img/captainjohnnew.jpeg";
-import felder from "../../assets/img/felder.jpeg";
+import jason from "../../assets/img/jason.jpeg";
 import kluzner from "../../assets/img/kluz.jpeg";
 import { Row } from "reactstrap";
 
@@ -37,11 +37,11 @@ const BackDrop = styled.div`
   border-radius: 8px;
   display: flex;
   flex-direction: column;
-  width: 45%;
   justify-content: center;
+  width: 40%;
+  margin: 0 15px;
   align-items: center;
-  margin: 0 auto;
-  @media all and (max-width: 1024px) {
+  @media all and (max-width: 762px) {
     width: 90%;
     margin: auto;
   }
@@ -65,6 +65,17 @@ const BackDrop1 = styled.div`
     margin: auto;
   }
 `;
+
+const DeckhandContainer = styled.div`
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  @media all and (max-width: 762px) {
+    flex-direction: column;
+  }
+`;
+
 
 const Wrapper = styled.div`
   display: flex;
@@ -151,109 +162,96 @@ const Crew = () => {
       </BackDrop1>
 
       <BackDrop1>
-        <Image src={felder} />
+        <Image src={jason} />
         <GlobalStyle.Container>
           <GlobalStyle.Title style={{ color: "white" }}>
-            Captain Zach Felder
+            Captain Jason Sokol
           </GlobalStyle.Title>
           <GlobalStyle.TextNormal>
             US Coast Guard Licensed 100 Ton Master Captain
           </GlobalStyle.TextNormal>
           <GlobalStyle.TextNormalIndent>
-            Captain Zach is the definition of an outdoorsman. If he isn’t
-            fishing, he's posted in the woods somewhere on the hunt for some
-            terrestrial game. He is someone who is truly passionate for the
-            sport of fishing and eager to teach you some of his tricks of the
-            trade that he's developed through years of experience and learning
-            from some of the Jersey Shore’s best. Primarily centered out of
-            Belmar, NJ, Captain Zack has been working boats since 2008 aboard
-            all of the big name headboats. He also spent two years working on
-            deck aboard the Voyager where he was able to gather incredible
-            experience offshore; targeting tuna and deep dropping for tilefish.
-            Since 2012, Captain Zack has been a 100 Ton Master Captain as well.
-            With over 17 years of professional experience, with many days spent
-            on the offshore and inshore grounds, Captain Zack is an asset to the
-            Nearfall team and you will enjoy a great day of fishing with him at
-            the helm.
+            Captain Jason has been fishing the waters of New Jersey since
+            childhood. Naturally, Jason went from just fishing on headboats to
+            working on them. Inevitably he worked his way to the wheelhouse,
+            running head boats and private charters up and down the NJ coast.
+            With two decades of experience he has spent pretty much all of his
+            free time on the water. Captain Jason is skilled in targeting
+            striped bass, fluke, blackfish, and offshore species. His goal isn’t
+            just to put fish in the cooler—though that’s always part of the
+            plan—but to create an experience that keeps people coming back.
+            Whether it’s helping someone land their personal best or teaching
+            new anglers the finer points of the sport, Captain Jason puts in the
+            effort to make every trip productive and memorable.
           </GlobalStyle.TextNormalIndent>
         </GlobalStyle.Container>
       </BackDrop1>
 
       <Wrapper>
         <GlobalStyle.Title style={{ color: "white", marginLeft: "10%" }}>
-          Team Members/Deckhands
+          Deckhands
         </GlobalStyle.Title>
-        <GlobalStyle.TextNormalIndent className="ps-5 pe-5 ms-5 me-5 pb-5 pt-3">
-          As is common on most charter boats, you have a couple steady deckhands
-          to work the deck and a captain or two that reliably puts people on the
-          fish day-in and day-out. On the Nearfall, most trips are done in a
-          similar fashion, however we also have a team who will be with us
-          several times throughout the year participating in local tournaments
-          when the opportunities present themselves. If you are lucky, you may
-          have the opportunity to meet one of our team members as a fill-in
-          deckhand when needed. Each team member is unique in their own way,
-          passionate for the sport, and eager to share some of their wisdom with
-          the customers. All Nearfall team members have several years of
-          experience on the local charter and head boats and are true
-          professionals.
-        </GlobalStyle.TextNormalIndent>
+        <GlobalStyle.TextNormalIndent className="ps-5 pe-5 ms-5 me-5 pb-5 pt-3 w-full"></GlobalStyle.TextNormalIndent>
 
-        <BackDrop className="mb-5 max-h-[600px]">
-          <Image src={mitch} />
-          <GlobalStyle.Container>
-            <GlobalStyle.Title
-              className="pb-5"
-              style={{
-                color: "lightgray",
-                textDecoration: "none",
-                fontSize: "22px",
-              }}
-            >
-              Team Member Mitchell Paton
-            </GlobalStyle.Title>
-            <GlobalStyle.TextNormalIndent className="ps-3 pe-3">
-              Mitchell is a Brick Town native and grew up working on the local
-              head boats where he spent 6 years specializing in bottom fishing
-              and fluke fishing. He has filled in on several charter boats
-              locally and is a well rounded deckhand. Mitch enjoys fishing for
-              just about anything, but if you asked him what his personal
-              favorite is, bluefish and other high speed pelagics are at the top
-              of his list. It is likely you’ll see Mitch on a weekend trip as he
-              is currently studying for his Doctorate in Physical Therapy full
-              time during the week.
-            </GlobalStyle.TextNormalIndent>
-          </GlobalStyle.Container>
-        </BackDrop>
+        <DeckhandContainer>
+          <BackDrop className="mb-5 max-h-[600px]">
+            <Image src={mitch} />
+            <GlobalStyle.Container>
+              <GlobalStyle.Title
+                className="pb-5"
+                style={{
+                  color: "lightgray",
+                  textDecoration: "none",
+                  fontSize: "22px",
+                }}
+              >
+                Team Member Mitchell Paton
+              </GlobalStyle.Title>
+              <GlobalStyle.TextNormalIndent className="ps-3 pe-3">
+                Mitchell is a Brick Town native and grew up working on the local
+                head boats where he spent 6 years specializing in bottom fishing
+                and fluke fishing. He has filled in on several charter boats
+                locally and is a well rounded deckhand. Mitch enjoys fishing for
+                just about anything, but if you asked him what his personal
+                favorite is, bluefish and other high speed pelagics are at the
+                top of his list. It is likely you’ll see Mitch on a weekend trip
+                as he is currently studying for his Doctorate in Physical
+                Therapy full time during the week.
+              </GlobalStyle.TextNormalIndent>
+            </GlobalStyle.Container>
+          </BackDrop>
 
-        <BackDrop className="mb-5 max-h-[600px]">
-          <Image src={kluzner} />
-          <GlobalStyle.Container>
-            <GlobalStyle.Title
-              className="pb-5"
-              style={{
-                color: "lightgray",
-                textDecoration: "none",
-                fontSize: "22px",
-              }}
-            >
-              Deckhand Ryan Kluzner
-            </GlobalStyle.Title>
-            <GlobalStyle.TextNormalIndent className="ps-3 pe-3">
-              Ryan is a lifelong resident in Brick, NJ and has 15 years
-              experience in the New Jersey Charter and commercial fishing
-              industries. Ryan specializes in back bay and inshore fishing for
-              all species. He has also spent plenty of time in the mid-range and
-              offshore canyons as well, targeting tuna, mahi and other
-              blue-water pelagics. Whether you’re a first timer, or a seasoned
-              veteran, Ryan has a wealth of knowledge that he is gladly willing
-              to share if you’re willing to learn! He takes the time to show you
-              the tactics and little hands-on tricks that can make a huge
-              difference by the day’s end. On top of filling a cooler and
-              enjoying a day on the open ocean, we like to see you improve as a
-              fisherman and Ryan is one of the best to guide you along the way.
-            </GlobalStyle.TextNormalIndent>
-          </GlobalStyle.Container>
-        </BackDrop>
+          <BackDrop className="mb-5 max-h-[600px]">
+            <Image src={kluzner} />
+            <GlobalStyle.Container>
+              <GlobalStyle.Title
+                className="pb-5"
+                style={{
+                  color: "lightgray",
+                  textDecoration: "none",
+                  fontSize: "22px",
+                }}
+              >
+                Deckhand Ryan Kluzner
+              </GlobalStyle.Title>
+              <GlobalStyle.TextNormalIndent className="ps-3 pe-3">
+                Ryan is a lifelong resident in Brick, NJ and has 15 years
+                experience in the New Jersey Charter and commercial fishing
+                industries. Ryan specializes in back bay and inshore fishing for
+                all species. He has also spent plenty of time in the mid-range
+                and offshore canyons as well, targeting tuna, mahi and other
+                blue-water pelagics. Whether you’re a first timer, or a seasoned
+                veteran, Ryan has a wealth of knowledge that he is gladly
+                willing to share if you’re willing to learn! He takes the time
+                to show you the tactics and little hands-on tricks that can make
+                a huge difference by the day’s end. On top of filling a cooler
+                and enjoying a day on the open ocean, we like to see you improve
+                as a fisherman and Ryan is one of the best to guide you along
+                the way.
+              </GlobalStyle.TextNormalIndent>
+            </GlobalStyle.Container>
+          </BackDrop>
+        </DeckhandContainer>
       </Wrapper>
     </Container>
   );
