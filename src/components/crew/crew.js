@@ -11,7 +11,7 @@ import facas from "../../assets/img/facas.jpeg";
 import dzug from "../../assets/img/dzug.jpeg";
 import woj from "../../assets/img/woj.jpeg";
 import kizman from "../../assets/img/captainjohnnew.jpeg";
-import jason from "../../assets/img/jason.jpeg";
+import greg from "../../assets/img/gregborras.jpg";
 import kluzner from "../../assets/img/kluz.jpeg";
 import { Row } from "reactstrap";
 
@@ -93,11 +93,11 @@ const Crew = () => {
     <Container>
       <GlobalStyle.Title>The Nearfall Crew</GlobalStyle.Title>
       <TextNormalIndent>
-        You can’t have a successful fishing boat without a dedicated and
+        You can't have a successful fishing boat without a dedicated and
         friendly crew. We pride ourselves on making your experience enjoyable
         and sending you home feeling like you are a part of the Nearfall family.
         The Nearfall Team is loaded with experience and ready to bring you the
-        best fishing experience on every trip. Each Captain and Deckhand’s
+        best fishing experience on every trip. Each Captain and Deckhand's
         knowledge of fishing and the local fishing will not only make your day
         easier and maximize your time at the rail, but you will also leave your
         charter as a better fisherman. We all look forward to having you aboard!
@@ -162,27 +162,29 @@ const Crew = () => {
       </BackDrop1>
 
       <BackDrop1>
-        <Image src={jason} />
+        <Image src={greg} />
         <GlobalStyle.Container>
           <GlobalStyle.Title style={{ color: "white" }}>
-            Captain Jason Sokol
+            Captain Greg Borras Jr.
           </GlobalStyle.Title>
           <GlobalStyle.TextNormal>
             US Coast Guard Licensed 100 Ton Master Captain
           </GlobalStyle.TextNormal>
           <GlobalStyle.TextNormalIndent>
-            Captain Jason has been fishing the waters of New Jersey since
-            childhood. Naturally, Jason went from just fishing on headboats to
-            working on them. Inevitably he worked his way to the wheelhouse,
-            running head boats and private charters up and down the NJ coast.
-            With two decades of experience he has spent pretty much all of his
-            free time on the water. Captain Jason is skilled in targeting
-            striped bass, fluke, blackfish, and offshore species. His goal isn’t
-            just to put fish in the cooler—though that’s always part of the
-            plan—but to create an experience that keeps people coming back.
-            Whether it’s helping someone land their personal best or teaching
-            new anglers the finer points of the sport, Captain Jason puts in the
-            effort to make every trip productive and memorable.
+            Captain Greg has spent more than 10 years as a full-time captain and
+            deckhand aboard some of the most reputable head boat and charter
+            boat vessels that the Jersey Shore has to offer. Capt Greg also
+            owned and operated Victoria Marie Charters and found immediate
+            success in the inshore and offshore fisheries. Greg has been
+            dedicated exclusively to saltwater fishing, honing his skills
+            through countless hours on the water targeting all species. With an
+            in-depth understanding of local tides, structure, and fish behavior,
+            he focuses on putting anglers in the best position for consistent
+            action and quality catches. His goal isn't just to put fish in the
+            cooler, but to also create an experience that keeps people coming
+            back. Whether it's helping someone land their personal best or
+            teaching new anglers the finer points of the sport, Captain Greg
+            puts in the effort to make every trip productive and memorable.
           </GlobalStyle.TextNormalIndent>
         </GlobalStyle.Container>
       </BackDrop1>
@@ -214,7 +216,7 @@ const Crew = () => {
                 locally and is a well rounded deckhand. Mitch enjoys fishing for
                 just about anything, but if you asked him what his personal
                 favorite is, bluefish and other high speed pelagics are at the
-                top of his list. It is likely you’ll see Mitch on a weekend trip
+                top of his list. It is likely you'll see Mitch on a weekend trip
                 as he is currently studying for his Doctorate in Physical
                 Therapy full time during the week.
               </GlobalStyle.TextNormalIndent>
@@ -240,11 +242,11 @@ const Crew = () => {
                 industries. Ryan specializes in back bay and inshore fishing for
                 all species. He has also spent plenty of time in the mid-range
                 and offshore canyons as well, targeting tuna, mahi and other
-                blue-water pelagics. Whether you’re a first timer, or a seasoned
+                blue-water pelagics. Whether you're a first timer, or a seasoned
                 veteran, Ryan has a wealth of knowledge that he is gladly
-                willing to share if you’re willing to learn! He takes the time
+                willing to share if you're willing to learn! He takes the time
                 to show you the tactics and little hands-on tricks that can make
-                a huge difference by the day’s end. On top of filling a cooler
+                a huge difference by the day's end. On top of filling a cooler
                 and enjoying a day on the open ocean, we like to see you improve
                 as a fisherman and Ryan is one of the best to guide you along
                 the way.

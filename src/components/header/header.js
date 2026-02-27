@@ -256,6 +256,9 @@ const Header = () => {
               <HeaderButton>
                 <u>905 NJ-35, S Belmar NJ</u>
               </HeaderButton>
+              <HeaderButton>
+                <u>47 Broadway Ave, Pt Pleasant Beach, NJ</u>
+              </HeaderButton>
             </ButtonContainer>
             <a href="https://www.facebook.com/NearfallFishing">
               <i className="fa-brands fa-facebook fa-2x"></i>

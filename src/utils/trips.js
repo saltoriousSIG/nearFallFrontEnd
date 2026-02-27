@@ -82,6 +82,32 @@ import pmsquid3 from "../assets/img/tunagroup.jpeg";
 import squid from "../assets/img/squid.png";
 
 export const trips = {
+  "Family Summer Special Fishing & Cruising": {
+    id: 16,
+    media: [],
+    description:
+      "",
+    tripTimes: ["3:00 PM to 7:00 PM"],
+    tripDuration: {
+      time: "4hrs",
+      maxOccupants: 6,
+    },
+    price: {
+      deposit: 200,
+      balance: 550,
+    },
+    dateRanges: [
+      {
+        start: "5:20",
+        end: "8:30",
+      },
+    ],
+    pmOnly: true,
+    contentfulIdentifier: "familySummerSpecial",
+    details: "All Gear/tackle/Bait Provided;",
+    targetCatch: [],
+    calendarTitle: ["Family Summer Special"],
+  },
   "Blackfish (Tautog) Charter": {
     id: 1,
     media: [blackfish, blackfish2, blackfish3],
@@ -112,11 +138,41 @@ export const trips = {
     targetCatch: [blackfishTC],
     calendarTitle: ["PM PRIVATE CHARTER", ""],
   },
+  "Marathon Jumbo Blackfish Special": {
+    id: 14,
+    media: [marathonTaug1, marathonTaug2, marathonTaug3],
+    description: `If you're a hardcore Tog fisherman and you are on the hunt to beat your personal best, this is the trip for you! From sunup to sun down we will have you anchored over wrecks and set up for success on the blackfish grounds.  With the extended hours for this trip we are able to fish areas out of our reach during our typical blackfish charter. Most of the bottom we will put you on is home to some truly massive blackfish that no picture can adequately show. It is not uncommon to see multiple fish between 10 and 20 pounds on a trip (many people go their whole lives without seeing a single Jumbo in person)! From December through January you are welcome to join us on this Jumbo Tog marathon.`,
+    address: "dauntless address",
+    tripTimes: ["4:30 AM to 4:30 PM"],
+    tripDuration: {
+      time: "12 hr",
+      maxOccupants: 6,
+    },
+    price: {
+      deposit: 400,
+      balance: 1250,
+    },
+    dateRanges: [
+      {
+        start: "10:16",
+        end: "11:31",
+      },
+      {
+        start: "0:1",
+        end: "1:8",
+      },
+    ],
+    contentfulIdentifier: "marathonJumboBlackfish",
+    details: `Bring Your Own Jigs Green Crab and White Crabs Provided (when available)`,
+    targetCatch: [blackfishTC],
+    extendedOnly: true,
+    calendarTitle: ["Marathon Blackfish"],
+  },
   "Wreck Fishing Charters": {
     id: 2,
     media: [wreckFishing, wreckFishing2, wreckFishing3, wreckFishing4],
     description:
-      "Along the entire Jersey Shore, from the beach to the offshore Canyons, the Atlantic ocean is abundant with natural rock, rubble, mussel beds, wrecks and artificial reefs. All of this natural structure creates homes and feeding grounds for an assortment of fish species that we can target, most of which make for great table fare as well. Whenever you drop a line on some of the local structures, you never quite know what will bite at your hook next. Ling, Flounder, Cod, Pollock, Seabass, Porgies and Blackfish are only some of the species you might see on any given day of bottom fishing. If you are a ‘meat-eater’ this is the trip for you! The majority of the fishing year, from April through December presents great opportunities to try out some bottom fishing. Come fill a cooler with the Nearfall Crew.",
+      "Along the entire Jersey Shore, from the beach to the offshore Canyons, the Atlantic ocean is abundant with natural rock, rubble, mussel beds, wrecks and artificial reefs. All of this natural structure creates homes and feeding grounds for an assortment of fish species that we can target, most of which make for great table fare as well. Whenever you drop a line on some of the local structures, you never quite know what will bite at your hook next. Ling, Flounder, Cod, Pollock, Seabass, Porgies and Blackfish are only some of the species you might see on any given day of bottom fishing. If you are a 'meat-eater' this is the trip for you! The majority of the fishing year, from April through December presents great opportunities to try out some bottom fishing. Come fill a cooler with the Nearfall Crew.",
     tripTimes: ["6:00am-2:00pm"],
     tripDuration: {
       time: "8h",
@@ -124,7 +180,7 @@ export const trips = {
     },
     price: {
       deposit: 200,
-      balance: 800,
+      balance: 820,
     },
     dateRanges: [
       {
@@ -145,7 +201,7 @@ export const trips = {
     id: 3,
     media: [seabass, seabass2, seabass3],
     description:
-      "Seabass season, oftentimes, presents customers their first opportunity to shake off the winter rust and bend a rod again. Around mid-May through most of June, Seabass tend to congregate on most inshore structures in vast numbers, making for an exciting and action-packed day of fishing. We then get another shot at these fish in large numbers come Mid October through December (mainly due to strict NJ fishing regulations).  It often doesn't take long to fill up a cooler of these beautiful black bass. This fishery is a family favorite and is a great opportunity for new anglers to try something new. Whether it’s with a sinker rig and some clam or with a diamond jig and teaser, sea bass bite hard and they bite quickly. In addition to the entertainment, seabass are one of my personal favorites when it comes to table fare. Come load up a cooler and make some tasty ceviche for dinner!",
+      "Seabass season, oftentimes, presents customers their first opportunity to shake off the winter rust and bend a rod again. Around mid-May through most of June, Seabass tend to congregate on most inshore structures in vast numbers, making for an exciting and action-packed day of fishing. We then get another shot at these fish in large numbers come Mid October through December (mainly due to strict NJ fishing regulations).  It often doesn't take long to fill up a cooler of these beautiful black bass. This fishery is a family favorite and is a great opportunity for new anglers to try something new. Whether it's with a sinker rig and some clam or with a diamond jig and teaser, sea bass bite hard and they bite quickly. In addition to the entertainment, seabass are one of my personal favorites when it comes to table fare. Come load up a cooler and make some tasty ceviche for dinner!",
     tripTimes: ["5:30am-12:30 pm", "2:00pm-8:30pm"],
     tripDuration: {
       time: "6.5h-7h",
@@ -178,11 +234,11 @@ export const trips = {
   "Striped Bass Charters -Spring and Fall": {
     id: 4,
     media: [stripedBass1, stripedBass2, stripedBass_3],
-    description: `In the springtime, as ocean water temps rise along the shore, bait moves in numbers so great, at times, it seems you could walk on them. Bunker pods sometimes hundreds of yards long can be seen up the coast for miles. Following closely behind are trophy-sized Striped Bass. Fishing out of Belmar puts you right in the middle of some of the best Striped Bass fishing the spring run has to offer. It is common to see bass 30-45lb with fish pushing 50lb or more busting through anxious pods of bunker. We are able to target these trophy class Striped Bass by live-lining bunker, spooning and trolling. There’s nothing quite like anxiously waiting for a large fish to come up on your bait or lure. Make sure you hold on tight, because when they hit, they pick the bait up and run hard, often peeling 50 yards of line from your reel with ease! We are able to catch these fish from May through June during the spring run. During this time of year, we have plenty of daylight to work with and have the ability to customize your Striped Bass Charter to give you the best opportunity to catch your next trophy bass. Depending on your schedule and the feeding habits of the mass of fish swimming through, we have 2 available options for Striper Charters: Morning, Afternoon/Evening ‘Magic Hour’ Striped Bass trips. `,
+    description: `In the springtime, as ocean water temps rise along the shore, bait moves in numbers so great, at times, it seems you could walk on them. Bunker pods sometimes hundreds of yards long can be seen up the coast for miles. Following closely behind are trophy-sized Striped Bass. Fishing out of Belmar puts you right in the middle of some of the best Striped Bass fishing the spring run has to offer. It is common to see bass 30-45lb with fish pushing 50lb or more busting through anxious pods of bunker. We are able to target these trophy class Striped Bass by live-lining bunker, spooning and trolling. There's nothing quite like anxiously waiting for a large fish to come up on your bait or lure. Make sure you hold on tight, because when they hit, they pick the bait up and run hard, often peeling 50 yards of line from your reel with ease! We are able to catch these fish from May through June during the spring run. During this time of year, we have plenty of daylight to work with and have the ability to customize your Striped Bass Charter to give you the best opportunity to catch your next trophy bass. Depending on your schedule and the feeding habits of the mass of fish swimming through, we have 2 available options for Striper Charters: Morning, Afternoon/Evening 'Magic Hour' Striped Bass trips. `,
     description2: ` As the summer months finally start to cool off and you begin thinking about your next Halloween Outfit, the ocean temps cool down and the Striped Bass make their way South again for the winter. During this time of year, you will never witness an ocean more alive. Sand eels, peanut bunker, and mullet flood the local waters. Striped Bass can be seen boiling up underneath the bait for much of the fall chasing this smaller class of bait. During this time of year, we can break out the lighter tackle, such as Ava Jigs, Swim shads, and topwater plugs. In addition to striped bass, you may have a good chance at catching gator blues, albacore, bonito and maybe even a Bluefin Tuna! We will be targeting Striped bass from the 2nd half of October through the month of December.`,
-    tripTimes: ["5:30am-12:30 pm", "1:30pm-8:00pm"],
+    tripTimes: ["6:00 AM to 12:00 PM", "12:30 PM to 6:30 PM"],
     tripDuration: {
-      time: "6-7h",
+      time: "6 Hours",
       maxOccupants: 6,
     },
     price: {
@@ -201,8 +257,8 @@ export const trips = {
     ],
     equipment: {
       spring:
-        "6-7’ Conventional Rod/Reel with 30-40lb test line; Large Casting Bunker Spoons; Snag Hooks and Hooks provided",
-      fall: "6-7’ Conventional and/or Spinning rod with 30-40lb test line; Casting spoons, Ava Jigs, Swimming Plugs;",
+        "6-7' Conventional Rod/Reel with 30-40lb test line; Large Casting Bunker Spoons; Snag Hooks and Hooks provided",
+      fall: "6-7' Conventional and/or Spinning rod with 30-40lb test line; Casting spoons, Ava Jigs, Swimming Plugs;",
     },
     contentfulIdentifier: "stripedBass",
     details:
@@ -218,9 +274,9 @@ export const trips = {
   "Raritan Bay Striped Bass": {
     id: 5,
     media: [stripedBass3, stripedBass4],
-    description: `Break the cabin fever! Join us on the Raritan Bay for your first chance at some world class striped bass fishing for the new year. The first water to get warmed up after a cold winter is our bays and rivers. In the earliest part of the spring, usually by the last week of March or the first week of April, the ‘Raritan’ is teeming with life. You will have a chance to shake the fishing rust off with this fishery. We will mostly be ‘jigging’ and ‘plugging’ for these hungry pelagics. It is not uncommon to see fish ranging from 20 inches to 55 inches in a single day. The Raritan in the month of April into the first half of May is the hottest game in town and we will be conveniently located just a couple miles from where the bite is at its best!`,
+    description: `Break the cabin fever! Join us on the Raritan Bay for your first chance at some world class striped bass fishing for the new year. The first water to get warmed up after a cold winter is our bays and rivers. In the earliest part of the spring, usually by the last week of March or the first week of April, the 'Raritan' is teeming with life. You will have a chance to shake the fishing rust off with this fishery. We will mostly be 'jigging' and 'plugging' for these hungry pelagics. It is not uncommon to see fish ranging from 20 inches to 55 inches in a single day. The Raritan in the month of April into the first half of May is the hottest game in town and we will be conveniently located just a couple miles from where the bite is at its best!`,
     description2: `Take a look at our calendar and take your pick at some trip options! Early bird trips run from 6am to 12pm. If you can't muster up the motivation to wake up for the morning bite, the afternoon can be just as good; we run the afternoon trips from 1:30pm-730pm! We also run a night time chunking trip with limited availability or by request; these trips run 5pm-11pm. The night time chunk bite can yield some of the biggest bass you have ever seen!`,
-    tripTimes: ["6:00am-12:00pm", "1:30pm-7:30pm"],
+    tripTimes: ["1:00 PM to 7:00 PM"],
     tripDuration: {
       time: "6h",
       maxOccupants: 6,
@@ -250,8 +306,8 @@ export const trips = {
   "Fluke (summer flounder) charters": {
     id: 6,
     media: [fluke1, fluke2, fluke3],
-    description: `During the spring, Fluke a.k.a summer flounder migrate inshore to our local waters. In the early part of Spring they are often found in good numbers within our inlets, rivers, and beaches. As the summer comes around, large numbers of fish take residence around fruitful hunting grounds such as rubble, mussel beds and local reefs. Summer time is the perfect opportunity to take your family, friends, and colleagues to fill a cooler of these delicious ‘flatties.’ We welcome all levels of fluke fisherman and can tailor the trip to the charter's needs. If you are a hardcore fluke fisherman looking for your next personal best fluke, our knowledge of the local bottom can set you up for your next ‘doormat’ fluke. Come join the team this Summer on the Fluke Grounds! We will be targeting Fluke from July through mid-September. `,
-    description2: `Tips and Tricks: Over the past decade or so, there has been an obvious transition in the tactics used to target big fluke. Previously, we often dragged large sinkers, dragging some squid and spearing or some stripped, miscellaneous bait 2-3 feet behind the sinker. Although this method is tried and effective for catching fluke and will still work for most people, bucktailing has gained considerable popularity in these parts. When using the term bucktailing, it refers to using a jig head with bucktail tied to its collar as the terminal tackle that we can bounce off the bottom. In many cases, these jigs can be a bare jig head with no hairs tied to the collar; these jigs tend to work just as well. Having a good selection of bucktail jigs is key when fluke fishing. You should have an assortment of weights ranging from 2-6 oz. Depending on the depth, speed of the boats drift,  and structure being fished you'll find the weight of the bucktail matters. When it comes to color selection, there is an abundance and most colors will catch a fish.  The most popular colors to use tend to be white, pink, orange, and chartreuse. To make your bucktailing experience more effective, it is necessary to add some bait or an extra lure to the line to further entice the fluke chasing our bucktails. GULP has been the go to artificial bait that has produced the most fish; 4-6” swimming mullets and 5-8” grubs are most commonly used. When deciding on color, Glow white, Orange Belly Shrimp, Pink Shine, and Chartreuse are most common and found to be very effective. In addition to the artificial bait, we like to have squid and/or stripped bait on a teaser hook about 12” above your bouncing bucktail. The most effective strip bait varies by the day and depends on what’s available. We often use whole squid, squid strips, fluke ribbons, and stips of bluefish, albacore, and mackerel if it is available. Grab a 6-7’ conventional or spinning rod/reel with 20-30 lb test braid and come try this technique out with the Nearfall crew. Our skilled Captains and Deckhands will guide you, especially if you are new to the sport.`,
+    description: `During the spring, Fluke a.k.a summer flounder migrate inshore to our local waters. In the early part of Spring they are often found in good numbers within our inlets, rivers, and beaches. As the summer comes around, large numbers of fish take residence around fruitful hunting grounds such as rubble, mussel beds and local reefs. Summer time is the perfect opportunity to take your family, friends, and colleagues to fill a cooler of these delicious 'flatties.' We welcome all levels of fluke fisherman and can tailor the trip to the charter's needs. If you are a hardcore fluke fisherman looking for your next personal best fluke, our knowledge of the local bottom can set you up for your next 'doormat' fluke. Come join the team this Summer on the Fluke Grounds! We will be targeting Fluke from July through mid-September. `,
+    description2: `Tips and Tricks: Over the past decade or so, there has been an obvious transition in the tactics used to target big fluke. Previously, we often dragged large sinkers, dragging some squid and spearing or some stripped, miscellaneous bait 2-3 feet behind the sinker. Although this method is tried and effective for catching fluke and will still work for most people, bucktailing has gained considerable popularity in these parts. When using the term bucktailing, it refers to using a jig head with bucktail tied to its collar as the terminal tackle that we can bounce off the bottom. In many cases, these jigs can be a bare jig head with no hairs tied to the collar; these jigs tend to work just as well. Having a good selection of bucktail jigs is key when fluke fishing. You should have an assortment of weights ranging from 2-6 oz. Depending on the depth, speed of the boats drift,  and structure being fished you'll find the weight of the bucktail matters. When it comes to color selection, there is an abundance and most colors will catch a fish.  The most popular colors to use tend to be white, pink, orange, and chartreuse. To make your bucktailing experience more effective, it is necessary to add some bait or an extra lure to the line to further entice the fluke chasing our bucktails. GULP has been the go to artificial bait that has produced the most fish; 4-6" swimming mullets and 5-8" grubs are most commonly used. When deciding on color, Glow white, Orange Belly Shrimp, Pink Shine, and Chartreuse are most common and found to be very effective. In addition to the artificial bait, we like to have squid and/or stripped bait on a teaser hook about 12" above your bouncing bucktail. The most effective strip bait varies by the day and depends on what's available. We often use whole squid, squid strips, fluke ribbons, and stips of bluefish, albacore, and mackerel if it is available. Grab a 6-7' conventional or spinning rod/reel with 20-30 lb test braid and come try this technique out with the Nearfall crew. Our skilled Captains and Deckhands will guide you, especially if you are new to the sport.`,
     tripTimes: ["6:00am-2:00 pm", "2:30pm-8:30pm"],
     tripDuration: {
       time: "6h -8h",
@@ -259,7 +315,7 @@ export const trips = {
     },
     price: {
       deposit: 200,
-      balance: 800,
+      balance: 820,
     },
     dateRanges: [
       {
@@ -270,7 +326,7 @@ export const trips = {
     contentfulIdentifier: "fluke",
     details: `Sinkers, hooks provided; 
         Squid provided; Fluke Ribbons and Bluefish/Albacore Strips when available; 
-        “BYOB&G”- Bring your own bucktails and GULP
+        "BYOB&G"- Bring your own bucktails and GULP
         `,
     targetCatch: [flukeTC],
     calendarTitle: ["Fluke", "AM Fluke", "PM Fluke"],
@@ -279,11 +335,11 @@ export const trips = {
     id: 7,
     media: [pmsquid1, pmsquid2, pmsquid3],
     description: `
-‘Calamari’ anyone? On this trip, you will have a chance to fill your coolers with the freshest calamari you can find. On this evening trip you can expect to drift through the bottom that hungry squid reside over during the summer. When the water warms up, squid migrate to our “inshore” lumps to feed and spawn. We capitalize on this opportunity when they are abundant and will target them as long as they are around in good numbers. Catches can range anywhere from 20 to over 400/man(if you have the technique figured out!) 
+'Calamari' anyone? On this trip, you will have a chance to fill your coolers with the freshest calamari you can find. On this evening trip you can expect to drift through the bottom that hungry squid reside over during the summer. When the water warms up, squid migrate to our "inshore" lumps to feed and spawn. We capitalize on this opportunity when they are abundant and will target them as long as they are around in good numbers. Catches can range anywhere from 20 to over 400/man(if you have the technique figured out!) 
 `,
     description2: `
 Interested in the sweet cherry on top??
-We aren't the only ones that enjoy calamari! In the summer months, the bluefin tuna chase the squid and we have a very good chance at catching one. For a fee, we are willing to put the big gear out ready to catch your next big Bluefin Tuna.  In 2023, we once saw 3 big tuna hit the deck in under 2 hours! Now we can’t guarantee the catch, but you can’t catch them without trying. Always Keep in mind that you have a pretty small window to “target” tuna on this trip. If you want more time and a better effort, check out our inshore tuna charter option. 
+We aren't the only ones that enjoy calamari! In the summer months, the bluefin tuna chase the squid and we have a very good chance at catching one. For a fee, we are willing to put the big gear out ready to catch your next big Bluefin Tuna.  In 2023, we once saw 3 big tuna hit the deck in under 2 hours! Now we can't guarantee the catch, but you can't catch them without trying. Always Keep in mind that you have a pretty small window to "target" tuna on this trip. If you want more time and a better effort, check out our inshore tuna charter option. 
 `,
     tripTimes: ["3:30pm-10:00pm"],
     tripDuration: {
@@ -349,15 +405,15 @@ Additional fishing time is at the discretion of the captain. If the captain is w
   "October-The Mixed Bag Month": {
     id: 9,
     media: [mixedBag, mixedBag1, mixedBag2],
-    description: `October is a great month of the year for fishing out of Belmar. The weather changes, the temperatures cool off and the ocean is teeming with life. During the month of October, much like the weather, fishing seasons change over as well. NJ fluke is closed, the stripers are on their way down the coast, and the seabass season opens. In addition to seabass, we tend to see stellar bluefishing, clouds of porgies and the exotic triggerfish fill our local bottom. The sweet cherry on top is the “pre-season” blackfish bite. Although we are only allowed to keep 1 blackfish per man during October, the blackfish in the month of October is red hot. It is not uncommon to throw back 15 keeper sized blackfish per man on a given day during the month. October is the perfect month to hone your skills and get ready for the “season opener” in November, when you are allowed to keep 5 fish a man. During these mixed bag bottom fishing trips, youll be able to get ample practice as an angler and plenty of treats for the dinner table.`,
-    tripTimes: ["6:00am-2:30pm", "7:30am-4:00pm"],
+    description: `October is a great month of the year for fishing out of Belmar. The weather changes, the temperatures cool off and the ocean is teeming with life. During the month of October, much like the weather, fishing seasons change over as well. NJ fluke is closed, the stripers are on their way down the coast, and the seabass season opens. In addition to seabass, we tend to see stellar bluefishing, clouds of porgies and the exotic triggerfish fill our local bottom. The sweet cherry on top is the "pre-season" blackfish bite. Although we are only allowed to keep 1 blackfish per man during October, the blackfish in the month of October is red hot. It is not uncommon to throw back 15 keeper sized blackfish per man on a given day during the month. October is the perfect month to hone your skills and get ready for the "season opener" in November, when you are allowed to keep 5 fish a man. During these mixed bag bottom fishing trips, youll be able to get ample practice as an angler and plenty of treats for the dinner table.`,
+    tripTimes: ["6:00 AM to 2:00 PM"],
     tripDuration: {
-      time: "8.5h",
+      time: "8 Hours",
       maxOccupants: 6,
     },
     price: {
       deposit: 200,
-      balance: 800,
+      balance: 820,
     },
     dateRanges: [
       {
@@ -370,10 +426,36 @@ Additional fishing time is at the discretion of the captain. If the captain is w
     targetCatch: [blackfishTC, bluefishTC, grayTrigger, porgieTC, seabassTC],
     calendarTitle: ["bottom fishing"],
   },
+  "NEW: Wind Mill Expeditions: Midshore Pelagics and Groundfish": {
+    id: 17,
+    media: [],
+    description:
+      "As of 2025, NJ and NY have committed to the implementation of wind farms. We began the windmill expeditions in 2025 on a trial basis and they were a hit! Although new, it didn't take long for vegetation to grow on the windmill bases and rockpiles around them. Bonito, Jacks, Triggerfish, Porgy, Blackfish and Seabass were among some of the species loaded around the windmills last season. As the windmills age, we expect to see loads of other species through the seasons. Late Summer, midshore pelagic trips had coolers full of Bonito, Bluefish and Jacks. On occasion, even Bluefin Tuna! We call it an expedition because each trip had the opportunity to see something new. Look to join us on these trips in August and September.",
+    tripTimes: ["5:00 AM to 3:00 PM"],
+    tripDuration: {
+      time: "10 Hours",
+      maxOccupants: 6,
+    },
+    price: {
+      deposit: 200,
+      balance: 1150,
+    },
+    dateRanges: [
+      {
+        start: "7:1",
+        end: "8:30",
+      },
+    ],
+    extendedOnly: true,
+    contentfulIdentifier: "windMillExpeditions",
+    details: "All Gear/tackle/Bait Provided;",
+    targetCatch: [],
+    calendarTitle: ["Wind Mill Expeditions"],
+  },
   "Sharking Charter": {
     id: 10,
     media: [shark],
-    description: `Make sure you get some stretching in and have the ice and tylenol ready at home. The Sharking specialty charter is not one for the faint of heart. On this trip we target whatever shark is hanging around the ‘chum slick.’ During the month of June, whether you want to believe it or not, the local waters are loaded with an assortment of shark species ranging from 40 to well over 1000 pounds. You can hook into brown sharks, dusky, finetooth, threshers, and the golden ticket, Mako shark on any given day when you soak some chum in the water and float out some fresh oily bait. Our gear is ready to handle whatever shark wants to rip some line out of the spool. Take turns with the crew fighting some of the toughest apex predators residing in our oceans. Depending on the size of the fish, you could be looking at a fight that could take all day long. If we are lucky enough to catch the right one, you'll have the bonus of bringing the trophy home to weigh in and steaks for the grill. If you’d rather fish for sport and watch your catch swim away, you are more than welcome to do so.  The Nearfall Crew will be with you every step of the way. `,
+    description: `Make sure you get some stretching in and have the ice and tylenol ready at home. The Sharking specialty charter is not one for the faint of heart. On this trip we target whatever shark is hanging around the 'chum slick.' During the month of June, whether you want to believe it or not, the local waters are loaded with an assortment of shark species ranging from 40 to well over 1000 pounds. You can hook into brown sharks, dusky, finetooth, threshers, and the golden ticket, Mako shark on any given day when you soak some chum in the water and float out some fresh oily bait. Our gear is ready to handle whatever shark wants to rip some line out of the spool. Take turns with the crew fighting some of the toughest apex predators residing in our oceans. Depending on the size of the fish, you could be looking at a fight that could take all day long. If we are lucky enough to catch the right one, you'll have the bonus of bringing the trophy home to weigh in and steaks for the grill. If you'd rather fish for sport and watch your catch swim away, you are more than welcome to do so.  The Nearfall Crew will be with you every step of the way. `,
     tripTimes: ["5:00am-5:00pm"],
     tripDuration: {
       time: "12h",
@@ -381,7 +463,7 @@ Additional fishing time is at the discretion of the captain. If the captain is w
     },
     price: {
       deposit: 400,
-      balance: 1400,
+      balance: 2000,
     },
     dateRanges: [
       {
@@ -399,14 +481,14 @@ Additional fishing time is at the discretion of the captain. If the captain is w
     id: 11,
     media: [midShore, midShore1, midShore2, midShore3],
     description: `In recent years, our coast has seen healthy numbers of Bluefin and Yellowfin Tuna close to home. From late May through September, you have a chance at catching a sushi grade fish within 60 miles from the inlet. This fishery allows the customer a chance at some trophy sized fish and for many, a once in a lifetime experience to catch tuna without the need to spend the money necessary to  travel and fish the offshore canyons. These fish are lightning fast balls of energy that can catch you by surprise if you aren't paying attention. Within a blink of an eye, even a smaller class tuna can peel 75+yards of line off your spool. You can expect to catch these fish by trolling, jigging and chunking bait. As a customer, your personal gear that can handle the brawn of a tuna is welcome. If you are trying tuna fishing for the first time, we will have all the gear necessary for you to land your first fish. Our Nearfall team looks forward to being out there with you.`,
-    tripTimes: ["3:30am-5:00pm"],
+    tripTimes: ["Variable based on time of year"],
     tripDuration: {
-      time: "12h-16h",
+      time: "Variable",
       maxOccupants: 6,
     },
     price: {
-      deposit: 400,
-      balance: 2000,
+      deposit: 720,
+      balance: 2880,
     },
     dateRanges: [
       {
@@ -420,10 +502,62 @@ Additional fishing time is at the discretion of the captain. If the captain is w
     targetCatch: [tunatc1, tunatc2, tunatc3],
     calendarTitle: ["Tuna Fishing"],
   },
-  "Mahi and Meat Charter": {
+  "NEW: Canyon Tuna Fishing (20-24hr)": {
+    id: 18,
+    media: [],
+    description:
+      "Join us on our 40ft Topaz as we journey out to the canyons to target the ultimate gamefish in our area. An assortment of tuna species migrate through the canyons and we can now target all of them with the addition of our new vessel. Yellowfin, Bigeye, Bluefin and Longfin are some of the tuna we can land and harvest. When you enter the deep blue water of the canyon, you can even see Marlin and Swordfish too. Test your strength and experience the top-of-line targets our area has to offer. We will be riding with speed and comfort too: full kitchen, bathroom, beds and entertainment station for your comfort as we make the long run to the deep.",
+    tripTimes: ["Variable depending on time of year"],
+    tripDuration: {
+      time: "20-24 Hours",
+      maxOccupants: 6,
+    },
+    price: {
+      deposit: 840,
+      balance: 3360,
+    },
+    dateRanges: [
+      {
+        start: "5:20",
+        end: "10:15",
+      },
+    ],
+    extendedOnly: true,
+    contentfulIdentifier: "canyonTuna",
+    details: "All Gear/tackle/Bait Provided;",
+    targetCatch: [tunatc1, tunatc2, tunatc3],
+    calendarTitle: ["Canyon Tuna Fishing"],
+  },
+  "NEW: Canyon Tile Fishing (18-24hr)": {
+    id: 19,
+    media: [],
+    description:
+      'Our 40ft Topaz will take you to the depths teeming with life in and around our canyons. "Deep-Drop" fishing will allow you to enter a whole new menu of bottom fish that you will never see inshore. The Golden and Blueline tile fish are the primary targets on these trips. You fish for these fish similar to fluke and the reward is the best tasting bottom fish you\'ll ever encounter. In addition, you may end up catching Rose fish, grouper, and purple hake to mix up the bag. If you\'re a bottom fisherman that wants to up the ante, this is the trip for you.',
+    tripTimes: ["Variable depending on time of year"],
+    tripDuration: {
+      time: "20-24 Hours",
+      maxOccupants: 6,
+    },
+    price: {
+      deposit: 840,
+      balance: 3360,
+    },
+    dateRanges: [
+      {
+        start: "5:20",
+        end: "10:15",
+      },
+    ],
+    extendedOnly: true,
+    contentfulIdentifier: "canyonTile",
+    details: "All Gear/tackle/Bait Provided;",
+    targetCatch: [],
+    calendarTitle: ["Canyon Tile Fishing"],
+  },
+  "Mahi Mahi Charter": {
     id: 12,
-    media: [mahi, mahi1, mahi2],
-    description: `During the late summer months, our local water temps become tropical and when the blue water pushes in, so do the Mahi Mahi. This Mahi and Meat Charter is one of my personal favorites because we will start or end the day, depending on conditions, pot hopping for Mahi Mahi, and transition to deep water bottom fishing. In the blue water, you can see the gold and green colors of the ‘dolphin’ from several yards away. We will target these fish by finding floating structure and pitching jigs and bait at the pots/debri in the water. The best part about this trip is being able to watch these fish grab your bait and do their acrobatics in the air as they fight to get away. These fish are so fast and athletic it's common for half the fight to be out of the water. To top off the day, we will anchor up on some deep water structure and take our pick at cod, pollock, ling, flounder and seabass. This trip is sure to fill a cooler with some interesting colors. This is a Nearfall favorite and we can’t wait to have you aboard!`,
+    media: [mahi],
+    description: `During the late summer months, our local water temps become tropical and when the blue water pushes in, so do the Mahi Mahi. This Mahi Mahi Charter is an opportunity to experience Florida and southerly fishing right at home in New Jersey. Most other species, we can target twice per year, but the Mahi Mahi has a small window right at the peak of summer to go chase them. In the blue water, you can see the gold and green colors of the 'dolphin' from several yards away. We will target these fish by finding floating structure and pitching jigs and bait at the pots/debri in the water. The best part about this trip is being able to watch these fish grab your bait and do their acrobatics in the air as they fight to get away. Mahi Mahi are so fast and athletic that it's common for half the fight to be out of the water. This is a Nearfall favorite and we can't wait to have you aboard!`,
     tripTimes: ["4:30am-4:30pm"],
     tripDuration: {
       time: "12h",
@@ -431,7 +565,7 @@ Additional fishing time is at the discretion of the captain. If the captain is w
     },
     price: {
       deposit: 400,
-      balance: 1400,
+      balance: 2000,
     },
     dateRanges: [
       {
@@ -440,10 +574,8 @@ Additional fishing time is at the discretion of the captain. If the captain is w
       },
     ],
     contentfulIdentifier: "mahiNMeat",
-    details: `If trip is canceled, deposit may be allocated for 2 inshore trips or moved to another date for Midshore Tuna, Mahi and Meat trip, or Shark charter; All tackle and bait provided;`,
-    additionalDetails:
-      "Depending on ocean conditions, and the way the Mahi move inshore, we may need to travel further than anicipated. In the event this extra mileage is required to put together an adequate catch, a $300 additional surcharge may be applied for fuel, and time. The Captain and the Charter Master will discuss if this is necessary prior to the trip",
-    targetCatch: [tunatc3, codTC, pollockTC, lingTC, flounderTC],
+    details: `If trip is canceled, deposit may be rolled over to another date for any charter; All tackle and bait provided;`,
+    targetCatch: [mahi],
     extendedOnly: true,
     calendarTitle: ["Mahi and Meat"],
   },
@@ -458,7 +590,7 @@ Additional fishing time is at the discretion of the captain. If the captain is w
     },
     price: {
       deposit: 200,
-      balance: 800,
+      balance: 820,
     },
     dateRanges: [
       {
@@ -470,36 +602,6 @@ Additional fishing time is at the discretion of the captain. If the captain is w
     details: `All tackle and bait provided;`,
     targetCatch: [bluefishTC, spanishmacktc, albacoretc, bonitotc],
     calendarTitle: ["AM Inshore Speedsters", "PM Inshore Speedsters"],
-  },
-  "Marathon Jumbo Blackfish Special": {
-    id: 14,
-    media: [marathonTaug1, marathonTaug2, marathonTaug3],
-    description: `If you're a hardcore Tog fisherman and you are on the hunt to beat your personal best, this is the trip for you! From sunup to sun down we will have you anchored over wrecks and set up for success on the blackfish grounds.  With the extended hours for this trip we are able to fish areas out of our reach during our typical blackfish charter. Most of the bottom we will put you on is home to some truly massive blackfish that no picture can adequately show. It is not uncommon to see multiple fish between 10 and 20 pounds on a trip (many people go their whole lives without seeing a single Jumbo in person)! From December through January you are welcome to join us on this Jumbo Tog marathon.`,
-    address: "dauntless address",
-    tripTimes: ["430am-630pm"],
-    tripDuration: {
-      time: "14h",
-      maxOccupants: 6,
-    },
-    price: {
-      deposit: 400,
-      balance: 1250,
-    },
-    dateRanges: [
-      {
-        start: "10:16",
-        end: "11:31",
-      },
-      {
-        start: "0:1",
-        end: "1:8",
-      },
-    ],
-    contentfulIdentifier: "marathonJumboBlackfish",
-    details: `Bring Your Own Jigs Green Crab and White Crabs Provided (when available)`,
-    targetCatch: [blackfishTC],
-    extendedOnly: true,
-    calendarTitle: ["Marathon Blackfish"],
   },
   "Evening Headboat Charters": {
     id: 15,

@@ -38,7 +38,7 @@ const Policies = () => {
             <li>
               Charter rates refer to the price of the boat and not the price per
               person. The person who formally books the trip is considered the
-              ‘Charter Master’ and will be responsible for filling the boat with
+              'Charter Master' and will be responsible for filling the boat with
               as many people as possible (up to 6 people). Depending on how many
               passengers are in the group determines the price per person. Price
               of the boat does not change if the charter master is unable to
@@ -57,9 +57,63 @@ const Policies = () => {
             </li>
             <li>
               If the charter master is unable to fill 6 spots, they may ask for
-              the office’s help to fill the trip with people. If the office is
+              the office's help to fill the trip with people. If the office is
               unable to fill the remaining spots, the charter master is still
               fully responsible for the FULL balance remaining for the trip.
+            </li>
+          </UL>
+        </GlobalStyle.Container>
+        <GlobalStyle.Container style={{ alignItems: "flex-start" }}>
+          <GlobalStyle.Title style={{ color: "white" }}>
+            Open Boat/Share Charter
+          </GlobalStyle.Title>
+          <UL>
+            <li>
+              If you want to join our open boat text and email list, please text
+              732-232-5620 with your FULL NAME, preferred PHONE NUMBER and EMAIL
+              address, along with the days you are normally available and the
+              species you prefer to catch
+            </li>
+            <li>
+              Every time we will put an open boat trip together, you will
+              receive a text stating our availability as well as price per
+              person; Reservations will be taken on a first come, first serve
+              basis
+            </li>
+            <li>
+              Open boat trips will typically range from $165-180 per person for
+              inshore trips; and $250 to $700 for extended hours and canyon
+              fishing trips. Please note tip is NOT included.
+            </li>
+            <li>
+              Once you commit to a spot on the open boat, FULL fare will need
+              to be sent via Zelle, Venmo or Paypal
+            </li>
+            <li>
+              There will be no service fee for Zelle. A 2.5% service fee will
+              be applied for Venmo and Paypal
+            </li>
+            <li>
+              Please bring extra cash for tip for the deckhand as it was not
+              included in your fare (20-25% is customary)
+            </li>
+            <li>
+              If we must cancel the open boat trip due to poor weather
+              conditions or lack of participation, you will be entitled to a
+              refund or roll it over to the next available open trip you can
+              join us on
+            </li>
+            <li>
+              If you must forfeit your spot after committing to an open boat,
+              you are still responsible for the fare until a replacement can be
+              found! The moment someone fills the spot you are forfeiting, you
+              will then be fully reimbursed.
+            </li>
+            <li>
+              On rare occasions a charter may have a couple people back out and
+              they request our help to fill the rest of the charter. In the
+              event this happens, the remaining spots will be treated as open
+              boat fares
             </li>
           </UL>
         </GlobalStyle.Container>
@@ -79,9 +133,11 @@ const Policies = () => {
             <li>
               There will be a 2.5% service fee for paypal upon deposit. A $200
               deposit is required for all inshore trips. For all shark, tuna,
-              and mahi and meat charters, a deposit of $400 is required. In the
-              event of cancellation of the trip, the deposit may be used for
-              another specialty trip or split for 2 inshore trips.
+              tilefish and mahi charters, a deposit of 20% of total trip cost
+              is required. In the event of cancellation of the trip, the
+              deposit can be rolled over to another date for any charter.
+              Deposits are nonrefundable, but you will have a whole calendar
+              year to reschedule to a new date with a price-lock guarantee
             </li>
             <li>
               Deposits Are NON-Refundable. If the trip is canceled, the deposit
@@ -143,11 +199,11 @@ const Policies = () => {
               deckhand. Our mates work extremely hard to make your trip a
               success. Similar to a waiter when going out to eat at a
               restaurant, your deckhand provides you a service to make your day
-              easy and enjoyable. Unlike the waiter or waitress that you’d give
+              easy and enjoyable. Unlike the waiter or waitress that you'd give
               20% of your meal cost for an hour of their service, our deckhands
               take care of you all day long. Starting with getting your gear on
               the boat and ending with the cleaning and packaging of your catch,
-              the deckhand’s role is essential to a successful trip
+              the deckhand's role is essential to a successful trip
             </li>
             <li>
               The Captain of the charter has permission to ask the charter
@@ -166,71 +222,57 @@ const Policies = () => {
               <GlobalStyle.Container
                 style={{ alignItems: "flex-start", marginLeft: "10px" }}
               >
-                <Attention>$900 fare-180-225 tip</Attention>
-                <Attention>$1000 fare-200-250 tip</Attention>
-                <Attention>$1200 fare-240-300 tip</Attention>
-                <Attention>$1500 fare- 300-375 tip</Attention>
-                <Attention>$2400 fare- 480-600 tip</Attention>
+                <Attention>$1000 fare- tip $200-250</Attention>
+                <Attention>$1350 fare- tip $270-340</Attention>
+                <Attention>$1650 fare- tip $350-410</Attention>
+                <Attention>$2400 fare- tip $480-600</Attention>
+                <Attention>$3600 fare- tip $720-900</Attention>
+                <Attention>$4200 fare- tip $840-1050</Attention>
               </GlobalStyle.Container>
             </li>
           </UL>
         </GlobalStyle.Container>
         <GlobalStyle.Container style={{ alignItems: "flex-start" }}>
           <GlobalStyle.Title style={{ color: "white" }}>
-            How is the Catch Divided? 
+            How is the Catch Divided?
           </GlobalStyle.Title>
           <UL>
+            <li>
+              <Attention nounderline={true}>On Charters:</Attention> we
+              distribute the catch evenly amongst the charter patrons unless
+              the charter has other arrangements
+            </li>
+            <li>
+              <Attention nounderline={true}>On Open Boats:</Attention> If a
+              respectable catch up to a limit catch makes it to the cooler,
+              then the catch will be evenly divided by all customers unless a
+              patron opts out of his/her share. If it is a slower day and
+              there are not enough "keepers" caught for every person to get a
+              fillet, then the person will keep what they have caught up to
+              their limit for the day.
+            </li>
             <GlobalStyle.Container
               style={{ alignItems: "flex-start", marginLeft: "10px" }}
             >
               <Attention nounderline={true}>
-                <li>This is done on a day by day basis with majority rule</li>
-              </Attention>
-              <Attention nounderline={true}>
                 <li>
-                  If the majority of the crew would like to share the catch we
-                  will divide the catch evenly amongst the paying crew
+                  If you catch more than your limit, the extras go towards
+                  the pool of fish to be evenly divided
                 </li>
               </Attention>
               <Attention nounderline={true}>
                 <li>
-                  If the majority of people want to “keep what they catch”, then
-                  that is what we will do
+                  If you catch below your limit and a boat limit was not
+                  caught that day, you must be prepared to bring home less
+                  than your limit
                 </li>
-                <GlobalStyle.Container
-                  style={{ alignItems: "flex-start", marginLeft: "10px" }}
-                >
-                  <Attention nounderline={true}>
-                    <li>
-                      If you catch more than your limit, the extras go towards
-                      the pool of fish to be evenly divided{" "}
-                    </li>
-                  </Attention>
-                  <Attention nounderline={true}>
-                    <li>
-                      If you catch below your limit and a boat limit was not
-                      caught that day, you must be prepared to bring home less
-                      than your limit
-                    </li>
-                  </Attention>
-                </GlobalStyle.Container>
               </Attention>
               <Attention nounderline={true}>
                 <li>
                   Keepers caught by the captain and deckhand will be split
-                  evenly amongst the people who have not caught their limit
+                  evenly amongst all patrons when the day's catch is evenly
+                  divided
                 </li>
-                <GlobalStyle.Container
-                  style={{ alignItems: "flex-start", marginLeft: "10px" }}
-                >
-                  <Attention nounderline={true}>
-                    <li>
-                      If everyone has caught their limit or has even amount of
-                      keepers, then the captain/deckhands catch will be evenly
-                      divided amongst everyone{" "}
-                    </li>
-                  </Attention>
-                </GlobalStyle.Container>
               </Attention>
             </GlobalStyle.Container>
           </UL>
@@ -242,7 +284,7 @@ const Policies = () => {
           <UL>
             <li>
               Safety is our number one concern and we will be constantly
-              monitoring weather up to the day of the trip. The trip’s captain
+              monitoring weather up to the day of the trip. The trip's captain
               will review the forecast and the office will confirm all charters
               24 hours prior to departure. If the weather is questionable for
               your charter, the final call will be made the evening before the
@@ -324,7 +366,7 @@ const Policies = () => {
             </li>
             <li>
               Coolers should be brought and left in the car to take home the
-              day’s catch. While on the water we will store your catch in our
+              day's catch. While on the water we will store your catch in our
               ice boxes.
             </li>
             <li>
