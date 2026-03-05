@@ -39,7 +39,7 @@ const Container = styled.div`
 `;
 
 const CarouselComponent = (props) => {
-  const { items, height } = props;
+  const { items, height, interval = 2000 } = props;
 
   const [index, setIndex] = useState(0);
 
@@ -62,7 +62,7 @@ const CarouselComponent = (props) => {
         activeIndex={index}
         onSelect={handleSelect}
         controls={true}
-        interval={2000}
+        interval={interval}
       >
         {carouselItems &&
           carouselItems.map((x, i) => {

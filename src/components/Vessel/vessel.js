@@ -81,8 +81,8 @@ const ImageBlock = styled.div`
 `;
 
 export const VesselInfo = () => {
-  const donelleImages = useContentful("trip", "donelle35");
-  const topazImages = useContentful("trip", "topaz40");
+  const donelleImages = useContentful("trip", "donelle");
+  const topazImages = useContentful("trip", "topaz");
 
   const donelleSpecs = useMemo(() => {
     return [
@@ -118,12 +118,12 @@ export const VesselInfo = () => {
   return (
     <Container>
       <GlobalStyle.Title style={{ marginBottom: '20px' }}>
-        The Nearfall Page
+        The Vessels
       </GlobalStyle.Title>
 
       <IntroBlock>
         <Text>
-          Come set sail and enjoy a day on the Atlantic Ocean with the Nearfall fishing team. Our seasoned captains and crew look forward to getting you and your party hooked for a lifetime. We aim to fill your coolers, share some laughs, and create a memorable experience for everyone aboard. Whether you're a seasoned veteran of the sport or testing your sea legs for the first time, Nearfall Fishing Charters is the place for you. Our team specializes in Blackfish, Striped Bass, Fluke, Bottom Fishing, Inshore Tuna and Sharking. We offer a wide range of trips and tailor it to the needs of the people aboard and the fishery in season. Departing from Shark River Inlet, our vessel is conveniently located at the Belmar Manutti Marina; just minutes away from the Garden State Parkway and Interstate 195. Take a break from your daily hussle and come on down to Nearfall Fishing Charters. We look forward to having you and are sincerely grateful for your patronage.
+          Come set sail and enjoy a day on the Atlantic Ocean with the Nearfall fishing team. Our seasoned captains and crew look forward to getting you and your party hooked for a lifetime. We aim to fill your coolers, share some laughs, and create a memorable experience for everyone aboard. Whether you're a seasoned veteran of the sport or testing your sea legs for the first time, Nearfall Fishing Charters is the place for you. Our team specializes in Blackfish, Striped Bass, Fluke, Bottom Fishing, Inshore Tuna and Sharking. We offer a wide range of trips and tailor it to the needs of the people aboard and the fishery in season. Departing from Shark River and Manasquan inlets, our vessels are conveniently located in the Belmar Manutti Marina and Broadway Basin; just minutes away from the Garden State Parkway and Interstate 195. Take a break from your daily hustle and come on down to Nearfall Fishing Charters. We look forward to having you and are sincerely grateful for your patronage.
         </Text>
       </IntroBlock>
 
@@ -132,20 +132,30 @@ export const VesselInfo = () => {
           <GlobalStyle.Title style={{ marginBottom: '20px' }}>
             35' Donelle
           </GlobalStyle.Title>
+          {donelleImages.length > 0 && (
+            <ImageBlock>
+              <CarouselImages images={donelleImages} />
+            </ImageBlock>
+          )}
           <GlobalStyle.Title style={{ fontSize: '1.5rem', marginTop: '20px' }}>
             35 Donelle Specs
           </GlobalStyle.Title>
-          <CarouselComponent items={donelleSpecs} height={250} />
+          <CarouselComponent items={donelleSpecs} height={250} interval={5000} />
         </VesselCol>
 
         <VesselCol>
           <GlobalStyle.Title style={{ marginBottom: '20px' }}>
             40' Topaz Express
           </GlobalStyle.Title>
+          {topazImages.length > 0 && (
+            <ImageBlock>
+              <CarouselImages images={topazImages} />
+            </ImageBlock>
+          )}
           <GlobalStyle.Title style={{ fontSize: '1.5rem', marginTop: '20px' }}>
             40 Topaz Express Specs
           </GlobalStyle.Title>
-          <CarouselComponent items={topazSpecs} height={250} />
+          <CarouselComponent items={topazSpecs} height={250} interval={5000} />
         </VesselCol>
       </VesselRow>
     </Container>
