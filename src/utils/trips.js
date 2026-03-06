@@ -85,8 +85,7 @@ export const trips = {
   "Family Summer Special Fishing & Cruising": {
     id: 16,
     media: [],
-    description:
-      "",
+    description: "",
     tripTimes: ["3:00 PM to 7:00 PM"],
     tripDuration: {
       time: "4hrs",
@@ -447,7 +446,7 @@ Additional fishing time is at the discretion of the captain. If the captain is w
       },
     ],
     extendedOnly: true,
-    contentfulIdentifier: "windMillExpeditions",
+    contentfulIdentifier: "newWindmills",
     details: "All Gear/tackle/Bait Provided;",
     targetCatch: [],
     calendarTitle: ["Wind Mill Expeditions"],
@@ -523,7 +522,7 @@ Additional fishing time is at the discretion of the captain. If the captain is w
       },
     ],
     extendedOnly: true,
-    contentfulIdentifier: "canyonTuna",
+    contentfulIdentifier: "newCanyonTuna",
     details: "All Gear/tackle/Bait Provided;",
     targetCatch: [tunatc1, tunatc2, tunatc3],
     calendarTitle: ["Canyon Tuna Fishing"],
@@ -532,7 +531,7 @@ Additional fishing time is at the discretion of the captain. If the captain is w
     id: 19,
     media: [],
     description:
-      'Our 40ft Topaz will take you to the depths teeming with life in and around our canyons. "Deep-Drop" fishing will allow you to enter a whole new menu of bottom fish that you will never see inshore. The Golden and Blueline tile fish are the primary targets on these trips. You fish for these fish similar to fluke and the reward is the best tasting bottom fish you\'ll ever encounter. In addition, you may end up catching Rose fish, grouper, and purple hake to mix up the bag. If you\'re a bottom fisherman that wants to up the ante, this is the trip for you.',
+      "Our 40ft Topaz will take you to the depths teeming with life in and around our canyons. \"Deep-Drop\" fishing will allow you to enter a whole new menu of bottom fish that you will never see inshore. The Golden and Blueline tile fish are the primary targets on these trips. You fish for these fish similar to fluke and the reward is the best tasting bottom fish you'll ever encounter. In addition, you may end up catching Rose fish, grouper, and purple hake to mix up the bag. If you're a bottom fisherman that wants to up the ante, this is the trip for you.",
     tripTimes: ["Variable depending on time of year"],
     tripDuration: {
       time: "20-24 Hours",
@@ -549,7 +548,7 @@ Additional fishing time is at the discretion of the captain. If the captain is w
       },
     ],
     extendedOnly: true,
-    contentfulIdentifier: "canyonTile",
+    contentfulIdentifier: "newCanyonTile",
     details: "All Gear/tackle/Bait Provided;",
     targetCatch: [],
     calendarTitle: ["Canyon Tile Fishing"],
